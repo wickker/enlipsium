@@ -1,0 +1,31 @@
+node_modules
+.next
+build
+
+# Don't check auto-generated stuff into git
+coverage
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.tmp
+
+# Yarn
+yarn-error.log
+
+# Local env config (Can be used to store secrets)
+.env*.local
+
+# Storybook
+storybook-static
+
+.cache
+
+#VS Code
+.vscode
+
+# Jest Sonar Reporter
+test-report.xml
+test-report.json
+node_modules
