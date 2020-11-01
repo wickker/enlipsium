@@ -7,7 +7,7 @@ import * as Constants from "../utils/constants";
 
 const GlobalStyle = createGlobalStyle`
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arial", sans-serif;
   padding: 0; 
   margin: 0;
   font-size: 16px;
@@ -27,6 +27,7 @@ const StyledUL = styled.ul`
     background: white;
     color: ${Constants.semiBlack};
     border-bottom: 1px solid #f0f0f0;
+    // box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
   }
 `;
 
