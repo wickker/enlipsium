@@ -1,8 +1,11 @@
 {
-    "home": {
-        "title": "Turning X-ray into Visible Light",
-        "tagline1": "We may not be able to bend light, but we certainly can bend the material that produces light. We make scintillators",
-        "tagline2": "Bigger, Brighter and Bendable!"
-    }
-
+  "home": {
+    "title": "Turning X-Ray into Visible Light",
+    "tagline1": "We may not be able to bend light, but we certainly can bend the material that produces light. We make scintillators",
+    "tagline2": "Bigger, Brighter and Bendable!",
+    "title2": "Revolutionizing the X-Ray Industry",
+    "description": "Enlipsium's thin film scintillator material is changing how X-ray devices are build. With a film so thin, flexible and sensitive, we can now customize X-ray devices like never before.\n\nGiven that most of the things we try to image are never really flat - have you ever wondered why X-ray detectors are always flat?\n\nCan we reduce the X-ray dosage used in medical screening?\n\nMany believe that the current X-ray dosage is sufficiently low, but at Enlipsium, we say let's go lower.\n\nJoin us today in our march towards a mordern X-ray industry!",
+    "tagline3": "Let There Be",
+    "tagline4": "Light"
+  }
 }
