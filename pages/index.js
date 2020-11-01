@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import * as Constants from "../utils/constants";
 import content from "../utils/content.json";
 import styled from "styled-components";
+import Button from "../components/Button";
 
 const LightGrayCol = styled(Col)`
   && {
@@ -55,7 +56,6 @@ const StyledRow = styled(Row)`
 
 const StyledRow2 = styled(Row)`
   && {
-    
   }
 `;
 
@@ -123,10 +123,22 @@ const Tagline4 = styled(Col)`
     text-transform: uppercase;
     font-style: italic;
     text-align: center;
+    margin-bottom: 10px;
+  }
+`;
+
+const StyledCol = styled(Col)`
+  && {
+    text-align: center;
   }
 `;
 
 export default function Home() {
+
+  const onButtonClick = () => {
+    window.location.assign("/")
+  }
+
   return (
     <Row>
       <LightGrayCol span={24}>
@@ -153,6 +165,9 @@ export default function Home() {
         <StyledRow2>
           <Tagline3 span={24}>{content.home.tagline3}</Tagline3>
           <Tagline4 span={24}>{content.home.tagline4}</Tagline4>
+          <StyledCol span={24}>
+            <Button buttonText="Contact Us" onClick={onButtonClick}/>
+          </StyledCol>
         </StyledRow2>
       </LightGrayCol2>
     </Row>
