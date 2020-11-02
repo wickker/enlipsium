@@ -5,7 +5,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Menu, Row, Col, Layout } from "antd";
 import * as Constants from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
 
 
 const { Footer, Content } = Layout;
@@ -64,6 +64,7 @@ const StyledCol2 = styled(Col)`
 const Copyright = styled(StyledCol2)`
   && {
     justify-content: flex-end;
+    padding-left: 30px;
   }
 `;
 
@@ -105,6 +106,18 @@ const StyledFooter = styled(Footer)`
     height: 50px;
     padding: 0;
     border-top: 1px solid #f0f0f0;
+  }
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  && {
+    .svg-inline--fa{
+      height: 3em;
+    }
+    margin-right: 10px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
@@ -175,7 +188,9 @@ export default function MyApp({ Component, pageProps }) {
             </Copyright>
             <StyledCol2 xs={2} sm={2} md={8} lg={8}></StyledCol2>
             <Icons xs={11} sm={11} md={8} lg={8}>
-              <FontAwesomeIcon icon={faFacebookSquare}/>
+              <StyledFontAwesomeIcon icon={faFacebookSquare}/>
+              <StyledFontAwesomeIcon icon={faTwitterSquare}/>
+              <StyledFontAwesomeIcon icon={faInstagramSquare}/>
             </Icons>
           </StyledRow2>
         </StyledFooter>
