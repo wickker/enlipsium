@@ -137,7 +137,7 @@ const StyledCol = styled(Col)`
 export default function Home() {
 
   const onButtonClick = () => {
-    window.location.assign("/")
+    window.location.assign("/contact")
   }
 
   return (

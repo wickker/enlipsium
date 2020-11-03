@@ -1,15 +1,17 @@
 import "antd/dist/antd.less";
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 import { Menu, Row, Col, Layout } from "antd";
 import * as Constants from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import {
   faFacebookSquare,
   faTwitterSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import { useRouter } from 'next/router'
 
 const { Footer, Content } = Layout;
 
@@ -64,6 +66,14 @@ const StyledCol2 = styled(Col)`
   }
 `;
 
+const StyledColEn = styled(StyledCol)`
+  && {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`;
+
 const Copyright = styled(StyledCol2)`
   && {
     justify-content: flex-end;
@@ -109,6 +119,7 @@ const StyledFooter = styled(Footer)`
     height: 50px;
     padding: 0;
     border-top: 1px solid #f0f0f0;
+    width: 100%;
   }
 `;
 
@@ -123,15 +134,28 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   }
 `;
 
+const Home = styled(Menu.Item)`
+&& {
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: inline-block;
+  }
+}
+`
+
 const { SubMenu } = Menu;
 
 export default function MyApp({ Component, pageProps }) {
-  const [currentOption, setCurrentOption] = React.useState("mail");
+  const router = useRouter()
+  const [routerOption, setRouterOption] = React.useState(router.pathname)
 
-  const handleClickMenuItem = (e) => {
-    console.log("Click: ", e);
-    setCurrentOption(e.key);
-  };
+  useEffect(() => {
+    setRouterOption(router.pathname)
+  }, [router.pathname])
+
+  const onEnlipsiumClick = () => {
+    window.location.assign("/")
+  }
 
   return (
     <div>
@@ -151,30 +175,32 @@ export default function MyApp({ Component, pageProps }) {
       <Layout>
         <StyledRow>
           <StyledCol xs={0} sm={1} md={3} lg={3}></StyledCol>
-          <StyledCol xs={0} sm={3} md={3} lg={3}>
+          <StyledColEn xs={0} sm={3} md={3} lg={3} onClick={onEnlipsiumClick}>
             Enlipsium
-          </StyledCol>
+          </StyledColEn>
           <Col xs={24} sm={19} md={15} lg={15}>
             <StyledUL>
               <Menu
-                onClick={handleClickMenuItem}
-                selectedKeys={[currentOption]}
+                selectedKeys={[routerOption]}
                 mode="horizontal"
               >
-                <SubMenu key="Products" title="Products">
+                <SubMenu key="products" title="Products">
                   <Menu.ItemGroup title="Nanoparticles">
                     <Menu.Item key="UCNPs">
                       Upconverting Nanoparticles (UCNPs)
                     </Menu.Item>
                   </Menu.ItemGroup>
                   <Menu.ItemGroup title="Quantum Dots">
-                    <Menu.Item key="PerovskiteNanocrystals">
+                    <Menu.Item key="perovskitenanocrystals">
                       CsPbX3 Perovskite Nanocrystals
                     </Menu.Item>
                   </Menu.ItemGroup>
                 </SubMenu>
-                <Menu.Item key="Scintillator">Scintillator</Menu.Item>
-                <Menu.Item key="Contact">Contact Us</Menu.Item>
+                <Menu.Item key="/scintillator">
+                  <Link href="/scintillator">Scintillator</Link>
+                </Menu.Item>
+                <Menu.Item key="/contact"><Link href="/contact">Contact Us</Link></Menu.Item>
+                <Home key="/"><Link href="/">Home</Link></Home>
               </Menu>
             </StyledUL>
           </Col>
