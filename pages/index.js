@@ -103,7 +103,7 @@ const Title2 = styled(Col)`
 
 const Description = styled(Col)`
   && {
-    color: ${Constants.lightGray};
+    color: ${Constants.darkGray};
     white-space: pre-line;
     line-height: 1.6;
   }
