@@ -5,8 +5,11 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Menu, Row, Col, Layout } from "antd";
 import * as Constants from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookSquare, faTwitterSquare, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
-
+import {
+  faFacebookSquare,
+  faTwitterSquare,
+  faInstagramSquare,
+} from "@fortawesome/free-brands-svg-icons";
 
 const { Footer, Content } = Layout;
 
@@ -111,9 +114,8 @@ const StyledFooter = styled(Footer)`
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   && {
-    .svg-inline--fa{
-      height: 3em;
-    }
+    min-height: 2em;
+    min-width: 2em;
     margin-right: 10px;
     &:hover {
       cursor: pointer;
@@ -188,9 +190,9 @@ export default function MyApp({ Component, pageProps }) {
             </Copyright>
             <StyledCol2 xs={2} sm={2} md={8} lg={8}></StyledCol2>
             <Icons xs={11} sm={11} md={8} lg={8}>
-              <StyledFontAwesomeIcon icon={faFacebookSquare}/>
-              <StyledFontAwesomeIcon icon={faTwitterSquare}/>
-              <StyledFontAwesomeIcon icon={faInstagramSquare}/>
+              <StyledFontAwesomeIcon icon={faFacebookSquare} />
+              <StyledFontAwesomeIcon icon={faTwitterSquare} />
+              <StyledFontAwesomeIcon icon={faInstagramSquare} />
             </Icons>
           </StyledRow2>
         </StyledFooter>

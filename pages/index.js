@@ -10,6 +10,7 @@ const LightGrayCol = styled(Col)`
     height: 500px;
     display: flex;
     align-items: center;
+    padding: 30px;
   }
 `;
 
