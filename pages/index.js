@@ -146,7 +146,7 @@ export default function Home() {
         <Row>
           <Title span={24}>{content.home.title}</Title>
           <Tagline span={24}>{content.home.tagline1}</Tagline>
-          <Tagline span={24}>{content.home.tagline2}</Tagline>
+          <Tagline span={24}><strong>{content.home.tagline2}</strong></Tagline>
         </Row>
       </LightGrayCol>
       <Col span={24}>

@@ -11,7 +11,7 @@ import {
   faTwitterSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const { Footer, Content } = Layout;
 
@@ -115,7 +115,7 @@ const StyledFooter = styled(Footer)`
   && {
     background-color: white;
     font-size: 14px;
-    color: ${Constants.gray};
+    color: ${Constants.darkGray};
     height: 50px;
     padding: 0;
     border-top: 1px solid #f0f0f0;
@@ -135,27 +135,27 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 `;
 
 const Home = styled(Menu.Item)`
-&& {
-  display: none;
-  @media only screen and (max-width: 600px) {
-    display: inline-block;
+  && {
+    display: none;
+    @media only screen and (max-width: 600px) {
+      display: inline-block;
+    }
   }
-}
-`
+`;
 
 const { SubMenu } = Menu;
 
 export default function MyApp({ Component, pageProps }) {
-  const router = useRouter()
-  const [routerOption, setRouterOption] = React.useState(router.pathname)
+  const router = useRouter();
+  const [routerOption, setRouterOption] = React.useState(router.pathname);
 
   useEffect(() => {
-    setRouterOption(router.pathname)
-  }, [router.pathname])
+    setRouterOption(router.pathname);
+  }, [router.pathname]);
 
   const onEnlipsiumClick = () => {
-    window.location.assign("/")
-  }
+    window.location.assign("/");
+  };
 
   return (
     <div>
@@ -180,10 +180,7 @@ export default function MyApp({ Component, pageProps }) {
           </StyledColEn>
           <Col xs={24} sm={19} md={15} lg={15}>
             <StyledUL>
-              <Menu
-                selectedKeys={[routerOption]}
-                mode="horizontal"
-              >
+              <Menu selectedKeys={[routerOption]} mode="horizontal">
                 <SubMenu key="products" title="Products">
                   <Menu.ItemGroup title="Nanoparticles">
                     <Menu.Item key="UCNPs">
@@ -199,8 +196,12 @@ export default function MyApp({ Component, pageProps }) {
                 <Menu.Item key="/scintillator">
                   <Link href="/scintillator">Scintillator</Link>
                 </Menu.Item>
-                <Menu.Item key="/contact"><Link href="/contact">Contact Us</Link></Menu.Item>
-                <Home key="/"><Link href="/">Home</Link></Home>
+                <Menu.Item key="/contact">
+                  <Link href="/contact">Contact Us</Link>
+                </Menu.Item>
+                <Home key="/">
+                  <Link href="/">Home</Link>
+                </Home>
               </Menu>
             </StyledUL>
           </Col>

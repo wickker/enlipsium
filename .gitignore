@@ -29,3 +29,6 @@ storybook-static
 test-report.xml
 test-report.json
 node_modules
+
+#api keys
+.env.local
