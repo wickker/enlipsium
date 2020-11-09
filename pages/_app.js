@@ -70,6 +70,7 @@ const StyledColEn = styled(StyledCol)`
   && {
     &:hover {
       cursor: pointer;
+      color: ${Constants.marine};
     }
   }
 `;
