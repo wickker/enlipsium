@@ -17,7 +17,7 @@ const { Footer, Content } = Layout;
 
 const GlobalStyle = createGlobalStyle`
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0; 
   margin: 0;
   font-size: 16px;
@@ -68,6 +68,7 @@ const StyledCol2 = styled(Col)`
 
 const StyledColEn = styled(StyledCol)`
   && {
+    font-weight: 500;
     &:hover {
       cursor: pointer;
       color: ${Constants.marine};
@@ -171,6 +172,8 @@ export default function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
           rel="stylesheet"
         ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"></link>
       </Head>
       <GlobalStyle />
       <Layout>

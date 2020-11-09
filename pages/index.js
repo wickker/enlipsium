@@ -31,6 +31,7 @@ const Title = styled(Col)`
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-weight: 500;
     @media only screen and (max-width: 600px) {
       font-size: 45px;
     }

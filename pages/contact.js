@@ -37,7 +37,7 @@ const FormTitle = styled.div`
 
 const scaleTitle = keyframes`
   from {
-    font-size: 35px;
+    font-size: 25px;
   }
   to {
     font-size: 30px;
@@ -47,7 +47,8 @@ const scaleTitle = keyframes`
 const Title = styled.div`
   font-size: 30px;
   color: white;
-  animation: ${scaleTitle} 0.5s linear 1s 1;
+  animation: ${scaleTitle} 0.5s linear 1;
+  text-align: center;
 `;
 
 const FormLabel = styled.div`
@@ -242,12 +243,15 @@ export default function Contact() {
         <ContactText>
           <strong>ttham@enlipsium.com</strong>
         </ContactText>
+        <ContactText>
+          <strong>+65 6980 0705</strong>
+        </ContactText>
       </InfoCol>
       <InfoCol2>
         <InfoText>
           Enlipsium is a National University of Singapore (NUS) Graduate
           Research Innovation Programme (GRIP) company i.e. a spin off company
-          driven by NUS-developed technology. Please feel free to contact the{" "}
+          driven by NUS-developed technology. Feel free to contact the{" "}
           <a href="http://www.nus.edu.sg/ilo" target="_blank">
             NUS Industry Liaison Office (ILO)
           </a>{" "}
