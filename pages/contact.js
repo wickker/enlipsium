@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import * as Constants from "../utils/constants";
 import { Row, Col, Input, Alert } from "antd";
 import emailjs from "emailjs-com";
@@ -35,10 +35,19 @@ const FormTitle = styled.div`
   color: ${Constants.gray};
 `;
 
+const scaleTitle = keyframes`
+  from {
+    font-size: 35px;
+  }
+  to {
+    font-size: 30px;
+  }
+`;
+
 const Title = styled.div`
   font-size: 30px;
-  text-align: center;
   color: white;
+  animation: ${scaleTitle} 0.5s linear 1s 1;
 `;
 
 const FormLabel = styled.div`
