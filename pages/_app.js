@@ -172,8 +172,14 @@ export default function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
           rel="stylesheet"
         ></link>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <GlobalStyle />
       <Layout>
