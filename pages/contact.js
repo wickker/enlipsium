@@ -153,7 +153,7 @@ const ContactText = styled.div`
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
-  word-break: break-all;
+  // word-break: break-all;
 `;
 
 export default function Contact() {
