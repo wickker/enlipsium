@@ -21,22 +21,45 @@ body {
   padding: 0; 
   margin: 0;
   font-size: 16px;
+  font-weight: 400;
 }
 `;
 
 const StyledUL = styled.ul`
   padding: 0;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   .ant-menu-horizontal {
     line-height: 50px;
   }
   .ant-menu {
     text-align: right;
     font-size: 14px;
-    border-bottom: none;
     background: white;
     color: ${Constants.semiBlack};
-    border-bottom: 1px solid #f0f0f0;
+    border: none;
+  }
+  @media only screen and (max-width: 991px) {
+    justify-content: center;
+  }
+  @media only screen and (max-width: 465px) {
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+      margin: 0 15px;
+  }
+  @media only screen and (max-width: 400px) {
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+      margin: 0 10px;
+      font-size: 13px;
+  }
+  @media only screen and (max-width: 340px) {
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+      margin: 0 8px;
+      font-size: 12px;
   }
 `;
 
@@ -48,11 +71,8 @@ const StyledCol = styled(Col)`
     align-items: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border-bottom: 1px solid #f0f0f0;
-    @media only screen and (max-width: 900px) {
-      word-break: break-all;
-    }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 991px) {
+      // word-break: break-all;
       display: none;
     }
   }
@@ -66,12 +86,13 @@ const StyledCol2 = styled(Col)`
   }
 `;
 
-const StyledColEn = styled(StyledCol)`
+const StyledColLogo = styled(StyledCol)`
   && {
-    font-weight: 500;
     &:hover {
       cursor: pointer;
-      color: ${Constants.marine};
+    }
+    @media only screen and (max-width: 991px) {
+      display: none;
     }
   }
 `;
@@ -80,6 +101,9 @@ const Copyright = styled(StyledCol2)`
   && {
     justify-content: flex-end;
     padding-left: 30px;
+    @media only screen and (max-width: 400px) {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -102,7 +126,10 @@ const StyledRow = styled(Row)`
     width: 100%;
     z-index: 99;
     background-color: white;
-    color: ${Constants.semiBlack};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid ${Constants.headerBorder};
   }
 `;
 
@@ -139,7 +166,7 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 const Home = styled(Menu.Item)`
   && {
     display: none;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 991px) {
       display: inline-block;
     }
   }
@@ -168,29 +195,23 @@ export default function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
           rel="stylesheet"
         ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <GlobalStyle />
       <Layout>
         <StyledRow>
-          <StyledCol xs={0} sm={1} md={3} lg={3}></StyledCol>
-          <StyledColEn xs={0} sm={3} md={3} lg={3} onClick={onEnlipsiumClick}>
-            Enlipsium
-          </StyledColEn>
-          <Col xs={24} sm={19} md={15} lg={15}>
+          <StyledCol xs={0} sm={0} md={3} lg={3}></StyledCol>
+          <StyledColLogo xs={0} sm={0} md={3} lg={3} onClick={onEnlipsiumClick}>
+            <img
+              src="https://via.placeholder.com/150x40?text=Site+Logo"
+              alt="Enlipsium logo"
+            />
+          </StyledColLogo>
+          <Col xs={24} sm={24} md={15} lg={15}>
             <StyledUL>
               <Menu selectedKeys={[routerOption]} mode="horizontal">
+                <Home key="/">
+                  <Link href="/">Home</Link>
+                </Home>
                 <SubMenu key="products" title="Products">
                   <Menu.ItemGroup title="Nanoparticles">
                     <Menu.Item key="UCNPs">
@@ -209,13 +230,10 @@ export default function MyApp({ Component, pageProps }) {
                 <Menu.Item key="/contact">
                   <Link href="/contact">Contact Us</Link>
                 </Menu.Item>
-                <Home key="/">
-                  <Link href="/">Home</Link>
-                </Home>
               </Menu>
             </StyledUL>
           </Col>
-          <StyledCol xs={0} sm={1} md={3} lg={3}></StyledCol>
+          <StyledCol xs={0} sm={0} md={3} lg={3}></StyledCol>
         </StyledRow>
         <StyledContent>
           <Component {...pageProps} />

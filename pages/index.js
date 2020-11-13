@@ -32,8 +32,11 @@ const Title = styled(Col)`
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 575px) {
       font-size: 45px;
+    }
+    @media only screen and (max-width: 340px) {
+      font-size: 42px;
     }
   }
 `;
@@ -44,8 +47,11 @@ const Tagline = styled(Col)`
     font-size: 20px;
     text-align: center;
     margin-bottom: 5px;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 575px) {
       font-size: 16px;
+    }
+    @media only screen and (max-width: 340px) {
+      font-size: 14px;
     }
   }
 `;
@@ -67,7 +73,7 @@ const LeftCol = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 991px) {
       padding-right: 0px;
     }
   }
@@ -86,7 +92,7 @@ const RightCol = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 991px) {
       padding-left: 0px;
       padding-top: 30px;
       text-align: center;
@@ -99,6 +105,9 @@ const Title2 = styled(Col)`
     font-size: 40px;
     line-height: 1.3;
     margin-bottom: 30px;
+    @media only screen and (max-width: 340px) {
+      font-size: 38px;
+    }
   }
 `;
 
@@ -107,6 +116,10 @@ const Description = styled(Col)`
     color: ${Constants.darkGray};
     white-space: pre-line;
     line-height: 1.6;
+    @media only screen and (max-width: 340px) {
+      font-size: 14px;
+      padding: 0 10px;
+    }
   }
 `;
 
