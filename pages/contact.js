@@ -23,7 +23,7 @@ const MapCol = styled(Col)`
   && {
     padding: 60px 40px 60px 90px;
     height: 75vh;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 991px) {
       padding: 30px;
     }
   }
@@ -49,6 +49,9 @@ const Title = styled.div`
   color: white;
   animation: ${scaleTitle} 0.5s linear 1;
   text-align: center;
+  @media only screen and (max-width: 340px) {
+    font-size: 25px;
+  }
 `;
 
 const FormLabel = styled.div`
@@ -60,7 +63,7 @@ const FormLabel = styled.div`
 const FormCol = styled(Col)`
   && {
     padding: 60px 90px 40px 60px;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 991px) {
       padding: 30px;
     }
   }
@@ -106,6 +109,9 @@ const TitleCol = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: 400px) {
+      padding: 60px 30px;
+    }
   }
 `;
 
@@ -113,6 +119,9 @@ const InfoCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
     padding: 60px 90px 0 90px;
+    @media only screen and (max-width: 400px) {
+      padding: 60px 30px 0 30px;
+    }
   }
 `;
 
@@ -120,7 +129,7 @@ const InfoCol2 = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
     padding: 0 30% 60px 30%;
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 991px) {
       padding: 0 30px 60px 30px;
     }
   }
@@ -144,6 +153,7 @@ const ContactText = styled.div`
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
+  word-break: break-all;
 `;
 
 export default function Contact() {
