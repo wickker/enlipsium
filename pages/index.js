@@ -4,20 +4,47 @@ import content from "../utils/content.json";
 import styled from "styled-components";
 import Button from "../components/Button";
 
-const LightGrayCol = styled(Col)`
+const MainTitleCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
-    height: 500px;
+    height: 70vh;
     display: flex;
     align-items: center;
     padding: 30px;
   }
 `;
 
-const LightGrayCol2 = styled(Col)`
+const AboutCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
-    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 60px 30px 30px 30px;
+    justify-content: center;
+  }
+`;
+
+const AboutTitle = styled(Col)`
+  && {
+    font-size: 40px;
+    color: ${Constants.marine};
+    text-align: center;
+    margin-bottom: 5px;
+  }
+`;
+
+const AboutTagline = styled(Col)`
+  && {
+    color: ${Constants.lightGray};
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+`;
+
+const ContactCol = styled(Col)`
+  && {
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,16 +54,13 @@ const LightGrayCol2 = styled(Col)`
 const Title = styled(Col)`
   && {
     color: ${Constants.marine};
-    font-size: 60px;
+    font-size: 65px;
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
     @media only screen and (max-width: 575px) {
       font-size: 45px;
-    }
-    @media only screen and (max-width: 340px) {
-      font-size: 42px;
     }
   }
 `;
@@ -50,20 +74,12 @@ const Tagline = styled(Col)`
     @media only screen and (max-width: 575px) {
       font-size: 16px;
     }
-    @media only screen and (max-width: 340px) {
-      font-size: 14px;
-    }
   }
 `;
 
 const StyledRow = styled(Row)`
   && {
-    margin: 30px;
-  }
-`;
-
-const StyledRow2 = styled(Row)`
-  && {
+    margin: 60px 30px;
   }
 `;
 
@@ -106,7 +122,7 @@ const Title2 = styled(Col)`
     line-height: 1.3;
     margin-bottom: 30px;
     @media only screen and (max-width: 340px) {
-      font-size: 38px;
+      font-size: 40px;
     }
   }
 `;
@@ -117,7 +133,7 @@ const Description = styled(Col)`
     white-space: pre-line;
     line-height: 1.6;
     @media only screen and (max-width: 340px) {
-      font-size: 14px;
+      font-size: 16px;
       padding: 0 10px;
     }
   }
@@ -148,21 +164,53 @@ const StyledCol = styled(Col)`
   }
 `;
 
-export default function Home() {
-
-  const onButtonClick = () => {
-    window.location.assign("/contact")
+const AvatarCol = styled(Col)`
+  && {
+    padding: 0 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
+`;
+
+const StyledAvatar = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+`;
+
+const StaffName = styled.div`
+  text-align: center;
+  color: ${Constants.darkGray};
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+`;
+
+const StaffPosition = styled.div`
+  text-align: center;
+  color: ${Constants.gray};
+  font-size: 16px;
+  font-style: italic;
+`;
+
+export default function Home() {
+  const onButtonClick = () => {
+    window.location.assign("/contact");
+  };
 
   return (
     <Row>
-      <LightGrayCol span={24}>
+      <MainTitleCol span={24}>
         <Row>
           <Title span={24}>{content.home.title}</Title>
           <Tagline span={24}>{content.home.tagline1}</Tagline>
-          <Tagline span={24}><strong>{content.home.tagline2}</strong></Tagline>
+          <Tagline span={24}>
+            <strong>{content.home.tagline2}</strong>
+          </Tagline>
         </Row>
-      </LightGrayCol>
+      </MainTitleCol>
       <Col span={24}>
         <StyledRow>
           <LeftCol xs={24} sm={24} md={24} lg={12}>
@@ -176,15 +224,58 @@ export default function Home() {
           </RightCol>
         </StyledRow>
       </Col>
-      <LightGrayCol2 span={24}>
-        <StyledRow2>
+      <AboutCol span={24}>
+        <Row>
+          <AboutTitle xs={24} sm={24} md={24} lg={24}>
+            Who Are These People Anyway?
+          </AboutTitle>
+          <AboutTagline xs={24} sm={24} md={24} lg={24}>
+            Teamwork makes the dream work
+          </AboutTagline>
+
+          <AvatarCol xs={24} sm={24} md={12} lg={6}>
+            <StyledAvatar
+              src="https://via.placeholder.com/300"
+              alt="Enlipsium staff"
+            />
+            <StaffName>Tommy Tham</StaffName>
+            <StaffPosition>Founder & CEO</StaffPosition>
+          </AvatarCol>
+          <AvatarCol xs={24} sm={24} md={12} lg={6}>
+            <StyledAvatar
+              src="https://via.placeholder.com/300"
+              alt="Enlipsium staff"
+            />
+            <StaffName>Full Name</StaffName>
+            <StaffPosition>Position</StaffPosition>
+          </AvatarCol>
+          <AvatarCol xs={24} sm={24} md={12} lg={6}>
+            <StyledAvatar
+              src="https://via.placeholder.com/300"
+              alt="Enlipsium staff"
+            />
+            <StaffName>Full Name</StaffName>
+            <StaffPosition>Position</StaffPosition>
+          </AvatarCol>
+          <AvatarCol xs={24} sm={24} md={12} lg={6}>
+            <StyledAvatar
+              src="https://via.placeholder.com/300"
+              alt="Enlipsium staff"
+            />
+            <StaffName>Full Name</StaffName>
+            <StaffPosition>Position</StaffPosition>
+          </AvatarCol>
+        </Row>
+      </AboutCol>
+      <ContactCol span={24}>
+        <Row>
           <Tagline3 span={24}>{content.home.tagline3}</Tagline3>
           <Tagline4 span={24}>{content.home.tagline4}</Tagline4>
           <StyledCol span={24}>
-            <Button buttonText="Contact Us" onClick={onButtonClick}/>
+            <Button buttonText="Contact Us" onClick={onButtonClick} />
           </StyledCol>
-        </StyledRow2>
-      </LightGrayCol2>
+        </Row>
+      </ContactCol>
     </Row>
   );
 }

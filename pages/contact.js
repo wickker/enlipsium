@@ -248,13 +248,13 @@ export default function Contact() {
       </FormCol>
       <InfoCol span={24}>
         <ContactText>
-          <strong>Ubi Techpark, 10 Ubi Cres, #05-70, Singapore 408564</strong>
-        </ContactText>
-        <ContactText>
           <strong>ttham@enlipsium.com</strong>
         </ContactText>
         <ContactText>
           <strong>+65 6980 0705</strong>
+        </ContactText>
+        <ContactText>
+          <strong>Ubi Techpark, 10 Ubi Cres, #05-70, Singapore 408564</strong>
         </ContactText>
       </InfoCol>
       <InfoCol2>
