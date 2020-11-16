@@ -4,50 +4,13 @@ import content from "../utils/content.json";
 import styled from "styled-components";
 import Button from "../components/Button";
 
-const MainTitleCol = styled(Col)`
+const TitleCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
     height: 70vh;
     display: flex;
     align-items: center;
     padding: 30px;
-  }
-`;
-
-const AboutCol = styled(Col)`
-  && {
-    background-color: ${Constants.lightestGray};
-    display: flex;
-    align-items: center;
-    padding: 60px 30px 30px 30px;
-    justify-content: center;
-  }
-`;
-
-const AboutTitle = styled(Col)`
-  && {
-    font-size: 40px;
-    color: ${Constants.marine};
-    text-align: center;
-    margin-bottom: 5px;
-  }
-`;
-
-const AboutTagline = styled(Col)`
-  && {
-    color: ${Constants.lightGray};
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-`;
-
-const ContactCol = styled(Col)`
-  && {
-    padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 `;
 
@@ -77,13 +40,13 @@ const Tagline = styled(Col)`
   }
 `;
 
-const StyledRow = styled(Row)`
+const StyledWriteUpRow = styled(Row)`
   && {
     margin: 60px 30px;
   }
 `;
 
-const LeftCol = styled(Col)`
+const LeftImageCol = styled(Col)`
   && {
     padding-right: 30px;
     display: flex;
@@ -102,7 +65,7 @@ const StyledImage = styled.img`
   border-radius: 25% 10%;
 `;
 
-const RightCol = styled(Col)`
+const RightWriteUpCol = styled(Col)`
   && {
     padding-left: 30px;
     display: flex;
@@ -115,7 +78,7 @@ const RightCol = styled(Col)`
   }
 `;
 
-const Title2 = styled(Col)`
+const WriteUpTitle = styled(Col)`
   && {
     color: ${Constants.gray};
     font-size: 40px;
@@ -127,7 +90,7 @@ const Title2 = styled(Col)`
   }
 `;
 
-const Description = styled(Col)`
+const WriteUp = styled(Col)`
   && {
     color: ${Constants.darkGray};
     white-space: pre-line;
@@ -139,28 +102,31 @@ const Description = styled(Col)`
   }
 `;
 
-const Tagline3 = styled(Col)`
+const AboutCol = styled(Col)`
   && {
-    font-size: 40px;
-    color: ${Constants.gray};
-    text-align: center;
+    background-color: ${Constants.lightestGray};
+    display: flex;
+    align-items: center;
+    padding: 60px 30px 30px 30px;
+    justify-content: center;
   }
 `;
 
-const Tagline4 = styled(Col)`
+const AboutTitle = styled(Col)`
   && {
     font-size: 40px;
+    color: ${Constants.marine};
+    text-align: center;
+    margin-bottom: 5px;
+  }
+`;
+
+const AboutTagline = styled(Col)`
+  && {
     color: ${Constants.lightGray};
-    text-transform: uppercase;
-    font-style: italic;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 10px;
-  }
-`;
-
-const StyledCol = styled(Col)`
-  && {
-    text-align: center;
+    margin-bottom: 30px;
   }
 `;
 
@@ -195,6 +161,40 @@ const StaffPosition = styled.div`
   font-style: italic;
 `;
 
+const ContactCol = styled(Col)`
+  && {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
+const ContactTitle1 = styled(Col)`
+  && {
+    font-size: 40px;
+    color: ${Constants.gray};
+    text-align: center;
+  }
+`;
+
+const ContactTitle2 = styled(Col)`
+  && {
+    font-size: 40px;
+    color: ${Constants.lightGray};
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+`;
+
+const ContactButtonCol = styled(Col)`
+  && {
+    text-align: center;
+  }
+`;
+
 export default function Home() {
   const onButtonClick = () => {
     window.location.assign("/contact");
@@ -202,7 +202,7 @@ export default function Home() {
 
   return (
     <Row>
-      <MainTitleCol span={24}>
+      <TitleCol span={24}>
         <Row>
           <Title span={24}>{content.home.title}</Title>
           <Tagline span={24}>{content.home.tagline1}</Tagline>
@@ -210,19 +210,19 @@ export default function Home() {
             <strong>{content.home.tagline2}</strong>
           </Tagline>
         </Row>
-      </MainTitleCol>
+      </TitleCol>
       <Col span={24}>
-        <StyledRow>
-          <LeftCol xs={24} sm={24} md={24} lg={12}>
+        <StyledWriteUpRow>
+          <LeftImageCol xs={24} sm={24} md={24} lg={12}>
             <StyledImage src="x-ray-machine.png" alt="x-ray machine" />
-          </LeftCol>
-          <RightCol xs={24} sm={24} md={24} lg={12}>
+          </LeftImageCol>
+          <RightWriteUpCol xs={24} sm={24} md={24} lg={12}>
             <Row>
-              <Title2 span={24}>{content.home.title2}</Title2>
-              <Description span={24}>{content.home.description}</Description>
+              <WriteUpTitle span={24}>{content.home.title2}</WriteUpTitle>
+              <WriteUp span={24}>{content.home.description}</WriteUp>
             </Row>
-          </RightCol>
-        </StyledRow>
+          </RightWriteUpCol>
+        </StyledWriteUpRow>
       </Col>
       <AboutCol span={24}>
         <Row>
@@ -232,7 +232,6 @@ export default function Home() {
           <AboutTagline xs={24} sm={24} md={24} lg={24}>
             Teamwork makes the dream work
           </AboutTagline>
-
           <AvatarCol xs={24} sm={24} md={12} lg={6}>
             <StyledAvatar
               src="https://via.placeholder.com/300"
@@ -269,11 +268,11 @@ export default function Home() {
       </AboutCol>
       <ContactCol span={24}>
         <Row>
-          <Tagline3 span={24}>{content.home.tagline3}</Tagline3>
-          <Tagline4 span={24}>{content.home.tagline4}</Tagline4>
-          <StyledCol span={24}>
+          <ContactTitle1 span={24}>{content.home.tagline3}</ContactTitle1>
+          <ContactTitle2 span={24}>{content.home.tagline4}</ContactTitle2>
+          <ContactButtonCol span={24}>
             <Button buttonText="Contact Us" onClick={onButtonClick} />
-          </StyledCol>
+          </ContactButtonCol>
         </Row>
       </ContactCol>
     </Row>
