@@ -31,27 +31,24 @@ const MapCol = styled(Col)`
 
 const FormTitle = styled.div`
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 40px;
   color: ${Constants.gray};
 `;
 
-const scaleTitle = keyframes`
+const ScaleTitle = keyframes`
   from {
     font-size: 25px;
   }
   to {
-    font-size: 30px;
+    font-size: 35px;
   }
 `;
 
 const Title = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   color: white;
-  animation: ${scaleTitle} 0.5s linear 1;
+  animation: ${ScaleTitle} 0.5s linear 1;
   text-align: center;
-  @media only screen and (max-width: 340px) {
-    font-size: 25px;
-  }
 `;
 
 const FormLabel = styled.div`

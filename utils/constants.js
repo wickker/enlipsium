@@ -5,4 +5,4 @@ export const gray = "#5A5A5A";
 export const lightGray = "#848689"
 export const lightestGray = "#F6F6F6";
 export const marine = "#3AAFA9";
-export const headerBorder = "#f0f0f0";
+export const border = "#f0f0f0";

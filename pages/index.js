@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import * as Constants from "../utils/constants";
 import content from "../utils/content.json";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Button from "../components/Button";
 
 const TitleCol = styled(Col)`
@@ -17,11 +17,14 @@ const TitleCol = styled(Col)`
 const Title = styled(Col)`
   && {
     color: ${Constants.marine};
-    font-size: 65px;
+    font-size: 75px;
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
+    @media only screen and (max-width: 991px) {
+      font-size: 65px;
+    }
     @media only screen and (max-width: 575px) {
       font-size: 45px;
     }
