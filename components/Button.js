@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   border: solid 3px ${Constants.marine};
   padding: 5px 30px;
   font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   &:hover {
     box-shadow: 0 6px 6px -6px ${Constants.marine};
     cursor: pointer;

@@ -4,6 +4,12 @@ import content from "../utils/content.json";
 import styled, { keyframes } from "styled-components";
 import Button from "../components/Button";
 
+// --------------------------------
+// --------------------------------
+// -------------TITLE--------------
+// --------------------------------
+// --------------------------------
+
 const TitleCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
@@ -14,42 +20,55 @@ const TitleCol = styled(Col)`
   }
 `;
 
-const Title = styled(Col)`
+const TitleText = styled(Col)`
   && {
     color: ${Constants.marine};
-    font-size: 75px;
+    font-size: 85px;
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
     @media only screen and (max-width: 991px) {
-      font-size: 65px;
+      font-size: 75px;
     }
     @media only screen and (max-width: 575px) {
-      font-size: 45px;
+      font-size: 55px;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 50px;
     }
   }
 `;
 
-const Tagline = styled(Col)`
+const TitleTagline = styled(Col)`
   && {
     color: ${Constants.gray};
     font-size: 20px;
     text-align: center;
     margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
     @media only screen and (max-width: 575px) {
       font-size: 16px;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 15px;
     }
   }
 `;
 
-const StyledWriteUpRow = styled(Row)`
+// --------------------------------
+// --------------------------------
+// ----------DESCRIPTION-----------
+// --------------------------------
+// --------------------------------
+
+const DescriptionRow = styled(Row)`
   && {
     margin: 60px 30px;
   }
 `;
 
-const LeftImageCol = styled(Col)`
+const DescriptionImageCol = styled(Col)`
   && {
     padding-right: 30px;
     display: flex;
@@ -61,14 +80,14 @@ const LeftImageCol = styled(Col)`
   }
 `;
 
-const StyledImage = styled.img`
+const DescriptionImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   border-radius: 25% 10%;
 `;
 
-const RightWriteUpCol = styled(Col)`
+const DescriptionTextCol = styled(Col)`
   && {
     padding-left: 30px;
     display: flex;
@@ -81,10 +100,10 @@ const RightWriteUpCol = styled(Col)`
   }
 `;
 
-const WriteUpTitle = styled(Col)`
+const DescriptionTextTitle = styled(Col)`
   && {
     color: ${Constants.gray};
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.3;
     margin-bottom: 30px;
     @media only screen and (max-width: 340px) {
@@ -93,17 +112,25 @@ const WriteUpTitle = styled(Col)`
   }
 `;
 
-const WriteUp = styled(Col)`
+const DescriptionText = styled(Col)`
   && {
     color: ${Constants.darkGray};
     white-space: pre-line;
     line-height: 1.6;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
     @media only screen and (max-width: 340px) {
-      font-size: 16px;
+      font-size: 14px;
       padding: 0 10px;
     }
   }
 `;
+
+// --------------------------------
+// --------------------------------
+// -------------ABOUT--------------
+// --------------------------------
+// --------------------------------
 
 const AboutCol = styled(Col)`
   && {
@@ -117,7 +144,7 @@ const AboutCol = styled(Col)`
 
 const AboutTitle = styled(Col)`
   && {
-    font-size: 40px;
+    font-size: 50px;
     color: ${Constants.marine};
     text-align: center;
     margin-bottom: 5px;
@@ -127,13 +154,14 @@ const AboutTitle = styled(Col)`
 const AboutTagline = styled(Col)`
   && {
     color: ${Constants.lightGray};
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     text-align: center;
     margin-bottom: 30px;
   }
 `;
 
-const AvatarCol = styled(Col)`
+const AboutAvatarCol = styled(Col)`
   && {
     padding: 0 20px 30px 20px;
     display: flex;
@@ -142,14 +170,15 @@ const AvatarCol = styled(Col)`
   }
 `;
 
-const StyledAvatar = styled.img`
+const AboutAvatar = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   border-radius: 50%;
 `;
 
-const StaffName = styled.div`
+const AboutStaffName = styled.div`
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   color: ${Constants.darkGray};
   font-size: 16px;
@@ -157,12 +186,19 @@ const StaffName = styled.div`
   margin-top: 20px;
 `;
 
-const StaffPosition = styled.div`
+const AboutStaffPosition = styled.div`
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   color: ${Constants.gray};
   font-size: 16px;
   font-style: italic;
 `;
+
+// --------------------------------
+// --------------------------------
+// -------------CONTACT------------
+// --------------------------------
+// --------------------------------
 
 const ContactCol = styled(Col)`
   && {
@@ -178,6 +214,7 @@ const ContactTitle1 = styled(Col)`
     font-size: 40px;
     color: ${Constants.gray};
     text-align: center;
+    font-family: "Montserrat", sans-serif;
   }
 `;
 
@@ -189,6 +226,7 @@ const ContactTitle2 = styled(Col)`
     font-style: italic;
     text-align: center;
     margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
   }
 `;
 
@@ -207,25 +245,29 @@ export default function Home() {
     <Row>
       <TitleCol span={24}>
         <Row>
-          <Title span={24}>{content.home.title}</Title>
-          <Tagline span={24}>{content.home.tagline1}</Tagline>
-          <Tagline span={24}>
+          <TitleText span={24}>{content.home.title}</TitleText>
+          <TitleTagline span={24}>{content.home.tagline1}</TitleTagline>
+          <TitleTagline span={24}>
             <strong>{content.home.tagline2}</strong>
-          </Tagline>
+          </TitleTagline>
         </Row>
       </TitleCol>
       <Col span={24}>
-        <StyledWriteUpRow>
-          <LeftImageCol xs={24} sm={24} md={24} lg={12}>
-            <StyledImage src="x-ray-machine.png" alt="x-ray machine" />
-          </LeftImageCol>
-          <RightWriteUpCol xs={24} sm={24} md={24} lg={12}>
+        <DescriptionRow>
+          <DescriptionImageCol xs={24} sm={24} md={24} lg={12}>
+            <DescriptionImage src="x-ray-machine.png" alt="x-ray machine" />
+          </DescriptionImageCol>
+          <DescriptionTextCol xs={24} sm={24} md={24} lg={12}>
             <Row>
-              <WriteUpTitle span={24}>{content.home.title2}</WriteUpTitle>
-              <WriteUp span={24}>{content.home.description}</WriteUp>
+              <DescriptionTextTitle span={24}>
+                {content.home.title2}
+              </DescriptionTextTitle>
+              <DescriptionText span={24}>
+                {content.home.description}
+              </DescriptionText>
             </Row>
-          </RightWriteUpCol>
-        </StyledWriteUpRow>
+          </DescriptionTextCol>
+        </DescriptionRow>
       </Col>
       <AboutCol span={24}>
         <Row>
@@ -233,40 +275,40 @@ export default function Home() {
             Who Are These People Anyway?
           </AboutTitle>
           <AboutTagline xs={24} sm={24} md={24} lg={24}>
-            Teamwork makes the dream work
+            Teamwork Makes the Dream Work
           </AboutTagline>
-          <AvatarCol xs={24} sm={24} md={12} lg={6}>
-            <StyledAvatar
+          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
+            <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <StaffName>Tommy Tham</StaffName>
-            <StaffPosition>Founder & CEO</StaffPosition>
-          </AvatarCol>
-          <AvatarCol xs={24} sm={24} md={12} lg={6}>
-            <StyledAvatar
+            <AboutStaffName>Tommy Tham</AboutStaffName>
+            <AboutStaffPosition>Founder & CEO</AboutStaffPosition>
+          </AboutAvatarCol>
+          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
+            <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <StaffName>Full Name</StaffName>
-            <StaffPosition>Position</StaffPosition>
-          </AvatarCol>
-          <AvatarCol xs={24} sm={24} md={12} lg={6}>
-            <StyledAvatar
+            <AboutStaffName>Full Name</AboutStaffName>
+            <AboutStaffPosition>Position</AboutStaffPosition>
+          </AboutAvatarCol>
+          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
+            <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <StaffName>Full Name</StaffName>
-            <StaffPosition>Position</StaffPosition>
-          </AvatarCol>
-          <AvatarCol xs={24} sm={24} md={12} lg={6}>
-            <StyledAvatar
+            <AboutStaffName>Full Name</AboutStaffName>
+            <AboutStaffPosition>Position</AboutStaffPosition>
+          </AboutAvatarCol>
+          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
+            <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <StaffName>Full Name</StaffName>
-            <StaffPosition>Position</StaffPosition>
-          </AvatarCol>
+            <AboutStaffName>Full Name</AboutStaffName>
+            <AboutStaffPosition>Position</AboutStaffPosition>
+          </AboutAvatarCol>
         </Row>
       </AboutCol>
       <ContactCol span={24}>

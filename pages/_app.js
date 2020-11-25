@@ -185,6 +185,7 @@ const FooterCopyrightText = styled(FooterDummyCol)`
   && {
     justify-content: flex-end;
     padding-left: 30px;
+    font-size: 16px;
     @media (max-width: 400px) {
       font-size: 13px;
     }
@@ -206,7 +207,6 @@ const FooterRow = styled(Row)`
 const FooterStyled = styled(Footer)`
   && {
     background-color: white;
-    font-size: 14px;
     color: ${Constants.darkGray};
     height: 50px;
     padding: 0;
