@@ -4,97 +4,10 @@ import * as Constants from "../utils/constants";
 import { Row, Col, Input, Alert } from "antd";
 import emailjs from "emailjs-com";
 
-const StyledIFrame = styled.iframe`
-  height: 100%;
-  width: 100%;
-  border: none;
-  box-shadow: 3px 3px 10px ${Constants.lightGray};
-  border-radius: 20px;
-`;
-
 const StyledRow = styled(Row)`
   && {
     display: flex;
     align-items: center;
-  }
-`;
-
-const MapCol = styled(Col)`
-  && {
-    padding: 60px 40px 60px 90px;
-    height: 75vh;
-    @media only screen and (max-width: 991px) {
-      padding: 30px;
-    }
-  }
-`;
-
-const FormTitle = styled.div`
-  margin-bottom: 20px;
-  font-size: 40px;
-  color: ${Constants.gray};
-`;
-
-const ScaleTitle = keyframes`
-  from {
-    font-size: 25px;
-  }
-  to {
-    font-size: 35px;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 35px;
-  color: white;
-  animation: ${ScaleTitle} 0.5s linear 1;
-  text-align: center;
-`;
-
-const FormLabel = styled.div`
-  color: ${Constants.semiBlack};
-  margin-bottom: 3px;
-  font-size: 16px;
-`;
-
-const FormCol = styled(Col)`
-  && {
-    padding: 60px 90px 40px 60px;
-    @media only screen and (max-width: 991px) {
-      padding: 30px;
-    }
-  }
-`;
-
-const StyledInput = styled(Input)`
-  && {
-    margin-bottom: 15px;
-  }
-`;
-
-const StyledAlert = styled(Alert)`
-  && {
-    margin-bottom: 15px;
-  }
-`;
-
-const StyledTA = styled(Input.TextArea)`
-  && {
-    margin-bottom: 20px;
-  }
-`;
-
-const StyledInputButton = styled.input`
-  background: ${Constants.darkGray};
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: solid 3px ${Constants.marine};
-  padding: 5px 30px;
-  font-size: 15px;
-  &:hover {
-    box-shadow: 0 6px 6px -6px ${Constants.marine};
-    cursor: pointer;
   }
 `;
 
@@ -112,6 +25,107 @@ const TitleCol = styled(Col)`
   }
 `;
 
+const TitleScaleAnimation = keyframes`
+  from {
+    font-size: 25px;
+  }
+  to {
+    font-size: 35px;
+  }
+`;
+
+const Title = styled.div`
+  font-size: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  animation: ${TitleScaleAnimation} 0.5s linear 1;
+  text-align: center;
+`;
+
+const MapIFrame = styled.iframe`
+  height: 100%;
+  width: 100%;
+  border: none;
+  box-shadow: 3px 3px 10px ${Constants.lightGray};
+  border-radius: 20px;
+`;
+
+const MapCol = styled(Col)`
+  && {
+    padding: 60px 40px 60px 90px;
+    height: 75vh;
+    @media only screen and (max-width: 991px) {
+      padding: 30px;
+    }
+  }
+`;
+
+const FormTitle = styled.div`
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: ${Constants.gray};
+`;
+
+const FormLabel = styled.div`
+  color: ${Constants.semiBlack};
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+`;
+
+const FormCol = styled(Col)`
+  && {
+    padding: 60px 90px 40px 60px;
+    @media only screen and (max-width: 991px) {
+      padding: 30px;
+    }
+  }
+`;
+
+const FormInput = styled(Input)`
+  && {
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+`;
+
+const FormAlert = styled(Alert)`
+  && {
+    margin-bottom: 15px;
+  }
+`;
+
+const FormTextArea = styled(Input.TextArea)`
+  && {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+`;
+
+const FormSubmitCol = styled(Col)`
+  && {
+    display: flex;
+    justify-content: flex-start;
+  }
+`;
+
+const FormSubmit = styled.input`
+  background: ${Constants.darkGray};
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: solid 3px ${Constants.marine};
+  padding: 5px 30px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  &:hover {
+    box-shadow: 0 6px 6px -6px ${Constants.marine};
+    cursor: pointer;
+  }
+`;
+
 const InfoCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
@@ -122,7 +136,7 @@ const InfoCol = styled(Col)`
   }
 `;
 
-const InfoCol2 = styled(Col)`
+const InfoTextCol = styled(Col)`
   && {
     background-color: ${Constants.lightestGray};
     padding: 0 30% 60px 30%;
@@ -132,25 +146,19 @@ const InfoCol2 = styled(Col)`
   }
 `;
 
-const ButtonCol = styled(Col)`
-  && {
-    display: flex;
-    justify-content: flex-start;
-  }
-`;
-
-const InfoText = styled.div`
+const InfoDescription = styled.div`
   color: ${Constants.lightGray};
   font-size: 13px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 `;
 
-const ContactText = styled.div`
+const InfoContactText = styled.div`
   color: ${Constants.gray};
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
-  // word-break: break-all;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export default function Contact() {
@@ -209,12 +217,12 @@ export default function Contact() {
         </Title>
       </TitleCol>
       <MapCol xs={24} sm={24} md={24} lg={12}>
-        <StyledIFrame src={mapSourceURL}></StyledIFrame>
+        <MapIFrame src={mapSourceURL}></MapIFrame>
       </MapCol>
       <FormCol xs={24} sm={24} md={24} lg={12}>
         <FormTitle>Contact Us</FormTitle>
         <div hidden={isSuccessHidden}>
-          <StyledAlert
+          <FormAlert
             message="Your message was successfully sent! We will be in touch with you shortly."
             type="success"
             showIcon
@@ -222,40 +230,40 @@ export default function Contact() {
         </div>
         <form className="contact-form" onSubmit={sendEmail}>
           <FormLabel>Name:</FormLabel>
-          <StyledInput name="from_name" value={name} onChange={handleName} />
+          <FormInput name="from_name" value={name} onChange={handleName} />
           <FormLabel>Email:</FormLabel>
-          <StyledInput
+          <FormInput
             name="contact_email"
             value={email}
             onChange={handleEmail}
           />
           <FormLabel>Message:</FormLabel>
-          <StyledTA
+          <FormTextArea
             name="message"
             autoSize={{ minRows: 4 }}
             value={message}
             onChange={handleMessage}
           />
           <Row>
-            <ButtonCol span={24}>
-              <StyledInputButton type="submit" value="Submit" />
-            </ButtonCol>
+            <FormSubmitCol span={24}>
+              <FormSubmit type="submit" value="Submit" />
+            </FormSubmitCol>
           </Row>
         </form>
       </FormCol>
       <InfoCol span={24}>
-        <ContactText>
+        <InfoContactText>
           <strong>ttham@enlipsium.com</strong>
-        </ContactText>
-        <ContactText>
+        </InfoContactText>
+        <InfoContactText>
           <strong>+65 6980 0705</strong>
-        </ContactText>
-        <ContactText>
+        </InfoContactText>
+        <InfoContactText>
           <strong>Ubi Techpark, 10 Ubi Cres, #05-70, Singapore 408564</strong>
-        </ContactText>
+        </InfoContactText>
       </InfoCol>
-      <InfoCol2>
-        <InfoText>
+      <InfoTextCol>
+        <InfoDescription>
           Enlipsium is a National University of Singapore (NUS) Graduate
           Research Innovation Programme (GRIP) company i.e. a spin off company
           driven by NUS-developed technology. Feel free to contact the{" "}
@@ -263,8 +271,8 @@ export default function Contact() {
             NUS Industry Liaison Office (ILO)
           </a>{" "}
           for more information about us and our technology.
-        </InfoText>
-      </InfoCol2>
+        </InfoDescription>
+      </InfoTextCol>
     </StyledRow>
   );
 }
