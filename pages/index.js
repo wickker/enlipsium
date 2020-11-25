@@ -16,7 +16,7 @@ const TitleCol = styled(Col)`
     height: 70vh;
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 0 30px;
   }
 `;
 
@@ -25,9 +25,10 @@ const TitleText = styled(Col)`
     color: ${Constants.marine};
     font-size: 85px;
     text-align: center;
-    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 10px;
     @media only screen and (max-width: 991px) {
       font-size: 75px;
     }
@@ -45,8 +46,10 @@ const TitleTagline = styled(Col)`
     color: ${Constants.gray};
     font-size: 20px;
     text-align: center;
-    margin-bottom: 5px;
     font-family: "Montserrat", sans-serif;
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+    }
     @media only screen and (max-width: 575px) {
       font-size: 16px;
     }
@@ -246,9 +249,13 @@ export default function Home() {
       <TitleCol span={24}>
         <Row>
           <TitleText span={24}>{content.home.title}</TitleText>
-          <TitleTagline span={24}>{content.home.tagline1}</TitleTagline>
           <TitleTagline span={24}>
-            <strong>{content.home.tagline2}</strong>
+            <Row>
+              <Col span={24} style={{ marginBottom: "5px" }}>{content.home.tagline1}</Col>
+              <Col span={24}>
+                <strong>{content.home.tagline2}</strong>
+              </Col>
+            </Row>
           </TitleTagline>
         </Row>
       </TitleCol>
