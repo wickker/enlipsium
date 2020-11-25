@@ -23,6 +23,12 @@ body {
 }
 `;
 
+// --------------------------------
+// --------------------------------
+// ---------HEADER STYLES----------
+// --------------------------------
+// --------------------------------
+
 const HeaderRow = styled(Row)`
   && {
     position: fixed;
@@ -37,7 +43,7 @@ const HeaderRow = styled(Row)`
   }
 `;
 
-const DummyCol = styled(Col)`
+const HeaderDummyCol = styled(Col)`
   && {
     padding-left: 20px;
     display: flex;
@@ -48,7 +54,7 @@ const DummyCol = styled(Col)`
   }
 `;
 
-const LogoCol = styled(DummyCol)`
+const HeaderLogoCol = styled(HeaderDummyCol)`
   && {
     &:hover {
       cursor: pointer;
@@ -59,10 +65,9 @@ const LogoCol = styled(DummyCol)`
   }
 `;
 
-const MenuCol = styled(Col)`
+const HeaderMenuCol = styled(Col)`
   && {
     font-family: "Karla", sans-serif;
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -75,7 +80,29 @@ const MenuCol = styled(Col)`
   }
 `;
 
-const MenuItemCol = styled(Col)`
+const HeaderMenuDropdown = styled.ul`
+  padding: 0;
+  margin: 0;
+  box-sizing: none;
+  .ant-menu {
+    text-align: center;
+    color: ${Constants.semiBlack};
+    border: none;
+    font-size: 16px;
+  }
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+    margin: 0;
+    padding: 0;
+  }
+  @media (max-width: 365px) {
+    .ant-menu {
+      font-size: 14px;
+    }
+  }
+`;
+
+const HeaderMenuItemCol = styled(Col)`
   && {
     padding: 0 20px;
     font-size: 16px;
@@ -99,38 +126,52 @@ const MenuItemCol = styled(Col)`
   }
 `;
 
-const HomeMenuItemCol = styled(MenuItemCol)`
+const marineBorderBottom = `solid 2px ${Constants.marine}`;
+
+const HeaderMenuItemColHome = styled(HeaderMenuItemCol)`
   && {
     display: none;
+    a {
+      color: ${(props) =>
+        props.option === "/" ? Constants.marine : Constants.semiBlack};
+      border-bottom: ${(props) =>
+        props.option === "/" ? marineBorderBottom : "none"};
+    }
     @media (max-width: 991px) {
       display: inline-block;
     }
   }
 `;
 
-const MenuDropdown = styled.ul`
-  padding: 0;
-  margin: 0;
-  box-sizing: none;
-  .ant-menu {
-    text-align: center;
-    color: ${Constants.semiBlack};
-    border: none;
-    font-size: 16px;
-  }
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
-  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
-    margin: 0;
-    padding: 0;
-  }
-  @media (max-width: 365px) {
-    .ant-menu {
-      font-size: 14px;
+const HeaderMenuItemColScint = styled(HeaderMenuItemCol)`
+  && {
+    a {
+      color: ${(props) =>
+        props.option === "/scintillator"
+          ? Constants.marine
+          : Constants.semiBlack};
+      border-bottom: ${(props) =>
+        props.option === "/scintillator" ? marineBorderBottom : "none"};
     }
   }
 `;
 
-// FOOTER STYLES
+const HeaderMenuItemColContact = styled(HeaderMenuItemCol)`
+  && {
+    a {
+      color: ${(props) =>
+        props.option === "/contact" ? Constants.marine : Constants.semiBlack};
+      border-bottom: ${(props) =>
+        props.option === "/contact" ? marineBorderBottom : "none"};
+    }
+  }
+`;
+
+// --------------------------------
+// --------------------------------
+// ---------FOOTER STYLES----------
+// --------------------------------
+// --------------------------------
 
 const FooterDummyCol = styled(Col)`
   && {
@@ -140,7 +181,7 @@ const FooterDummyCol = styled(Col)`
   }
 `;
 
-const CopyrightText = styled(FooterDummyCol)`
+const FooterCopyrightText = styled(FooterDummyCol)`
   && {
     justify-content: flex-end;
     padding-left: 30px;
@@ -162,14 +203,7 @@ const FooterRow = styled(Row)`
   }
 `;
 
-const StyledContent = styled(Content)`
-  && {
-    background-color: white;
-    padding-top: 50px;
-  }
-`;
-
-const StyledFooter = styled(Footer)`
+const FooterStyled = styled(Footer)`
   && {
     background-color: white;
     font-size: 14px;
@@ -181,7 +215,7 @@ const StyledFooter = styled(Footer)`
   }
 `;
 
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+const FooterFontAwesomeIcon = styled(FontAwesomeIcon)`
   && {
     min-height: 2em;
     min-width: 2em;
@@ -192,11 +226,23 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   }
 `;
 
+// --------------------------------
+// --------------------------------
+// ---------CONTENT STYLES---------
+// --------------------------------
+// --------------------------------
+
+const StyledContent = styled(Content)`
+  && {
+    background-color: white;
+    padding-top: 50px;
+  }
+`;
+
 const { SubMenu } = Menu;
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [routerOption, setRouterOption] = React.useState(router.pathname);
   const [dropdownFontSize, setDropdownFontSize] = React.useState(16);
   const [windowWidth, setWindowWidth] = React.useState(0);
 
@@ -216,9 +262,7 @@ export default function MyApp({ Component, pageProps }) {
     }
   }, [windowWidth]);
 
-  useEffect(() => {
-    setRouterOption(router.pathname);
-  }, [router.pathname]);
+  console.log("Pathname: ", router.pathname);
 
   const onLogoClick = () => {
     window.location.assign("/");
@@ -242,63 +286,65 @@ export default function MyApp({ Component, pageProps }) {
       <GlobalStyle />
       <Layout>
         <HeaderRow>
-          <DummyCol xs={0} sm={0} md={3} lg={3}></DummyCol>
-          <LogoCol xs={0} sm={0} md={3} lg={3} onClick={onLogoClick}>
+          <HeaderDummyCol xs={0} sm={0} md={3} lg={3}></HeaderDummyCol>
+          <HeaderLogoCol xs={0} sm={0} md={3} lg={3} onClick={onLogoClick}>
             <img
               src="https://via.placeholder.com/180x40/0000FF/FFFFFF?Text=LOGO"
               alt="Enlipsium logo"
             />
-          </LogoCol>
-          <MenuCol xs={24} sm={24} md={15} lg={15}>
+          </HeaderLogoCol>
+          <HeaderMenuCol xs={24} sm={24} md={15} lg={15}>
             <Row>
-              <HomeMenuItemCol>
-                <Link href="/scintillator">Home</Link>
-              </HomeMenuItemCol>
-              <MenuItemCol>
-                <MenuDropdown>
-                  <Menu mode="horizontal">
-                    <SubMenu title="Products">
-                      <Menu.ItemGroup
-                        title={
-                          <span style={{ fontSize: dropdownFontSize }}>
-                            Nanoparticles
-                          </span>
-                        }
-                      >
-                        <Menu.Item style={{ fontSize: dropdownFontSize }}>
-                          Upconverting Nanoparticles (UCNPs)
-                        </Menu.Item>
-                      </Menu.ItemGroup>
-                    </SubMenu>
-                  </Menu>
-                </MenuDropdown>
-              </MenuItemCol>
-              <MenuItemCol>
+              <HeaderMenuItemColHome option={router.pathname}>
+                <Link href="/">Home</Link>
+              </HeaderMenuItemColHome>
+              <HeaderMenuItemCol>
+                <HeaderMenuDropdown>
+                  <Link href="/products">
+                    <Menu mode="horizontal">
+                      <SubMenu title="Products">
+                        <Menu.ItemGroup
+                          title={
+                            <span style={{ fontSize: dropdownFontSize }}>
+                              Nanoparticles
+                            </span>
+                          }
+                        >
+                          <Menu.Item style={{ fontSize: dropdownFontSize }}>
+                            Upconverting Nanoparticles (UCNPs)
+                          </Menu.Item>
+                        </Menu.ItemGroup>
+                      </SubMenu>
+                    </Menu>
+                  </Link>
+                </HeaderMenuDropdown>
+              </HeaderMenuItemCol>
+              <HeaderMenuItemColScint option={router.pathname}>
                 <Link href="/scintillator">Scintillator</Link>
-              </MenuItemCol>
-              <MenuItemCol>
+              </HeaderMenuItemColScint>
+              <HeaderMenuItemColContact option={router.pathname}>
                 <Link href="/contact">Contact Us</Link>
-              </MenuItemCol>
+              </HeaderMenuItemColContact>
             </Row>
-          </MenuCol>
-          <DummyCol xs={0} sm={0} md={3} lg={3}></DummyCol>
+          </HeaderMenuCol>
+          <HeaderDummyCol xs={0} sm={0} md={3} lg={3}></HeaderDummyCol>
         </HeaderRow>
         <StyledContent>
           <Component {...pageProps} />
         </StyledContent>
-        <StyledFooter>
+        <FooterStyled>
           <FooterRow>
-            <CopyrightText xs={11} sm={11} md={8} lg={8}>
+            <FooterCopyrightText xs={11} sm={11} md={8} lg={8}>
               © 2020 Enlipsium All Rights Reserved
-            </CopyrightText>
+            </FooterCopyrightText>
             <FooterDummyCol xs={2} sm={2} md={8} lg={8}></FooterDummyCol>
             <FooterIcons xs={11} sm={11} md={8} lg={8}>
-              <StyledFontAwesomeIcon icon={faFacebookSquare} />
-              <StyledFontAwesomeIcon icon={faTwitterSquare} />
-              <StyledFontAwesomeIcon icon={faInstagramSquare} />
+              <FooterFontAwesomeIcon icon={faFacebookSquare} />
+              <FooterFontAwesomeIcon icon={faTwitterSquare} />
+              <FooterFontAwesomeIcon icon={faInstagramSquare} />
             </FooterIcons>
           </FooterRow>
-        </StyledFooter>
+        </FooterStyled>
       </Layout>
     </div>
   );
