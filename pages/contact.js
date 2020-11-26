@@ -64,6 +64,9 @@ const FormTitle = styled.div`
   margin-bottom: 20px;
   font-size: 50px;
   color: ${Constants.gray};
+  @media only screen and (max-width: 400px) {
+    font-size: 40px;
+  }
 `;
 
 const FormLabel = styled.div`
@@ -71,6 +74,9 @@ const FormLabel = styled.div`
   margin-bottom: 3px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  @media only screen and (max-width: 400px) {
+    font-size: 15px;
+  }
 `;
 
 const FormCol = styled(Col)`
@@ -87,12 +93,20 @@ const FormInput = styled(Input)`
     margin-bottom: 15px;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    @media only screen and (max-width: 400px) {
+      font-size: 15px;
+    }
   }
 `;
 
 const FormAlert = styled(Alert)`
   && {
     margin-bottom: 15px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    @media only screen and (max-width: 400px) {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -101,6 +115,9 @@ const FormTextArea = styled(Input.TextArea)`
     margin-bottom: 20px;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    @media only screen and (max-width: 400px) {
+      font-size: 15px;
+    }
   }
 `;
 

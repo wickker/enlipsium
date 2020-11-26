@@ -343,6 +343,28 @@ export default function MyApp({ Component, pageProps }) {
                           </Link>
                         </Menu.Item>
                       </Menu.ItemGroup>
+                      <Menu.ItemGroup
+                        title={
+                          <span style={{ fontSize: dropdownFontSize }}>
+                            Scintillator Film
+                          </span>
+                        }
+                      >
+                        <Menu.Item key="/products/scintillator-film/nano-perovskite">
+                          <Link href="/products/scintillator-film/nano-perovskite">
+                            <span style={{ fontSize: dropdownFontSize }}>
+                              Nano Perovskite
+                            </span>
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item key="/products/scintillator-film/organic">
+                          <Link href="/products/scintillator-film/organic">
+                            <span style={{ fontSize: dropdownFontSize }}>
+                              Organic
+                            </span>
+                          </Link>
+                        </Menu.Item>
+                      </Menu.ItemGroup>
                     </SubMenu>
                   </Menu>
                 </HeaderMenuDropdown>
