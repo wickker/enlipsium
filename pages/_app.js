@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/router";
 
 const { Footer, Content } = Layout;
+const { SubMenu } = Menu;
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -239,12 +240,11 @@ const StyledContent = styled(Content)`
   }
 `;
 
-const { SubMenu } = Menu;
-
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [dropdownFontSize, setDropdownFontSize] = React.useState(16);
   const [windowWidth, setWindowWidth] = React.useState(0);
+  const [currentKey, setCurrentKey] = React.useState(router.pathname);
 
   const calcInnerWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -264,8 +264,17 @@ export default function MyApp({ Component, pageProps }) {
 
   console.log("Pathname: ", router.pathname);
 
-  const onLogoClick = () => {
+  const handleLogoClick = () => {
+    setCurrentKey("");
     window.location.assign("/");
+  };
+
+  const handleDropdownMenuClick = (e) => {
+    setCurrentKey(e.key);
+  };
+
+  const handleGenericMenuClick = () => {
+    setCurrentKey("");
   };
 
   return (
@@ -287,7 +296,7 @@ export default function MyApp({ Component, pageProps }) {
       <Layout>
         <HeaderRow>
           <HeaderDummyCol xs={0} sm={0} md={3} lg={3}></HeaderDummyCol>
-          <HeaderLogoCol xs={0} sm={0} md={3} lg={3} onClick={onLogoClick}>
+          <HeaderLogoCol xs={0} sm={0} md={3} lg={3} onClick={handleLogoClick}>
             <img
               src="https://via.placeholder.com/180x40/0000FF/FFFFFF?Text=LOGO"
               alt="Enlipsium logo"
@@ -295,34 +304,59 @@ export default function MyApp({ Component, pageProps }) {
           </HeaderLogoCol>
           <HeaderMenuCol xs={24} sm={24} md={15} lg={15}>
             <Row>
-              <HeaderMenuItemColHome option={router.pathname}>
+              <HeaderMenuItemColHome
+                option={router.pathname}
+                onClick={handleGenericMenuClick}
+              >
                 <Link href="/">Home</Link>
               </HeaderMenuItemColHome>
               <HeaderMenuItemCol>
                 <HeaderMenuDropdown>
-                  <Link href="/products">
-                    <Menu mode="horizontal">
-                      <SubMenu title="Products">
-                        <Menu.ItemGroup
-                          title={
+                  <Menu
+                    onClick={handleDropdownMenuClick}
+                    selectedKeys={[currentKey]}
+                    mode="horizontal"
+                  >
+                    <SubMenu
+                      title="Products"
+                      style={
+                        router.pathname === "/products/nanoparticles/UCNPs"
+                          ? {
+                              color: Constants.marine,
+                              borderBottom: marineBorderBottom,
+                            }
+                          : { color: Constants.semiBlack, borderBottom: "none" }
+                      }
+                    >
+                      <Menu.ItemGroup
+                        title={
+                          <span style={{ fontSize: dropdownFontSize }}>
+                            Nanoparticles
+                          </span>
+                        }
+                      >
+                        <Menu.Item key="/products/nanoparticles/UCNPs">
+                          <Link href="/products/nanoparticles/UCNPs">
                             <span style={{ fontSize: dropdownFontSize }}>
-                              Nanoparticles
+                              Upconverting Nanoparticles (UCNPs)
                             </span>
-                          }
-                        >
-                          <Menu.Item style={{ fontSize: dropdownFontSize }}>
-                            Upconverting Nanoparticles (UCNPs)
-                          </Menu.Item>
-                        </Menu.ItemGroup>
-                      </SubMenu>
-                    </Menu>
-                  </Link>
+                          </Link>
+                        </Menu.Item>
+                      </Menu.ItemGroup>
+                    </SubMenu>
+                  </Menu>
                 </HeaderMenuDropdown>
               </HeaderMenuItemCol>
-              <HeaderMenuItemColScint option={router.pathname}>
+              <HeaderMenuItemColScint
+                option={router.pathname}
+                onClick={handleGenericMenuClick}
+              >
                 <Link href="/scintillator">Scintillator</Link>
               </HeaderMenuItemColScint>
-              <HeaderMenuItemColContact option={router.pathname}>
+              <HeaderMenuItemColContact
+                option={router.pathname}
+                onClick={handleGenericMenuClick}
+              >
                 <Link href="/contact">Contact Us</Link>
               </HeaderMenuItemColContact>
             </Row>
