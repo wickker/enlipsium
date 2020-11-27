@@ -85,6 +85,9 @@ const HeaderMenuDropdown = styled.ul`
   padding: 0;
   margin: 0;
   box-sizing: none;
+  &:hover {
+    border-bottom: solid 2px ${Constants.marine};
+  }
   .ant-menu {
     text-align: center;
     color: ${Constants.semiBlack};
@@ -320,7 +323,11 @@ export default function MyApp({ Component, pageProps }) {
                     <SubMenu
                       title="Products"
                       style={
-                        router.pathname === "/products/nanoparticles/UCNPs"
+                        router.pathname === "/products/nanoparticles/UCNPs" ||
+                        router.pathname ===
+                          "/products/scintillator-film/nano-perovskite" ||
+                        router.pathname ===
+                          "/products/scintillator-film/organic"
                           ? {
                               color: Constants.marine,
                               borderBottom: marineBorderBottom,
