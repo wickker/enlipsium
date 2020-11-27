@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import * as Constants from "../utils/constants";
 import content from "../utils/content.json";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Button from "../components/Button";
 
 // --------------------------------
@@ -262,7 +262,7 @@ export default function Home() {
       <Col span={24}>
         <DescriptionRow>
           <DescriptionImageCol xs={24} sm={24} md={24} lg={12}>
-            <DescriptionImage src="x-ray-machine.png" alt="x-ray machine" />
+            <DescriptionImage src="x-ray-latest.jpg" alt="x-ray machine" />
           </DescriptionImageCol>
           <DescriptionTextCol xs={24} sm={24} md={24} lg={12}>
             <Row>
