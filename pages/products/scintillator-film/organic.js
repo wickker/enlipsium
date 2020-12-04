@@ -43,7 +43,7 @@ const InfoColStyled = styled(Col)`
   && {
     padding: 30px;
     @media (max-width: 540px) {
-      padding: 30px 30px 0 30px;
+      padding: 30px 30px 30px 30px;
     }
   }
 `;

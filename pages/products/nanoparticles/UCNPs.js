@@ -12,6 +12,7 @@ const TitleColStyled = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 120%;
   }
 `;
 
@@ -326,6 +327,7 @@ export default function UCNPs() {
           bordered
           pagination={false}
           size="small"
+          scroll={{ x:400 }}
         />
       </TableColStyled>
     </Row>
