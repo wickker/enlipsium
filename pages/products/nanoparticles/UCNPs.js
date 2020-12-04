@@ -311,7 +311,7 @@ export default function UCNPs() {
                 </ul>
               </Details>
               <DetailsContact span={24}>
-                Feel free to <a href="mailto:ttham@enlipsium.com">contact us</a>{" "}
+                Please <a href="mailto:ttham@enlipsium.com">contact us</a>{" "}
                 for quotation/ more information on our products. We will be glad
                 to assist you!
               </DetailsContact>

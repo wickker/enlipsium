@@ -244,9 +244,15 @@ const StyledContent = styled(Content)`
 `;
 
 export default function MyApp({ Component, pageProps }) {
+  const getInitialWindowWidth = () => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth
+    }
+  }
+
   const router = useRouter();
   const [dropdownFontSize, setDropdownFontSize] = React.useState(16);
-  const [windowWidth, setWindowWidth] = React.useState(0);
+  const [windowWidth, setWindowWidth] = React.useState(getInitialWindowWidth());
   const [currentKey, setCurrentKey] = React.useState(router.pathname);
 
   const calcInnerWidth = () => {
@@ -264,8 +270,6 @@ export default function MyApp({ Component, pageProps }) {
       setDropdownFontSize(16);
     }
   }, [windowWidth]);
-
-  console.log("Pathname: ", router.pathname);
 
   const handleLogoClick = () => {
     setCurrentKey("");
