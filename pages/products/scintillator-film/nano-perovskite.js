@@ -53,6 +53,7 @@ const ImageCol = styled(Col)`
     padding-right: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     @media (max-width: 767px) {
       padding-right: 0;
       margin-bottom: 30px;
@@ -61,8 +62,8 @@ const ImageCol = styled(Col)`
 `;
 
 const ImageStyled = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 10%;
 `;
