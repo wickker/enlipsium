@@ -286,35 +286,35 @@ export default function Home() {
           </AboutTagline>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="https://via.placeholder.com/300"
-              alt="Enlipsium staff"
+              src="perry.jpg"
+              alt="Enlipsium staff - Yzhar Perry"
             />
-            <AboutStaffName>Tommy Tham</AboutStaffName>
-            <AboutStaffPosition>Founder & CEO</AboutStaffPosition>
+            <AboutStaffName>Mr Yzhar Perry</AboutStaffName>
+            <AboutStaffPosition>CEO & Founder</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <AboutStaffName>Full Name</AboutStaffName>
-            <AboutStaffPosition>Position</AboutStaffPosition>
+            <AboutStaffName>Mr Tommy Tham</AboutStaffName>
+            <AboutStaffPosition>CTO & Founder</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
               src="https://via.placeholder.com/300"
               alt="Enlipsium staff"
             />
-            <AboutStaffName>Full Name</AboutStaffName>
-            <AboutStaffPosition>Position</AboutStaffPosition>
+            <AboutStaffName>Professor Liu Xiaogang</AboutStaffName>
+            <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
               src="https://via.placeholder.com/300"
-              alt="Enlipsium staff"
+              alt="Enlipsium staff - Chen Qiushui"
             />
-            <AboutStaffName>Full Name</AboutStaffName>
-            <AboutStaffPosition>Position</AboutStaffPosition>
+            <AboutStaffName>Professor Chen Qiushui</AboutStaffName>
+            <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
           </AboutAvatarCol>
         </Row>
       </AboutCol>

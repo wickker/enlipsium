@@ -66,6 +66,17 @@ const HeaderLogoCol = styled(HeaderDummyCol)`
   }
 `;
 
+const LogoImage = styled.img`
+{
+  height: 45px;
+  margin: 1px 0;
+  &:hover {
+    height: 47px;
+  }
+  transition: height 0.5s;
+}
+`
+
 const HeaderMenuCol = styled(Col)`
   && {
     font-family: "Karla", sans-serif;
@@ -304,8 +315,8 @@ export default function MyApp({ Component, pageProps }) {
         <HeaderRow>
           <HeaderDummyCol xs={0} sm={0} md={3} lg={3}></HeaderDummyCol>
           <HeaderLogoCol xs={0} sm={0} md={3} lg={3} onClick={handleLogoClick}>
-            <img
-              src="https://via.placeholder.com/180x40/0000FF/FFFFFF?Text=LOGO"
+            <LogoImage
+              src="enlipsium-logo.jpg"
               alt="Enlipsium logo"
             />
           </HeaderLogoCol>
