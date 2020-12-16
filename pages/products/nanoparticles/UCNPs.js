@@ -291,7 +291,7 @@ export default function UCNPs() {
         <Row>
           <ImageCol xs={24} sm={24} md={12} lg={12}>
             <ImageStyled
-              src="http://via.placeholder.com/700x500"
+              src="https://via.placeholder.com/700x500"
               alt="Upconverting nanoparticles"
             />
           </ImageCol>
