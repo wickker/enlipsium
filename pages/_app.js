@@ -1,17 +1,17 @@
-import "antd/dist/antd.less";
-import React, { useEffect } from "react";
-import Head from "next/head";
-import styled, { createGlobalStyle } from "styled-components";
-import { Menu, Row, Col, Layout } from "antd";
-import * as Constants from "../utils/constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import 'antd/dist/antd.less';
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Menu, Row, Col, Layout } from 'antd';
+import * as Constants from '../utils/constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 import {
   faFacebookSquare,
   faTwitterSquare,
   faInstagramSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import { useRouter } from "next/router";
+} from '@fortawesome/free-brands-svg-icons';
+import { useRouter } from 'next/router';
 
 const { Footer, Content } = Layout;
 const { SubMenu } = Menu;
@@ -67,19 +67,19 @@ const HeaderLogoCol = styled(HeaderDummyCol)`
 `;
 
 const LogoImage = styled.img`
-{
-  height: 45px;
-  margin: 1px 0;
-  &:hover {
-    height: 47px;
+   {
+    height: 45px;
+    margin: 1px 0;
+    &:hover {
+      height: 47px;
+    }
+    transition: height 0.5s;
   }
-  transition: height 0.5s;
-}
-`
+`;
 
 const HeaderMenuCol = styled(Col)`
   && {
-    font-family: "Karla", sans-serif;
+    font-family: 'Karla', sans-serif;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -148,9 +148,9 @@ const HeaderMenuItemColHome = styled(HeaderMenuItemCol)`
     display: none;
     a {
       color: ${(props) =>
-        props.option === "/" ? Constants.marine : Constants.semiBlack};
+        props.option === '/' ? Constants.marine : Constants.semiBlack};
       border-bottom: ${(props) =>
-        props.option === "/" ? marineBorderBottom : "none"};
+        props.option === '/' ? marineBorderBottom : 'none'};
     }
     @media (max-width: 991px) {
       display: inline-block;
@@ -162,11 +162,11 @@ const HeaderMenuItemColScint = styled(HeaderMenuItemCol)`
   && {
     a {
       color: ${(props) =>
-        props.option === "/scintillator"
+        props.option === '/scintillator'
           ? Constants.marine
           : Constants.semiBlack};
       border-bottom: ${(props) =>
-        props.option === "/scintillator" ? marineBorderBottom : "none"};
+        props.option === '/scintillator' ? marineBorderBottom : 'none'};
     }
   }
 `;
@@ -175,9 +175,9 @@ const HeaderMenuItemColContact = styled(HeaderMenuItemCol)`
   && {
     a {
       color: ${(props) =>
-        props.option === "/contact" ? Constants.marine : Constants.semiBlack};
+        props.option === '/contact' ? Constants.marine : Constants.semiBlack};
       border-bottom: ${(props) =>
-        props.option === "/contact" ? marineBorderBottom : "none"};
+        props.option === '/contact' ? marineBorderBottom : 'none'};
     }
   }
 `;
@@ -256,10 +256,10 @@ const StyledContent = styled(Content)`
 
 export default function MyApp({ Component, pageProps }) {
   const getInitialWindowWidth = () => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth
+    if (typeof window !== 'undefined') {
+      return window.innerWidth;
     }
-  }
+  };
 
   const router = useRouter();
   const [dropdownFontSize, setDropdownFontSize] = React.useState(16);
@@ -270,8 +270,8 @@ export default function MyApp({ Component, pageProps }) {
     setWindowWidth(window.innerWidth);
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", calcInnerWidth);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', calcInnerWidth);
   }
 
   useEffect(() => {
@@ -283,8 +283,8 @@ export default function MyApp({ Component, pageProps }) {
   }, [windowWidth]);
 
   const handleLogoClick = () => {
-    setCurrentKey("");
-    window.location.assign("/");
+    setCurrentKey('');
+    window.location.assign('/');
   };
 
   const handleDropdownMenuClick = (e) => {
@@ -292,22 +292,43 @@ export default function MyApp({ Component, pageProps }) {
   };
 
   const handleGenericMenuClick = () => {
-    setCurrentKey("");
+    setCurrentKey('');
   };
 
   return (
     <div>
       <Head>
         <title>Enlipsium</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
-          rel="stylesheet"
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
         />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
-          rel="stylesheet"
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff'></meta>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap'
+          rel='stylesheet'
+        />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap'
+          rel='stylesheet'
         />
       </Head>
       <GlobalStyle />
@@ -315,10 +336,7 @@ export default function MyApp({ Component, pageProps }) {
         <HeaderRow>
           <HeaderDummyCol xs={0} sm={0} md={3} lg={3}></HeaderDummyCol>
           <HeaderLogoCol xs={0} sm={0} md={3} lg={3} onClick={handleLogoClick}>
-            <LogoImage
-              src="enlipsium-logo.jpg"
-              alt="Enlipsium logo"
-            />
+            <LogoImage src='enlipsium-logo.jpg' alt='Enlipsium logo' />
           </HeaderLogoCol>
           <HeaderMenuCol xs={24} sm={24} md={15} lg={15}>
             <Row>
@@ -326,28 +344,28 @@ export default function MyApp({ Component, pageProps }) {
                 option={router.pathname}
                 onClick={handleGenericMenuClick}
               >
-                <Link href="/">Home</Link>
+                <Link href='/'>Home</Link>
               </HeaderMenuItemColHome>
               <HeaderMenuItemCol>
                 <HeaderMenuDropdown>
                   <Menu
                     onClick={handleDropdownMenuClick}
                     selectedKeys={[currentKey]}
-                    mode="horizontal"
+                    mode='horizontal'
                   >
                     <SubMenu
-                      title="Products"
+                      title='Products'
                       style={
-                        router.pathname === "/products/nanoparticles/UCNPs" ||
+                        router.pathname === '/products/nanoparticles/UCNPs' ||
                         router.pathname ===
-                          "/products/scintillator-film/nano-perovskite" ||
+                          '/products/scintillator-film/nano-perovskite' ||
                         router.pathname ===
-                          "/products/scintillator-film/organic"
+                          '/products/scintillator-film/organic'
                           ? {
                               color: Constants.marine,
                               borderBottom: marineBorderBottom,
                             }
-                          : { color: Constants.semiBlack, borderBottom: "none" }
+                          : { color: Constants.semiBlack, borderBottom: 'none' }
                       }
                     >
                       <Menu.ItemGroup
@@ -357,8 +375,8 @@ export default function MyApp({ Component, pageProps }) {
                           </span>
                         }
                       >
-                        <Menu.Item key="/products/nanoparticles/UCNPs">
-                          <Link href="/products/nanoparticles/UCNPs">
+                        <Menu.Item key='/products/nanoparticles/UCNPs'>
+                          <Link href='/products/nanoparticles/UCNPs'>
                             <span style={{ fontSize: dropdownFontSize }}>
                               Upconverting Nanoparticles (UCNPs)
                             </span>
@@ -372,15 +390,15 @@ export default function MyApp({ Component, pageProps }) {
                           </span>
                         }
                       >
-                        <Menu.Item key="/products/scintillator-film/nano-perovskite">
-                          <Link href="/products/scintillator-film/nano-perovskite">
+                        <Menu.Item key='/products/scintillator-film/nano-perovskite'>
+                          <Link href='/products/scintillator-film/nano-perovskite'>
                             <span style={{ fontSize: dropdownFontSize }}>
                               Nano Perovskite
                             </span>
                           </Link>
                         </Menu.Item>
-                        <Menu.Item key="/products/scintillator-film/organic">
-                          <Link href="/products/scintillator-film/organic">
+                        <Menu.Item key='/products/scintillator-film/organic'>
+                          <Link href='/products/scintillator-film/organic'>
                             <span style={{ fontSize: dropdownFontSize }}>
                               Organic
                             </span>
@@ -395,13 +413,13 @@ export default function MyApp({ Component, pageProps }) {
                 option={router.pathname}
                 onClick={handleGenericMenuClick}
               >
-                <Link href="/scintillator">Scintillator</Link>
+                <Link href='/scintillator'>Scintillator</Link>
               </HeaderMenuItemColScint>
               <HeaderMenuItemColContact
                 option={router.pathname}
                 onClick={handleGenericMenuClick}
               >
-                <Link href="/contact">Contact Us</Link>
+                <Link href='/contact'>Contact Us</Link>
               </HeaderMenuItemColContact>
             </Row>
           </HeaderMenuCol>
