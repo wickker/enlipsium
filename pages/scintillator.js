@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 
 const StyledCol = styled(Col)`
 && {
-    height: 90vh;
+    min-height: 90vh;
 }
 `
 
