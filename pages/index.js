@@ -294,23 +294,23 @@ export default function Home() {
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="https://via.placeholder.com/300"
-              alt="Enlipsium staff"
+              src="tommy.jpg"
+              alt="Enlipsium staff - Tommy Tham"
             />
             <AboutStaffName>Mr Tommy Tham</AboutStaffName>
             <AboutStaffPosition>CTO & Founder</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="https://via.placeholder.com/300"
-              alt="Enlipsium staff"
+              src="liuxiaogang.jpg"
+              alt="Enlipsium staff - Liu Xiaogang"
             />
             <AboutStaffName>Professor Liu Xiaogang</AboutStaffName>
             <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="https://via.placeholder.com/300"
+              src="chenqiushui.jpg"
               alt="Enlipsium staff - Chen Qiushui"
             />
             <AboutStaffName>Professor Chen Qiushui</AboutStaffName>
