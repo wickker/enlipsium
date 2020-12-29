@@ -67,8 +67,7 @@ const ImageCol = styled(Col)`
 const ImageStyled = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10%;
+  object-fit: contain;
 `;
 
 const DetailsCol = styled(Col)`
@@ -291,7 +290,7 @@ export default function UCNPs() {
         <Row>
           <ImageCol xs={24} sm={24} md={12} lg={12}>
             <ImageStyled
-              src='../../700x500.png'
+              src='../../upconversion.jpg'
               alt='Upconverting nanoparticles'
             />
           </ImageCol>
