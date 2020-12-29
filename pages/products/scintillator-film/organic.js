@@ -160,6 +160,20 @@ export default function Organic() {
                   <li>Photosensitizers in photodynamic therapy</li>
                 </ul> */}
                 <div>
+                  Enlipsium’s organic scintillators uses our proprietary
+                  Persistent Luminescence Nanoparticle (PLnP). This class of
+                  scintillators has an extremely long persistence time, along
+                  with electron trap stability, such that emission occurs only
+                  under thermal/ optical stimulations.
+                  <br />
+                  <br />
+                  PLnP scintillators are thus able to 'store' the incident X-ray
+                  radiation within the film, and the emission can be 'released'
+                  at the appropriate time and conditions. Furthermore, the
+                  organic matrix allows these scintillators to be fully flexible
+                  and conformable to non-planar surfaces.
+                  <br />
+                  <br />
                   {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco

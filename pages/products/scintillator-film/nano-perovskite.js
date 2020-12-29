@@ -42,9 +42,6 @@ const TitleProductDetailCol = styled(Col)`
 const InfoColStyled = styled(Col)`
   && {
     padding: 30px;
-    @media (max-width: 540px) {
-      padding: 30px;
-    }
   }
 `;
 
@@ -53,9 +50,6 @@ const ImageCol = styled(Col)`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 767px) {
-      margin-bottom: 30px;
-    }
   }
 `;
 
@@ -77,12 +71,25 @@ const DetailsName = styled(Col)`
   }
 `;
 
+const Details = styled(Col)`
+  && {
+    font-size: 16px;
+    color: ${Constants.semiBlack};
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-line;
+    @media (max-width: 400px) {
+      font-size: 15px;
+    }
+  }
+`;
+
 const DetailsContact = styled(Col)`
   && {
     font-size: 16px;
     color: ${Constants.semiBlack};
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
+    margin-top: 20px;
     margin-bottom: 30px;
     @media (max-width: 400px) {
       font-size: 15px;
@@ -104,6 +111,16 @@ export default function Nanoperovskite() {
       <InfoColStyled span={24}>
         <Row>
           <DetailsName span={24}>Nano Perovskite</DetailsName>
+          <Details span={24}>
+            <div>
+              Enlipsium is one of the first companies in the world to have
+              successfully taken X-ray images with high resolution using
+              Nano-scintillators. Making use of the properties of nano sized
+              perovskite crystals, our scintillators are able to achieve
+              ultra-high speed imaging with decay time as little as 44.6ns and
+              resolutions of up to 3.2ln/mm!
+            </div>
+          </Details>
           <DetailsContact span={24}>
             Please{' '}
             <strong>
