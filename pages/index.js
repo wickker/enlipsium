@@ -286,7 +286,7 @@ export default function Home() {
           </AboutTagline>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="perry.jpg"
+              src="yzharperry.jpg"
               alt="Enlipsium staff - Yzhar Perry"
             />
             <AboutStaffName>Mr Yzhar Perry</AboutStaffName>
