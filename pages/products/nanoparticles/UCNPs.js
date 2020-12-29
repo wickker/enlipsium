@@ -1,8 +1,8 @@
-import { Row, Col } from "antd";
-import * as Constants from "../../../utils/constants";
-import data from "../../../utils/content.json";
-import { Table } from "antd";
-import styled from "styled-components";
+import { Row, Col } from 'antd';
+import * as Constants from '../../../utils/constants';
+import data from '../../../utils/content.json';
+import { Table } from 'antd';
+import styled from 'styled-components';
 
 const TitleColStyled = styled(Col)`
   && {
@@ -33,7 +33,7 @@ const TitleProductCol = styled(Col)`
 const TitleProductDetailCol = styled(Col)`
   && {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 18px;
     @media (max-width: 400px) {
@@ -98,7 +98,7 @@ const DetailsApplications = styled(Col)`
   && {
     font-size: 17px;
     color: ${Constants.semiBlack};
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     margin-bottom: 10px;
     @media (max-width: 400px) {
@@ -111,7 +111,7 @@ const Details = styled(Col)`
   && {
     font-size: 16px;
     color: ${Constants.semiBlack};
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @media (max-width: 400px) {
       font-size: 15px;
     }
@@ -122,7 +122,7 @@ const DetailsContact = styled(Col)`
   && {
     font-size: 16px;
     color: ${Constants.semiBlack};
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     margin-top: 20px;
     @media (max-width: 400px) {
@@ -144,7 +144,7 @@ const TableColStyled = styled(Col)`
 
 const TableStyled = styled(Table)`
   && {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     tr,
     th {
       font-size: 14px;
@@ -185,7 +185,7 @@ export default function UCNPs() {
     };
     if (index === 12) {
       obj.props.colSpan = 2;
-      obj.props.align = "left";
+      obj.props.align = 'left';
     }
     return obj;
   };
@@ -233,32 +233,32 @@ export default function UCNPs() {
 
   const columns = [
     {
-      title: "No.",
-      dataIndex: "item_num",
+      title: 'No.',
+      dataIndex: 'item_num',
     },
     {
-      title: "Description",
-      dataIndex: "description",
+      title: 'Description',
+      dataIndex: 'description',
       render: renderDescription,
     },
     {
-      title: "Adbsorption Max",
-      dataIndex: "abs_max",
+      title: 'Adbsorption Max',
+      dataIndex: 'abs_max',
       render: renderAbsMax,
     },
     {
-      title: "Emission Max",
-      dataIndex: "emission_max",
+      title: 'Emission Max',
+      dataIndex: 'emission_max',
       render: renderEmissionMax,
     },
     {
-      title: "Surface",
-      dataIndex: "surface",
+      title: 'Surface',
+      dataIndex: 'surface',
       render: renderSurface,
     },
     {
-      title: "Pack Size",
-      dataIndex: "pack_size",
+      title: 'Pack Size',
+      dataIndex: 'pack_size',
       render: renderPackSize,
     },
   ];
@@ -291,8 +291,8 @@ export default function UCNPs() {
         <Row>
           <ImageCol xs={24} sm={24} md={12} lg={12}>
             <ImageStyled
-              src="https://via.placeholder.com/700x500"
-              alt="Upconverting nanoparticles"
+              src='../../700x500.png'
+              alt='Upconverting nanoparticles'
             />
           </ImageCol>
           <DetailsCol xs={24} sm={24} md={12} lg={12}>
@@ -313,7 +313,10 @@ export default function UCNPs() {
                 </ul>
               </Details>
               <DetailsContact span={24}>
-                Please <a href="mailto:ttham@enlipsium.com">contact us</a>{" "}
+                Please{' '}
+                <strong>
+                  <a href='mailto:ttham@enlipsium.com'>contact us</a>
+                </strong>{' '}
                 for quotation/ more information on our products. We will be glad
                 to assist you!
               </DetailsContact>
@@ -327,8 +330,8 @@ export default function UCNPs() {
           dataSource={mapData()}
           bordered
           pagination={false}
-          size="small"
-          scroll={{ x:400 }}
+          size='small'
+          scroll={{ x: 400 }}
         />
       </TableColStyled>
     </Row>

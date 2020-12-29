@@ -143,16 +143,11 @@ export default function Nanoperovskite() {
       <InfoColStyled span={24}>
         <Row>
           <ImageCol xs={24} sm={24} md={12} lg={12}>
-            <ImageStyled
-              src='http://via.placeholder.com/700x500'
-              alt='Nano perovskite'
-            />
+            <ImageStyled src='../../700x500.png' alt='Nano perovskite' />
           </ImageCol>
           <DetailsCol xs={24} sm={24} md={12} lg={12}>
             <Row>
-              <DetailsName span={24}>
-                Nano Perovskite
-              </DetailsName>
+              <DetailsName span={24}>Nano Perovskite</DetailsName>
               {/* <DetailsApplications span={24}>Applications:</DetailsApplications> */}
               <Details span={24}>
                 {/* <ul>
@@ -164,12 +159,26 @@ export default function Nanoperovskite() {
                   <li>Molecular recognition</li>
                   <li>Photosensitizers in photodynamic therapy</li>
                 </ul> */}
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div>
+                  {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                  <br />
+                  <br />
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum. */}
+                </div>
               </Details>
               <DetailsContact span={24}>
-                Please <a href='mailto:ttham@enlipsium.com'>contact us</a> for
-                quotation/ more information on our products. We will be glad to
-                assist you!
+                Please{' '}
+                <strong>
+                  <a href='mailto:ttham@enlipsium.com'>contact us</a>
+                </strong>{' '}
+                for quotation/ more information on our products. We will be glad
+                to assist you!
               </DetailsContact>
             </Row>
           </DetailsCol>

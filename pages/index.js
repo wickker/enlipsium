@@ -294,7 +294,7 @@ export default function Home() {
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
             <AboutAvatar
-              src="tommy.jpg"
+              src="tommytham.jpg"
               alt="Enlipsium staff - Tommy Tham"
             />
             <AboutStaffName>Mr Tommy Tham</AboutStaffName>
@@ -305,7 +305,7 @@ export default function Home() {
               src="liuxiaogang.jpg"
               alt="Enlipsium staff - Liu Xiaogang"
             />
-            <AboutStaffName>Professor Liu Xiaogang</AboutStaffName>
+            <AboutStaffName>Professor Xiaogang Liu</AboutStaffName>
             <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
           </AboutAvatarCol>
           <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
@@ -313,7 +313,7 @@ export default function Home() {
               src="chenqiushui.jpg"
               alt="Enlipsium staff - Chen Qiushui"
             />
-            <AboutStaffName>Professor Chen Qiushui</AboutStaffName>
+            <AboutStaffName>Professor Qiushui Chen</AboutStaffName>
             <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
           </AboutAvatarCol>
         </Row>
