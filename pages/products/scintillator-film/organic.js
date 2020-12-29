@@ -122,7 +122,7 @@ const DetailsContact = styled(Col)`
     color: ${Constants.semiBlack};
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    margin-top: 30px;
+    // margin-top: 30px;
     @media (max-width: 400px) {
       font-size: 15px;
     }
@@ -143,7 +143,7 @@ export default function Organic() {
       <InfoColStyled span={24}>
         <Row>
           <ImageCol xs={24} sm={24} md={12} lg={12}>
-            <ImageStyled src='../../700x500.png' alt='Organic' />
+            <ImageStyled src='../../organic.jpg' alt='Organic' />
           </ImageCol>
           <DetailsCol xs={24} sm={24} md={12} lg={12}>
             <Row>
