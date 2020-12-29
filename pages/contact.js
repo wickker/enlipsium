@@ -276,11 +276,11 @@ export default function Contact() {
           <strong>+65 6980 0705</strong>
         </InfoContactText>
         <InfoContactText>
-        <strong>Singapore:</strong><br/>
+        <strong><u>Singapore</u></strong><br/>
           <strong>Ubi Techpark, 10 Ubi Cres, #05-70, Singapore 408564</strong>
         </InfoContactText>
         <InfoContactText>
-          <strong>Israel:</strong><br/>
+          <strong><u>Israel</u></strong><br/>
           <strong>Omar Ben el-Khatab 58, Kfar Qasem</strong>
         </InfoContactText>
       </InfoCol>
