@@ -40,7 +40,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Header />
       <div>
         <Component {...pageProps} />
-        <div>Testing the font?</div>
+        <div>Test app js</div>
       </div>
     </div>
   );
