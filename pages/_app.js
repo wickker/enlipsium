@@ -3,16 +3,11 @@ import React from 'react';
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 import Header from '../components/navigation/header/header'
+import Footer from '../components/navigation/footer/footer'
 // import { Menu, Row, Col, Layout } from 'antd';
 // import * as Constants from '../utils/constants';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import Link from 'next/link';
-// import {
-//   faFacebookSquare,
-//   faTwitterSquare,
-//   faInstagramSquare,
-// } from '@fortawesome/free-brands-svg-icons';
-// import { useRouter } from 'next/router';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -27,6 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
     <div>
       <Head>
         <title>Enlipsium</title>
+        // favicon
         <link
           rel='apple-touch-icon'
           sizes='180x180'
@@ -48,6 +44,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff'></meta>
+        // fonts
         <link
           href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap'
           rel='stylesheet'
@@ -63,6 +60,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
         <div>Test app</div>
       </div>
+      <Footer />
     </div>
   );
 };

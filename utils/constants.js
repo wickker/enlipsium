@@ -13,7 +13,8 @@ export const COLORS = {
     SEMI_BLACK: '#0B0C10',
     DARK_GRAY: '#333333',
     LIGHTEST_GRAY: '#F6F6F6',
-    MARINE: '#3AAFA9'
+    MARINE: '#3AAFA9',
+    BORDER: '#f0f0f0'
 }
 
 export const ROUTES_KEYS = {

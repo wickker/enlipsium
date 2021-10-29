@@ -3,7 +3,7 @@ import { Menu } from 'antd';
 import { Logo } from './styles';
 import { get } from 'lodash';
 import { useRouter } from 'next/router';
-import { ROUTES_KEYS, COLORS } from '../../../utils/constants';
+import { ROUTES_KEYS } from '../../../utils/constants';
 
 const { SubMenu } = Menu;
 
