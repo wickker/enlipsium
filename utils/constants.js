@@ -1,4 +1,4 @@
-// Color scheme
+// remove this later
 export const semiBlack = '#0B0C10';
 export const darkGray = '#333333';
 export const gray = '#5A5A5A';
@@ -10,9 +10,9 @@ export const border = '#f0f0f0';
 export const COLORS = {
     GRAY: '#5A5A5A',
     LIGHT_GRAY: '#848689',
-    SEMI_BLACK: '#0B0C10',
-    DARK_GRAY: '#333333',
     LIGHTEST_GRAY: '#F6F6F6',
+    DARK_GRAY: '#333333',
+    SEMI_BLACK: '#0B0C10',
     MARINE: '#3AAFA9',
     BORDER: '#f0f0f0'
 }

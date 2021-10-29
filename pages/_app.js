@@ -1,13 +1,12 @@
 import 'antd/dist/antd.less';
 import React from 'react';
 import Head from 'next/head';
-import { createGlobalStyle } from 'styled-components';
-import Header from '../components/navigation/header/header'
-import Footer from '../components/navigation/footer/footer'
-// import { Menu, Row, Col, Layout } from 'antd';
-// import * as Constants from '../utils/constants';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import Link from 'next/link';
+import styled, { createGlobalStyle } from 'styled-components';
+import Header from '../components/navigation/header/header';
+import Footer from '../components/navigation/footer/footer';
+import { Layout } from 'antd';
+
+const { Content } = Layout;
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -15,6 +14,12 @@ body {
   padding: 0; 
   margin: 0;
 }
+`;
+
+const StyledContent = styled(Content)`
+  && {
+    background-color: white;
+  }
 `;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -41,7 +46,11 @@ const MyApp = ({ Component, pageProps }) => {
           href='/favicons/favicon-16x16.png'
         />
         <link rel='manifest' href='/favicons/site.webmanifest' />
-        <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
+        <link
+          rel='mask-icon'
+          href='/favicons/safari-pinned-tab.svg'
+          color='#5bbad5'
+        />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff'></meta>
         // fonts
@@ -56,10 +65,9 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <GlobalStyle />
       <Header />
-      <div>
+      <StyledContent>
         <Component {...pageProps} />
-        <div>Test app</div>
-      </div>
+      </StyledContent>
       <Footer />
     </div>
   );

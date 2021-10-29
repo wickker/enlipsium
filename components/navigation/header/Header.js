@@ -16,16 +16,30 @@ const Header = () => {
   };
   const [currentKey, setCurrentKey] = useState(`${ROUTES_KEYS.HOME}`);
   const [windowWidth, setWindowWidth] = useState(getInitialWindowWidth());
+  const [logoMargins, setLogoMargins] = useState({
+    right: undefined,
+    left: undefined,
+  });
+
+  console.log('windowWidth : ', windowWidth); // remove this later
 
   useEffect(() => {
     window.addEventListener('resize', updateWindowWidth);
     return () => window.removeEventListener('resize', updateWindowWidth);
   }, []);
 
+  useEffect(() => {
+    if (windowWidth) {
+      setLogoMargins({
+        right: calculateLogoMargins(windowWidth, 'right'),
+        left: calculateLogoMargins(windowWidth, 'left'),
+      });
+    }
+  }, [windowWidth]);
+
   const updateWindowWidth = () => {
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
-      console.log('windowWidth : ', window.innerWidth); // remove this later
     }
   };
 
@@ -35,9 +49,6 @@ const Header = () => {
   };
 
   const calculateLogoMargins = (width, side) => {
-    if (!width) {
-      return 0;
-    }
     if (width > 1200) {
       if (side === 'right') {
         return width * 0.4;
@@ -71,9 +82,9 @@ const Header = () => {
       <Menu.Item
         key={`${ROUTES_KEYS.HOME}`}
         style={{
-          'border-bottom': 'none',
-          'margin-right': `${calculateLogoMargins(windowWidth, 'right')}px`,
-          'margin-left': `${calculateLogoMargins(windowWidth, 'left')}px`,
+          borderBottom: 'none',
+          marginRight: `${get(logoMargins, 'right')}px`,
+          marginLeft: `${get(logoMargins, 'left')}px`,
         }}
       >
         <Logo src='enlipsium-logo.jpg' alt='Enlipsium' />
@@ -83,39 +94,39 @@ const Header = () => {
           <Menu.Item
             key={`${ROUTES_KEYS.NANEOS}`}
             style={{
-              'margin-left': '-12px',
-              'margin-bottom': '-5px',
+              marginLeft: '-12px',
+              marginBottom: '-5px',
             }}
           >
             Naneos
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.UCNPS}`}
-            style={{ 'margin-bottom': '-5px' }}
+            style={{ marginBottom: '-5px' }}
           >
             Upconverting Nanoparticles (UCNPs)
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.NANO_PEROVSKITE}`}
-            style={{ 'margin-bottom': '-5px' }}
+            style={{ marginBottom: '-5px' }}
           >
             Nano Perovskite
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ORGANIC}`}
-            style={{ 'margin-bottom': '-5px' }}
+            style={{ marginBottom: '-5px' }}
           >
             Organic
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.POLYIPNOS}`}
-            style={{ 'margin-left': '-12px', 'margin-bottom': '-5px' }}
+            style={{ marginLeft: '-12px', marginBottom: '-5px' }}
           >
             Polyipnos
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
-            style={{ 'margin-left': '-12px' }}
+            style={{ marginLeft: '-12px' }}
           >
             Enlit
           </Menu.Item>
