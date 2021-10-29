@@ -1,6 +1,6 @@
-import Document from "next/document";
-import { ServerStyleSheet } from "styled-components";
-import {Amplify} from "aws-amplify";
+import Document from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+import { Amplify } from 'aws-amplify';
 Amplify.configure({ ssr: true });
 
 export default class MyDocument extends Document {

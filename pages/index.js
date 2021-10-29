@@ -245,7 +245,7 @@ export default function Home() {
   };
 
   return (
-    <div>test index js</div>
+    <div>Test index</div>
     // <Row>
     //   <TitleCol span={24}>
     //     <Row>

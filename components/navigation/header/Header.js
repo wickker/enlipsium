@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'antd';
-import {} from './Styles';
+import {} from './styles';
+import { get } from 'lodash';
 
 const { SubMenu } = Menu;
 
@@ -10,7 +11,7 @@ const Header = () => {
       return window.innerWidth;
     }
   };
-  const [current, setCurrent] = useState('mail');
+  const [currentKey, setCurrentKey] = useState('mail');
   const [windowWidth, setWindowWidth] = useState(getInitialWindowWidth());
 
   useEffect(() => {
@@ -26,14 +27,17 @@ const Header = () => {
   };
 
   const handleClick = (e) => {
-    setCurrent(e.key);
+    setCurrentKey(get(e, 'key'));
   };
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[current]} mode='horizontal'>
+    <Menu onClick={handleClick} selectedKeys={[currentKey]} mode='horizontal'>
       <Menu.Item
         key='test'
-        style={{ 'border-bottom': 'none', 'margin-right': `${windowWidth*0.2}px` }}
+        style={{
+          'border-bottom': 'none',
+          'margin-right': `${windowWidth * 0.2}px`,
+        }}
       >
         <img src='https://via.placeholder.com/100x30' />
       </Menu.Item>
