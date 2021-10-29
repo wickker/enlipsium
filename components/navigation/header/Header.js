@@ -3,7 +3,7 @@ import { Menu } from 'antd';
 import { Logo } from './styles';
 import { get } from 'lodash';
 import { useRouter } from 'next/router';
-import { ROUTES_KEYS } from '../../../utils/constants';
+import { ROUTES_KEYS, COLORS } from '../../../utils/constants';
 
 const { SubMenu } = Menu;
 
@@ -14,7 +14,7 @@ const Header = () => {
       return window.innerWidth;
     }
   };
-  const [currentKey, setCurrentKey] = useState('mail');
+  const [currentKey, setCurrentKey] = useState(`${ROUTES_KEYS.HOME}`);
   const [windowWidth, setWindowWidth] = useState(getInitialWindowWidth());
 
   useEffect(() => {
@@ -31,23 +31,34 @@ const Header = () => {
 
   const handleClick = (e) => {
     setCurrentKey(get(e, 'key'));
-    router.push(get(e, 'key'));
+    // router.push(get(e, 'key'));
   };
 
   const calculateLogoMargins = (width, side) => {
     if (!width) {
       return 0;
     }
-    if (width > 1200 && side === 'right') {
-      return width * 0.4;
-    }
-    if (width > 1200 && side === 'left') {
+    if (width > 1200) {
+      if (side === 'right') {
+        return width * 0.4;
+      }
+      return width * 0.15;
+    } else if (width >= 700 && width <= 1200) {
+      if (side === 'right') {
+        return width * 0.3;
+      }
       return width * 0.1;
+    } else if (width < 700 && width >= 500) {
+      if (side === 'right') {
+        return width * 0.2;
+      }
+      return width * 0.05;
+    } else {
+      if (side === 'right') {
+        return width * 0.2;
+      }
+      return 0;
     }
-    if (side === 'right') {
-      return width * 0.2;
-    }
-    return 0;
   };
 
   return (
@@ -67,22 +78,50 @@ const Header = () => {
       >
         <Logo src='enlipsium-logo.jpg' alt='Enlipsium' />
       </Menu.Item>
-      <Menu.Item key='mail'>Navigation One</Menu.Item>
-      <SubMenu key='SubMenu' title='Navigation Three - Submenu'>
-        <Menu.ItemGroup title='Item 1'>
-          <Menu.Item key='setting:1'>Option 1</Menu.Item>
-          <Menu.Item key='setting:2'>Option 2</Menu.Item>
-        </Menu.ItemGroup>
-        <Menu.ItemGroup title='Item 2'>
-          <Menu.Item key='setting:3'>Option 3</Menu.Item>
-          <Menu.Item key='setting:4'>Option 4</Menu.Item>
+      <SubMenu key={`${ROUTES_KEYS.TECHNOLOGIES}`} title='Technologies'>
+        <Menu.ItemGroup>
+          <Menu.Item
+            key={`${ROUTES_KEYS.NANEOS}`}
+            style={{
+              'margin-left': '-12px',
+              'margin-bottom': '-5px',
+            }}
+          >
+            Naneos
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.UCNPS}`}
+            style={{ 'margin-bottom': '-5px' }}
+          >
+            Upconverting Nanoparticles (UCNPs)
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.NANO_PEROVSKITE}`}
+            style={{ 'margin-bottom': '-5px' }}
+          >
+            Nano Perovskite
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.ORGANIC}`}
+            style={{ 'margin-bottom': '-5px' }}
+          >
+            Organic
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.POLYIPNOS}`}
+            style={{ 'margin-left': '-12px', 'margin-bottom': '-5px' }}
+          >
+            Polyipnos
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.ENLIT}`}
+            style={{ 'margin-left': '-12px' }}
+          >
+            Enlit
+          </Menu.Item>
         </Menu.ItemGroup>
       </SubMenu>
-      <Menu.Item key='alipay'>
-        <a href='https://ant.design' target='_blank' rel='noopener noreferrer'>
-          Navigation Four - Link
-        </a>
-      </Menu.Item>
+      <Menu.Item key={`${ROUTES_KEYS.CONTACT_US}`}>Contact Us</Menu.Item>
     </Menu>
   );
 };
