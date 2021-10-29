@@ -6,3 +6,7 @@ export const lightGray = "#848689"
 export const lightestGray = "#F6F6F6";
 export const marine = "#3AAFA9";
 export const border = "#f0f0f0";
+
+export const ROUTES_KEYS = {
+    'HOME': '/',
+  }

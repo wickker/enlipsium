@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'antd';
-import {} from './styles';
+import { Logo } from './styles';
 import { get } from 'lodash';
+import { useRouter } from 'next/router';
+import { ROUTES_KEYS } from '../../../utils/constants';
 
 const { SubMenu } = Menu;
 
 const Header = () => {
+  const router = useRouter();
   const getInitialWindowWidth = () => {
     if (typeof window !== 'undefined') {
       return window.innerWidth;
@@ -22,24 +25,47 @@ const Header = () => {
   const updateWindowWidth = () => {
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
-      console.log('updating window width');
+      console.log('windowWidth : ', window.innerWidth); // remove this later
     }
   };
 
   const handleClick = (e) => {
     setCurrentKey(get(e, 'key'));
+    router.push(get(e, 'key'));
+  };
+
+  const calculateLogoMargins = (width, side) => {
+    if (!width) {
+      return 0;
+    }
+    if (width > 1200 && side === 'right') {
+      return width * 0.4;
+    }
+    if (width > 1200 && side === 'left') {
+      return width * 0.1;
+    }
+    if (side === 'right') {
+      return width * 0.2;
+    }
+    return 0;
   };
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[currentKey]} mode='horizontal'>
+    <Menu
+      onClick={handleClick}
+      selectedKeys={[currentKey]}
+      mode='horizontal'
+      style={{ 'font-size': '16px' }}
+    >
       <Menu.Item
-        key='test'
+        key={`${ROUTES_KEYS.HOME}`}
         style={{
           'border-bottom': 'none',
-          'margin-right': `${windowWidth * 0.2}px`,
+          'margin-right': `${calculateLogoMargins(windowWidth, 'right')}px`,
+          'margin-left': `${calculateLogoMargins(windowWidth, 'left')}px`,
         }}
       >
-        <img src='https://via.placeholder.com/100x30' />
+        <Logo src='enlipsium-logo.jpg' alt='Enlipsium' />
       </Menu.Item>
       <Menu.Item key='mail'>Navigation One</Menu.Item>
       <SubMenu key='SubMenu' title='Navigation Three - Submenu'>
