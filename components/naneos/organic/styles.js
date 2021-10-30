@@ -53,6 +53,15 @@ export const Details = styled(Col)`
   }
 `;
 
+export const Container = styled(Col)`
+  && {
+    padding: 30px;
+    @media (max-width: 752px) {
+      padding: 30px 30px 0px 30px;
+    }
+  }
+`;
+
 export const EmptyCol = styled(Col)`
   && {
     height: 50px;

@@ -43,13 +43,11 @@ const Home = () => {
         </Title3>
       </TitleLeftCol>
       <Col xs={24} sm={24} md={24} lg={12}>
-        <div>
-          <img
-            style={{ width: '100%', height: '75vh' }}
-            src='https://image.shutterstock.com/shutterstock/photos/1646466424/display_1500/stock-photo-cells-and-biological-chain-molecules-and-abstract-conception-d-rendering-computer-digital-drawing-1646466424.jpg'
-            alt='Enlipsium Homepage'
-          />
-        </div>
+        <img
+          style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
+          src='https://image.shutterstock.com/shutterstock/photos/1646466424/display_1500/stock-photo-cells-and-biological-chain-molecules-and-abstract-conception-d-rendering-computer-digital-drawing-1646466424.jpg'
+          alt='Enlipsium Homepage'
+        />
       </Col>
       <ProductLine>
         Enlipsium offers{' '}
