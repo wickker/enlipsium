@@ -21,7 +21,7 @@ const Header = () => {
     left: undefined,
   });
 
-  console.log('windowWidth : ', windowWidth); // remove this later
+  // console.log('windowWidth : ', windowWidth); // remove this later
 
   useEffect(() => {
     window.addEventListener('resize', updateWindowWidth);
@@ -77,7 +77,7 @@ const Header = () => {
       onClick={handleClick}
       selectedKeys={[currentKey]}
       mode='horizontal'
-      style={{ 'font-size': '16px' }}
+      style={{ fontSize : '16px', color: 'black' }}
     >
       <Menu.Item
         key={`${ROUTES_KEYS.HOME}`}
@@ -98,7 +98,7 @@ const Header = () => {
               marginBottom: '-5px',
             }}
           >
-            Naneos
+            NANEOS
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.UCNPS}`}
@@ -122,13 +122,13 @@ const Header = () => {
             key={`${ROUTES_KEYS.POLYIPNOS}`}
             style={{ marginLeft: '-12px', marginBottom: '-5px' }}
           >
-            Polyipnos
+            POLYIPNOS
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
             style={{ marginLeft: '-12px' }}
           >
-            Enlit
+            ENLIT
           </Menu.Item>
         </Menu.ItemGroup>
       </SubMenu>

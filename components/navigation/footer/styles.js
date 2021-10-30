@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { Col, Layout } from 'antd';
+import { Col } from 'antd';
 import { COLORS } from '../../../utils/constants';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-const { Footer } = Layout;
 
 export const DummyCol = styled(Col)`
   && {
