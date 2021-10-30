@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Row } from 'antd';
 import emailjs from 'emailjs-com';
 import { get } from 'lodash';
+import { COLORS } from '../../utils/constants';
 import {
   TitleCol,
   Title,
@@ -91,8 +92,11 @@ const Contact = () => {
     <Row align='middle' justify='center'>
       <TitleCol span={24}>
         <Title>
-          Want to get in touch? We'd love to hear from you. Here's how you can
-          reach us...
+          Want to get in touch?{' '}
+          <span style={{ fontWeight: '900', color: `${COLORS.ORANGE}` }}>
+            We'd love to hear from you.
+          </span>{' '}
+          Here's how you can reach us...
         </Title>
       </TitleCol>
       <MapCol xs={24} sm={24} md={24} lg={12}>
