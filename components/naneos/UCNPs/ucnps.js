@@ -1,4 +1,4 @@
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 import { COLORS } from '../../../utils/constants';
 import data from './content.json';
 import { get } from 'lodash';
