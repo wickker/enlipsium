@@ -24,7 +24,7 @@ import {
 
 const Home = () => {
   const handleClickContact = () => {
-    // window.location.assign('/contact');
+    window.location.assign('/contact');
   };
 
   const handleClickCard = () => {
@@ -142,46 +142,46 @@ const Home = () => {
       <TeamTagline>Teamwork Makes the Dream Work</TeamTagline>
       <TeamRow justify='center'>
         <Col xs={24} sm={24} md={12} lg={6}>
-          <img
-            src='yzharperry.jpg'
-            alt='Enlipsium Yzhar Perry'
-            style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <img
-            src='tommytham.jpg'
-            alt='Enlipsium Tommy Tham'
-            style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <img
-            src='chenqiushui.jpg'
-            alt='Enlipsium Chen Qiu Shui'
-            style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
-          <img
-            src='xiaogangliu.jpg'
-            alt='Enlipsium Liu Xiao Gang'
-            style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={6}>
+          <div>
+            <img
+              src='yzharperry.jpg'
+              alt='Enlipsium Yzhar Perry'
+              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+            />
+          </div>
           <TeamName>Mr Yzhar Perry</TeamName>
           <TeamPosition>CEO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
+          <div>
+            <img
+              src='tommytham.jpg'
+              alt='Enlipsium Tommy Tham'
+              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+            />
+          </div>
           <TeamName>Mr Tommy Tham</TeamName>
           <TeamPosition>CTO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
+          <div>
+            <img
+              src='chenqiushui.jpg'
+              alt='Enlipsium Chen Qiu Shui'
+              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+            />
+          </div>
           <TeamName>Professor Qiushui Chen</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
+          <div>
+            <img
+              src='xiaogangliu.jpg'
+              alt='Enlipsium Liu Xiao Gang'
+              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+            />
+          </div>
           <TeamName>Professor Xiaogang Liu</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>
         </Col>

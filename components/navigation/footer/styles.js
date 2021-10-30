@@ -29,17 +29,15 @@ export const IconsCol = styled(DummyCol)`
 `;
 
 export const StyledFooter = styled.div`
-   {
-    background-color: white;
-    color: ${COLORS.DARK_GRAY};
-    height: 50px;
-    padding: 0px;
-    border-top: 1px solid ${COLORS.BORDER};
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-  }
+  background-color: white;
+  color: ${COLORS.DARK_GRAY};
+  height: 50px;
+  padding: 0px;
+  border-top: 1px solid ${COLORS.BORDER};
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 `;
 
 export const FontAwesomeIcon = styled(Icon)`

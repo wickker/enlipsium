@@ -21,8 +21,6 @@ const Header = () => {
     left: undefined,
   });
 
-  // console.log('windowWidth : ', windowWidth); // remove this later
-
   useEffect(() => {
     window.addEventListener('resize', updateWindowWidth);
     return () => window.removeEventListener('resize', updateWindowWidth);
