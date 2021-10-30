@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row } from 'antd';
 import emailjs from 'emailjs-com';
-import get from 'lodash';
+import { get } from 'lodash';
 import {
   TitleCol,
   Title,
@@ -27,8 +27,31 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const mapSourceURL = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&zoom=16&q=10%20Ubi%20Cres%20#05-70%20Singapore%20408564`;
 
+  const fieldsAreValidated = () => {
+    if (!name) {
+      return false;
+    }
+    if (!email || !email.includes('@')) {
+      return false;
+    }
+    if (!message) {
+      return false;
+    }
+    return true;
+  };
+
+  const clearFields = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!fieldsAreValidated()) {
+      clearFields();
+      return;
+    }
     emailjs
       .sendForm(
         'service_5f9r68f',
@@ -40,9 +63,7 @@ const Contact = () => {
         (result) => {
           console.log(get(result, 'text'));
           setIsSuccess(true);
-          setName('');
-          setEmail('');
-          setMessage('');
+          clearFields();
         },
         (error) => {
           console.log(get(error, 'text'));
