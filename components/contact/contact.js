@@ -3,11 +3,9 @@ import { Row } from 'antd';
 import emailjs from 'emailjs-com';
 import get from 'lodash';
 import {
-  StyledRow,
   TitleCol,
-  TitleScaleAnimation,
   Title,
-  MapIFrame,
+  MapFrame,
   MapCol,
   FormTitle,
   FormLabel,
@@ -15,21 +13,19 @@ import {
   FormInput,
   FormAlert,
   FormTextArea,
-  FormSubmitCol,
-  FormSubmit,
+  FormSubmitButton,
   InfoCol,
-  InfoTextCol,
   InfoDescription,
   InfoContactText,
+  EmptyCol,
 } from './styles';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [isSuccessHidden, setIsSuccessHidden] = useState(true);
-
-  const mapSourceUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&zoom=16&q=10%20Ubi%20Cres%20#05-70%20Singapore%20408564`;
+  const [isSuccess, setIsSuccess] = useState(false);
+  const mapSourceURL = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&zoom=16&q=10%20Ubi%20Cres%20#05-70%20Singapore%20408564`;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -43,31 +39,35 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(get(result, 'text'));
-          setIsSuccessHidden(false);
+          setIsSuccess(true);
           setName('');
           setEmail('');
           setMessage('');
         },
         (error) => {
           console.log(get(error, 'text'));
+          setIsSuccess(false);
         }
       );
   };
 
-  const handleName = (e) => {
+  const handleNameChange = (e) => {
     setName(get(e, 'target.value'));
+    setIsSuccess(false);
   };
 
-  const handleEmail = (e) => {
+  const handleEmailChange = (e) => {
     setEmail(get(e, 'target.value'));
+    setIsSuccess(false);
   };
 
-  const handleMessage = (e) => {
+  const handleMessageChange = (e) => {
     setMessage(get(e, 'target.value'));
+    setIsSuccess(false);
   };
 
   return (
-    <StyledRow>
+    <Row align='middle' justify='center'>
       <TitleCol span={24}>
         <Title>
           Want to get in touch? We'd love to hear from you. Here's how you can
@@ -75,38 +75,38 @@ const Contact = () => {
         </Title>
       </TitleCol>
       <MapCol xs={24} sm={24} md={24} lg={12}>
-        <MapIFrame src={mapSourceUrl}></MapIFrame>
+        <MapFrame src={mapSourceURL}></MapFrame>
       </MapCol>
       <FormCol xs={24} sm={24} md={24} lg={12}>
         <FormTitle>Contact Us</FormTitle>
-        <div hidden={isSuccessHidden}>
+        {isSuccess && (
           <FormAlert
             message='Your message was successfully sent! We will be in touch with you shortly.'
             type='success'
             showIcon
           />
-        </div>
+        )}
         <form className='contact-form' onSubmit={sendEmail}>
           <FormLabel>Name:</FormLabel>
-          <FormInput name='from_name' value={name} onChange={handleName} />
+          <FormInput
+            name='from_name'
+            value={name}
+            onChange={handleNameChange}
+          />
           <FormLabel>Email:</FormLabel>
           <FormInput
             name='contact_email'
             value={email}
-            onChange={handleEmail}
+            onChange={handleEmailChange}
           />
           <FormLabel>Message:</FormLabel>
           <FormTextArea
             name='message'
             autoSize={{ minRows: 4 }}
             value={message}
-            onChange={handleMessage}
+            onChange={handleMessageChange}
           />
-          <Row>
-            <FormSubmitCol span={24}>
-              <FormSubmit type='submit' value='Submit' />
-            </FormSubmitCol>
-          </Row>
+          <FormSubmitButton type='submit' value='Submit' />
         </form>
       </FormCol>
       <InfoCol span={24}>
@@ -131,18 +131,17 @@ const Contact = () => {
           <strong>Omar Ben el-Khatab 58, Kfar Qasem</strong>
         </InfoContactText>
       </InfoCol>
-      <InfoTextCol>
-        <InfoDescription>
-          Enlipsium is a National University of Singapore (NUS) Graduate
-          Research Innovation Programme (GRIP) company i.e. a spin off company
-          driven by NUS-developed technology. Feel free to contact the{' '}
-          <a href='http://www.nus.edu.sg/ilo' target='_blank'>
-            NUS Industry Liaison Office (ILO)
-          </a>{' '}
-          for more information about us and our technology.
-        </InfoDescription>
-      </InfoTextCol>
-    </StyledRow>
+      <InfoDescription>
+        Enlipsium is a National University of Singapore (NUS) Graduate Research
+        Innovation Programme (GRIP) company i.e. a spin off company driven by
+        NUS-developed technology. Feel free to contact the{' '}
+        <a href='http://www.nus.edu.sg/ilo' target='_blank'>
+          NUS Industry Liaison Office (ILO)
+        </a>{' '}
+        for more information about us and our technology.
+      </InfoDescription>
+      <EmptyCol span={24} />
+    </Row>
   );
 };
 

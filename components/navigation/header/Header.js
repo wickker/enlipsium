@@ -14,7 +14,7 @@ const Header = () => {
       return window.innerWidth;
     }
   };
-  const [currentKey, setCurrentKey] = useState(`${ROUTES_KEYS.HOME}`);
+  const [currentKey, setCurrentKey] = useState(router.pathname);
   const [windowWidth, setWindowWidth] = useState(getInitialWindowWidth());
   const [logoMargins, setLogoMargins] = useState({
     right: undefined,
@@ -43,7 +43,7 @@ const Header = () => {
 
   const handleClick = (e) => {
     setCurrentKey(get(e, 'key'));
-    // router.push(get(e, 'key'));
+    router.push(get(e, 'key'));
   };
 
   const calculateLogoMargins = (width, side) => {

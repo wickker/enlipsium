@@ -21,7 +21,7 @@ const StyledButton = styled.button`
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   &:hover {
-    box-shadow: 0 6px 6px -6px ${(props) => handleColorSelection(props.inputColor)};
+    box-shadow: 0px 6px 6px -6px ${(props) => handleColorSelection(props.inputColor)};
     cursor: pointer;
   }
 `;
