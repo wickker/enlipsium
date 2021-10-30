@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import { COLORS } from '../../utils/constants';
+import Button from '../reusable/button';
 import {
   TitleLeftCol,
   Title1,
@@ -21,10 +22,12 @@ import {
   EmptyCol,
 } from './styles';
 
-const { Meta } = Card;
-
 const Home = () => {
-  const onButtonClick = () => {
+  const handleClickContact = () => {
+    // window.location.assign('/contact');
+  };
+
+  const handleClickCard = () => {
     // window.location.assign('/contact');
   };
 
@@ -64,15 +67,23 @@ const Home = () => {
               <img src='polyipnos-logo.png' style={{ borderRadius: '15px' }} />
             }
           >
-            <CardTitle>Polyipnos</CardTitle>
-            <CardDescription>
-              Lanthanide luminescence nanocrystals are commonly used in
-              anti-counterfeit applications. By adding a small amount of the
-              nanocrystal into a medium (e.g. inks or polymers), a customizable
-              and unique color signature may be produced. It is invisble in the
-              visible light spectrum but under UV or IR, its unique color may be
-              detected by the naked eye or equipment.
-            </CardDescription>
+            <Row justify='center'>
+              <CardTitle>Polyipnos</CardTitle>
+              <CardDescription>
+                Lanthanide luminescence nanocrystals are commonly used in
+                anti-counterfeit applications. By adding a small amount of the
+                nanocrystal into a medium (e.g. inks or polymers), a
+                customizable and unique color signature may be produced. It is
+                invisble in the visible light spectrum but under UV or IR, its
+                unique color may be detected by the naked eye or equipment.
+              </CardDescription>
+              <Button
+                onClick={handleClickCard}
+                inputColor='orange'
+                buttonText='Learn More'
+                style={{ marginTop: '30px' }}
+              />
+            </Row>
           </Card>
         </CardCol>
         <CardCol xs={24} sm={24} md={24} lg={8}>
@@ -83,14 +94,22 @@ const Home = () => {
               <img src='naneos-logo.png' style={{ borderRadius: '15px' }} />
             }
           >
-            <CardTitle>Naneos (X-ray Scintillators)</CardTitle>
-            <CardDescription>
-              Enlipsium’s thin film scintillator material is changing how X-ray
-              devices are build. With a film so thin, flexible and sensitive, we
-              can now customize X-ray devices like never before. Many believe
-              that the current X-ray dosage is sufficiently low, but at
-              Enlipsium, we say let’s go lower.
-            </CardDescription>
+            <Row justify='center'>
+              <CardTitle>Naneos (X-ray Scintillators)</CardTitle>
+              <CardDescription>
+                Enlipsium’s thin film scintillator material is changing how
+                X-ray devices are build. With a film so thin, flexible and
+                sensitive, we can now customize X-ray devices like never before.
+                Many believe that the current X-ray dosage is sufficiently low,
+                but at Enlipsium, we say let’s go lower.
+              </CardDescription>
+              <Button
+                onClick={handleClickCard}
+                inputColor='orange'
+                buttonText='Learn More'
+                style={{ marginTop: '30px' }}
+              />
+            </Row>
           </Card>
         </CardCol>
         <CardCol xs={24} sm={24} md={24} lg={8}>
@@ -101,13 +120,21 @@ const Home = () => {
               <img src='enlit-logo.png' style={{ borderRadius: '15px' }} />
             }
           >
-            <CardTitle>Enlit</CardTitle>
-            <CardDescription>
-              Enlit EcoClean technology provides an advanced self-cleaning
-              coating solution that works as a protective shield against dust,
-              dirt and water marks. We develop sustainable and ecofriendly
-              products with the environment in mind.
-            </CardDescription>
+            <Row justify='center'>
+              <CardTitle>Enlit</CardTitle>
+              <CardDescription>
+                Enlit EcoClean technology provides an advanced self-cleaning
+                coating solution that works as a protective shield against dust,
+                dirt and water marks. We develop sustainable and ecofriendly
+                products with the environment in mind.
+              </CardDescription>
+              <Button
+                onClick={handleClickCard}
+                inputColor='orange'
+                buttonText='Learn More'
+                style={{ marginTop: '30px' }}
+              />
+            </Row>
           </Card>
         </CardCol>
       </CardRow>
@@ -161,59 +188,13 @@ const Home = () => {
       </TeamRow>
       <ContactLine1>Let There Be</ContactLine1>
       <ContactLine2>LIGHT</ContactLine2>
+      <Button
+        onClick={handleClickContact}
+        inputColor='orange'
+        buttonText='Contact Us'
+        style={{ marginBottom: '50px', marginTop: '10px' }}
+      />
       <EmptyCol span={24} />
-
-      {/* <AboutCol span={24}>
-        <Row>
-          <AboutTitle xs={24} sm={24} md={24} lg={24}>
-            Who Are These People Anyway?
-          </AboutTitle>
-          <AboutTagline xs={24} sm={24} md={24} lg={24}>
-            Teamwork Makes the Dream Work
-          </AboutTagline>
-          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
-            <AboutAvatar
-              src='yzharperry.jpg'
-              alt='Enlipsium staff - Yzhar Perry'
-            />
-            <AboutStaffName>Mr Yzhar Perry</AboutStaffName>
-            <AboutStaffPosition>CEO & Founder</AboutStaffPosition>
-          </AboutAvatarCol>
-          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
-            <AboutAvatar
-              src='tommytham.jpg'
-              alt='Enlipsium staff - Tommy Tham'
-            />
-            <AboutStaffName>Mr Tommy Tham</AboutStaffName>
-            <AboutStaffPosition>CTO & Founder</AboutStaffPosition>
-          </AboutAvatarCol>
-          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
-            <AboutAvatar
-              src='liuxiaogang.jpg'
-              alt='Enlipsium staff - Liu Xiaogang'
-            />
-            <AboutStaffName>Professor Qiushui Chen</AboutStaffName>
-            <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
-          </AboutAvatarCol>
-          <AboutAvatarCol xs={24} sm={24} md={12} lg={6}>
-            <AboutAvatar
-              src='chenqiushui.jpg'
-              alt='Enlipsium staff - Chen Qiushui'
-            />
-            <AboutStaffName>Professor Xiaogang Liu</AboutStaffName>
-            <AboutStaffPosition>Technical Advisor</AboutStaffPosition>
-          </AboutAvatarCol>
-        </Row>
-      </AboutCol>
-      <ContactCol span={24}>
-        <Row>
-          <ContactTitle1 span={24}>{content.home.tagline3}</ContactTitle1>
-          <ContactTitle2 span={24}>{content.home.tagline4}</ContactTitle2>
-          <ContactButtonCol span={24}>
-            <Button buttonText='Contact Us' onClick={onButtonClick} />
-          </ContactButtonCol>
-        </Row>
-      </ContactCol> */}
     </Row>
   );
 };
