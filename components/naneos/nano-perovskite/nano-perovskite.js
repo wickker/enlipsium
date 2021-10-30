@@ -41,7 +41,7 @@ const Nanoperovskite = () => {
         </Details>
         <img
           style={{ width: '100%', marginTop: '30px' }}
-          src='../../nano-perovskite-crystal.jpg'
+          src='../../nano-perovskite.jpg'
           alt='Nano Perovskite'
         />
       </div>
