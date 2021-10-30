@@ -20,7 +20,7 @@ const Naneos = () => {
     <Row align='middle' justify='center'>
       <TitleLeftCol xs={24} sm={24} md={24} lg={12}>
         <div>
-          <NaneosImg src='naneos-slim.png' />
+          <NaneosImg src='naneos-slim.png' alt='Naneos Logo'/>
         </div>
         <Title>
           We may not be able to bend light, but we can certainly bend the
@@ -34,11 +34,11 @@ const Naneos = () => {
         <img
           style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
           src='https://image.shutterstock.com/image-photo/photo-xray-human-shoulder-600w-1716091282.jpg'
-          alt='Enlipsium Homepage'
+          alt='Enlipsium Skeleton'
         />
       </Col>
       <Col xs={24} sm={24} md={24} lg={12}>
-        <XrayImg src='x-ray.jpg' />
+        <XrayImg src='x-ray.jpg' alt='Enlipsium X-Ray'/>
       </Col>
       <DescriptionCol xs={24} sm={24} md={24} lg={12}>
         <DescriptionTitle>Revolutionizing the X-Ray Industry</DescriptionTitle>
