@@ -1,0 +1,76 @@
+{
+  "polyipnos": [
+    {
+      "key": "1",
+      "condition": "Materials",
+      "polyipnos": "Luminescence Nanocrystals",
+      "transparent_inks": "Quinine",
+      "invisible_inks": "Stronium Aluminate",
+      "visible_inks": "Stronium Aluminate/ Phosphor"
+    },
+    {
+      "key": "2",
+      "condition": "Under Visible Light",
+      "polyipnos": "Completely Transparent",
+      "transparent_inks": "Completely Transparent",
+      "invisible_inks": "Completely Transparent",
+      "visible_inks": "Visible"
+    },
+    {
+      "key": "3",
+      "condition": "Under 365nm UV Light",
+      "polyipnos": "Emission Colors Can Be Tuned",
+      "transparent_inks": "Only Glow Blue",
+      "invisible_inks": "Emission Colors Can Be Tuned",
+      "visible_inks": "Only Glow Same Color Pigment"
+    },
+    {
+      "key": "4",
+      "condition": "Under 270nm UV Light",
+      "polyipnos": "Emission Colors Can Be Tuned",
+      "transparent_inks": "NIL",
+      "invisible_inks": "NIL",
+      "visible_inks": "NIL"
+    },
+    {
+      "key": "5",
+      "condition": "Under 980nm Infrared Red Wavelength",
+      "polyipnos": "Emission Colors Of Green Or Blue",
+      "transparent_inks": "NIL",
+      "invisible_inks": "NIL",
+      "visible_inks": "NIL"
+    },
+    {
+      "key": "6",
+      "condition": "Print On Paper",
+      "polyipnos": "Printable On Any Colored Paper",
+      "transparent_inks": "No White Paper",
+      "invisible_inks": "No White Paper",
+      "visible_inks": "No White Paper"
+    },
+    {
+      "key": "7",
+      "condition": "Print On Fabric",
+      "polyipnos": "Yes",
+      "transparent_inks": "No",
+      "invisible_inks": "No",
+      "visible_inks": "Yes"
+    },
+    {
+      "key": "8",
+      "condition": "Additive For Polymer",
+      "polyipnos": "Yes",
+      "transparent_inks": "No",
+      "invisible_inks": "No",
+      "visible_inks": "No"
+    },
+    {
+      "key": "9",
+      "condition": "Security Level",
+      "polyipnos": "High",
+      "transparent_inks": "Low",
+      "invisible_inks": "Mid",
+      "visible_inks": "Low"
+    }
+  ]
+}

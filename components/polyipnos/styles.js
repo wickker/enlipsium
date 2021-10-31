@@ -1,4 +1,4 @@
-import { Col, Row } from 'antd';
+import { Col, Row, Table } from 'antd';
 import { COLORS } from '../../utils/constants';
 import styled from 'styled-components';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -22,13 +22,24 @@ export const ImageCol = styled(Col)`
   }
 `;
 
+export const LogoImg = styled.img`
+  width: 35%;
+  object-fit: cover;
+  @media (max-width: 540px) {
+    width: 50%;
+  }
+`;
+
 export const Tagline = styled.div`
   color: #7af7cd;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 25px;
   margin-top: 50px;
   text-shadow: 2px 2px 4px black;
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-align: center;
 `;
 
 export const TitleCol = styled(Col)`
@@ -38,18 +49,30 @@ export const TitleCol = styled(Col)`
     line-height: 1.3em;
     text-align: left;
     padding: 50px 100px 30px 100px;
+    @media (max-width: 992px) {
+      padding: 50px 50px 30px 50px;
+    }
+    @media (max-width: 350px) {
+      font-size: 43px;
+    }
   }
 `;
 
 export const LeftContainer = styled(Col)`
   && {
     padding: 0px 30px 30px 100px;
+    @media (max-width: 992px) {
+      padding: 0px 50px 30px 50px;
+    }
   }
 `;
 
 export const RightContainer = styled(Col)`
   && {
     padding: 0px 100px 0px 0px;
+    @media (max-width: 992px) {
+      padding: 0px 30px 0px 30px;
+    }
   }
 `;
 
@@ -100,6 +123,36 @@ export const FontAwesomeIcon = styled(Icon)`
     color: ${COLORS.MARINE};
     margin-right: 10px;
     margin-top: 1px;
+  }
+`;
+
+export const TableCol = styled(Col)`
+  && {
+    padding: 30px;
+    background-color: ${COLORS.LIGHTEST_GRAY};
+    @media (max-width: 540px) {
+      padding: 30px 0px;
+    }
+  }
+`;
+
+export const StyledTable = styled(Table)`
+  && {
+    font-family: 'Montserrat', sans-serif;
+    tr,
+    th {
+      font-size: 14px;
+    }
+    thead tr th {
+      background-color: ${COLORS.MARINE};
+      color: white;
+    }
+    @media (max-width: 540px) {
+      tr,
+      th {
+        font-size: 12px;
+      }
+    }
   }
 `;
 
