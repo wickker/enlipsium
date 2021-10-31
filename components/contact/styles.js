@@ -62,7 +62,7 @@ export const FormCol = styled(Col)`
 export const FormTitle = styled.div`
   margin-bottom: 20px;
   font-size: 50px;
-  color: ${COLORS.GRAY};
+  color: ${COLORS.DARK_GRAY};
   @media only screen and (max-width: 400px) {
     font-size: 40px;
   }
@@ -139,7 +139,7 @@ export const InfoCol = styled(Col)`
 `;
 
 export const InfoContactText = styled.div`
-  color: ${COLORS.GRAY};
+  color: ${COLORS.DARK_GRAY};
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
@@ -147,7 +147,7 @@ export const InfoContactText = styled.div`
 `;
 
 export const InfoDescription = styled.div`
-  color: ${COLORS.LIGHT_GRAY};
+  color: ${COLORS.GRAY};
   width: 100%;
   font-size: 13px;
   text-align: center;
