@@ -144,7 +144,7 @@ const Home = () => {
             <img
               src='yzharperry.jpg'
               alt='Enlipsium Yzhar Perry'
-              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
             />
           </div>
           <TeamName>Mr Yzhar Perry</TeamName>
@@ -155,7 +155,7 @@ const Home = () => {
             <img
               src='tommytham.jpg'
               alt='Enlipsium Tommy Tham'
-              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
             />
           </div>
           <TeamName>Mr Tommy Tham</TeamName>
@@ -166,7 +166,7 @@ const Home = () => {
             <img
               src='chenqiushui.jpg'
               alt='Enlipsium Chen Qiu Shui'
-              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
             />
           </div>
           <TeamName>Professor Qiushui Chen</TeamName>
@@ -177,7 +177,7 @@ const Home = () => {
             <img
               src='xiaogangliu.jpg'
               alt='Enlipsium Liu Xiao Gang'
-              style={{ width: '100%', borderRadius: '50%', padding: '20px' }}
+              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
             />
           </div>
           <TeamName>Professor Xiaogang Liu</TeamName>
