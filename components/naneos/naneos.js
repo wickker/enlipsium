@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { COLORS } from '../../utils/constants';
+import { COLORS, ROUTES_KEYS } from '../../utils/constants';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 import {
   TitleLeftCol,
   Title,
@@ -13,6 +14,7 @@ import {
   DescriptionCol,
   FontAwesomeIcon,
   ProductContainer,
+  StyledA,
 } from './styles';
 
 const Naneos = () => {
@@ -20,7 +22,7 @@ const Naneos = () => {
     <Row align='middle' justify='center'>
       <TitleLeftCol xs={24} sm={24} md={24} lg={12}>
         <div>
-          <NaneosImg src='naneos-slim.png' alt='Naneos Logo'/>
+          <NaneosImg src='naneos-slim.png' alt='Naneos Logo' />
         </div>
         <Title>
           We may not be able to bend light, but we can certainly bend the
@@ -38,7 +40,7 @@ const Naneos = () => {
         />
       </Col>
       <Col xs={24} sm={24} md={24} lg={12}>
-        <XrayImg src='x-ray.jpg' alt='Enlipsium X-Ray'/>
+        <XrayImg src='x-ray.jpg' alt='Enlipsium X-Ray' />
       </Col>
       <DescriptionCol xs={24} sm={24} md={24} lg={12}>
         <DescriptionTitle>Revolutionizing the X-Ray Industry</DescriptionTitle>
@@ -66,17 +68,23 @@ const Naneos = () => {
           Check out our products below:
           <ProductContainer style={{ marginTop: '5px' }}>
             <FontAwesomeIcon icon={faCheck} />
-            <a style={{ color: `${COLORS.RED}` }}>
-              Upconverting Nanoparticles (UCNPs)
-            </a>
+            <Link href={`${ROUTES_KEYS.UCNPS}`}>
+              <StyledA style={{ color: `${COLORS.RED}` }}>
+                Upconverting Nanoparticles (UCNPs)
+              </StyledA>
+            </Link>
           </ProductContainer>
           <ProductContainer>
             <FontAwesomeIcon icon={faCheck} />
-            <a style={{ color: `${COLORS.RED}` }}>Nano Perovskite</a>
+            <Link href={`${ROUTES_KEYS.NANO_PEROVSKITE}`}>
+              <StyledA style={{ color: `${COLORS.RED}` }}>Nano Perovskite</StyledA>
+            </Link>
           </ProductContainer>
           <ProductContainer>
             <FontAwesomeIcon icon={faCheck} />
-            <a style={{ color: `${COLORS.RED}` }}>Organic</a>
+            <Link href={`${ROUTES_KEYS.ORGANIC}`}>
+              <StyledA style={{ color: `${COLORS.RED}` }}>Organic</StyledA>
+            </Link>
           </ProductContainer>
         </DescriptionText>
       </DescriptionCol>

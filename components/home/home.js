@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
-import { COLORS } from '../../utils/constants';
+import { COLORS, ROUTES_KEYS } from '../../utils/constants';
+import { get } from 'lodash';
 import Button from '../reusable/button';
 import {
   TitleLeftCol,
@@ -24,12 +25,8 @@ import {
 } from './styles';
 
 const Home = () => {
-  const handleClickContact = () => {
-    window.location.assign('/contact');
-  };
-
-  const handleClickCard = () => {
-    // window.location.assign('/contact');
+  const handleClickRouteButton = (routeKey) => {
+    window.location.assign(get(ROUTES_KEYS, routeKey));
   };
 
   return (
@@ -77,7 +74,7 @@ const Home = () => {
                 unique color may be detected by the naked eye or equipment.
               </CardDescription>
               <Button
-                onClick={handleClickCard}
+                onClick={() => handleClickRouteButton('POLYIPNOS')}
                 inputColor='orange'
                 buttonText='Learn More'
                 style={{ marginTop: '30px' }}
@@ -103,7 +100,7 @@ const Home = () => {
                 but at Enlipsium, we say let’s go lower.
               </CardDescription>
               <Button
-                onClick={handleClickCard}
+                onClick={() => handleClickRouteButton('NANEOS')}
                 inputColor='orange'
                 buttonText='Learn More'
                 style={{ marginTop: '30px' }}
@@ -128,7 +125,7 @@ const Home = () => {
                 products with the environment in mind.
               </CardDescription>
               <Button
-                onClick={handleClickCard}
+                onClick={() => handleClickRouteButton('ENLIT')}
                 inputColor='orange'
                 buttonText='Learn More'
                 style={{ marginTop: '30px' }}
@@ -172,7 +169,7 @@ const Home = () => {
       <ContactLine1>Let There Be</ContactLine1>
       <ContactLine2>LIGHT</ContactLine2>
       <Button
-        onClick={handleClickContact}
+        onClick={() => handleClickRouteButton('CONTACT_US')}
         inputColor='orange'
         buttonText='Contact Us'
         style={{ marginBottom: '50px', marginTop: '10px' }}

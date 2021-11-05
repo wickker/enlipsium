@@ -1,5 +1,6 @@
 import { Row } from 'antd';
-import { COLORS } from '../../utils/constants';
+import { COLORS, ROUTES_KEYS } from '../../utils/constants';
+import Link from 'next/link';
 import {
   ImageCol,
   LogoImg,
@@ -19,8 +20,6 @@ import {
   Overlay,
   OverlayText,
   OverlayCol,
-  StyledReactPlayer,
-  PlayerContainer,
 } from './styles';
 
 const Enlit = () => {
@@ -120,12 +119,13 @@ const Enlit = () => {
         <Overlay className='hello'>
           <OverlayText>
             Find out more{' '}
-            <a
-              href='#'
-              style={{ fontWeight: 900, color: `${COLORS.DARK_BLUE}` }}
-            >
-              HERE
-            </a>
+            <Link href={`${ROUTES_KEYS.CONTACT_US}`}>
+              <a
+                style={{ fontWeight: 900, color: `${COLORS.DARK_BLUE}` }}
+              >
+                HERE
+              </a>
+            </Link>
           </OverlayText>
         </Overlay>
       </OverlayCol>

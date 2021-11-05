@@ -9,6 +9,7 @@ export const TitleCol = styled(Col)`
     height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     @media only screen and (max-width: 400px) {
       padding: 0px 30px;
     }

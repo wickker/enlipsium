@@ -85,3 +85,9 @@ export const EmptyCol = styled(Col)`
     height: 50px;
   }
 `;
+
+export const StyledA = styled.a`
+  &:hover {
+    text-decoration: underline;
+  }
+`;
