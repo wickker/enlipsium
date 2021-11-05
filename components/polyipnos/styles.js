@@ -31,7 +31,7 @@ export const LogoImg = styled.img`
 `;
 
 export const Tagline = styled.div`
-  color: #7af7cd;
+  color: ${COLORS.HIGHLIGHT_MARINE};
   letter-spacing: 3px;
   font-size: 25px;
   margin-top: 50px;

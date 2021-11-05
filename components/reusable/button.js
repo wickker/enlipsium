@@ -17,11 +17,11 @@ const StyledButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 2px;
   border: solid 3px ${(props) => handleColorSelection(props.inputColor)};
-  padding: 5px 30px;
+  padding: 10px 30px;
   font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
+  transition: background-color 1s ease;
   &:hover {
-    box-shadow: 0px 6px 6px -6px ${(props) => handleColorSelection(props.inputColor)};
+    background-color: ${COLORS.SEMI_BLACK};
     cursor: pointer;
   }
 `;

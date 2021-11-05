@@ -49,7 +49,6 @@ export const Title3 = styled.div`
   font-size: 18px;
   margin-top: 50px;
   color: ${COLORS.LIGHTEST_GRAY};
-  text-align: justify;
   @media only screen and (max-width: 415px) {
     font-size: 16px;
   }
@@ -93,12 +92,13 @@ export const CardTitle = styled.div`
   font-weight: 900;
   margin-bottom: 10px;
   text-align: center;
+  color: ${COLORS.SEMI_BLACK};
 `;
 
 export const CardDescription = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: ${COLORS.GRAY};
+  color: ${COLORS.DARK_GRAY};
   text-align: center;
 `;
 
@@ -114,6 +114,12 @@ export const TeamTitle = styled.div`
   }
 `;
 
+export const TeamPhoto = styled.img`
+  width: 100%;
+  border-radius: 20%;
+  padding: 20px 30px;
+`;
+
 export const TeamTagline = styled.div`
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
@@ -122,28 +128,31 @@ export const TeamTagline = styled.div`
   text-align: center;
   color: ${COLORS.LIGHTEST_GRAY};
   padding: 0px 30px 20px 30px;
+  letter-spacing: 1px;
 `;
 
 export const TeamRow = styled(Row)`
   && {
-    padding: 0px 10px 50px 10px;
+    padding: 0px 100px 50px 100px;
     background-color: ${COLORS.DARK_GRAY};
+    @media only screen and (max-width: 576px) {
+      padding: 0px 10px 50px 10px;
+    }
   }
 `;
 
 export const TeamName = styled.div`
-  font-size: 16px;
+  font-size: 17px;
   color: white;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 `;
 
 export const TeamPosition = styled.div`
-  font-size: 16px;
-  color: ${COLORS.LIGHT_GRAY};
+  font-size: 17px;
+  color: ${COLORS.LIGHTEST_GRAY};
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-style: italic;
 `;
 
 export const ContactLine1 = styled.div`
@@ -153,12 +162,12 @@ export const ContactLine1 = styled.div`
   text-align: center;
   color: ${COLORS.DARK_GRAY};
   padding: 50px 30px 0px 30px;
+  margin-bottom: 5px;
 `;
 
 export const ContactLine2 = styled(ContactLine1)`
   && {
     color: ${COLORS.LIGHT_GRAY};
-    font-style: italic;
     padding: 0px 30px;
   }
 `;

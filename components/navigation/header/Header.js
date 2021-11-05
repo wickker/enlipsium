@@ -94,6 +94,7 @@ const Header = () => {
             style={{
               marginLeft: '-12px',
               marginBottom: '-5px',
+              letterSpacing: '1px'
             }}
           >
             NANEOS
@@ -118,13 +119,13 @@ const Header = () => {
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.POLYIPNOS}`}
-            style={{ marginLeft: '-12px', marginBottom: '-5px' }}
+            style={{ marginLeft: '-12px', marginBottom: '-5px', letterSpacing: '1px' }}
           >
             POLYIPNOS
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
-            style={{ marginLeft: '-12px' }}
+            style={{ marginLeft: '-12px', letterSpacing: '1px' }}
           >
             ENLIT
           </Menu.Item>

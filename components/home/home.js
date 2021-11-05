@@ -20,6 +20,7 @@ import {
   ContactLine1,
   ContactLine2,
   EmptyCol,
+  TeamPhoto,
 } from './styles';
 
 const Home = () => {
@@ -45,7 +46,7 @@ const Home = () => {
       <Col xs={24} sm={24} md={24} lg={12}>
         <img
           style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
-          src='https://image.shutterstock.com/shutterstock/photos/1646466424/display_1500/stock-photo-cells-and-biological-chain-molecules-and-abstract-conception-d-rendering-computer-digital-drawing-1646466424.jpg'
+          src='https://image.shutterstock.com/image-photo/hand-take-fluorescent-tube-600w-780769636.jpg'
           alt='Enlipsium Homepage'
         />
       </Col>
@@ -141,44 +142,28 @@ const Home = () => {
       <TeamRow justify='center'>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <img
-              src='yzharperry.jpg'
-              alt='Enlipsium Yzhar Perry'
-              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
-            />
+            <TeamPhoto src='yzharperry.jpg' alt='Enlipsium Yzhar Perry' />
           </div>
           <TeamName>Mr Yzhar Perry</TeamName>
           <TeamPosition>CEO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <img
-              src='tommytham.jpg'
-              alt='Enlipsium Tommy Tham'
-              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
-            />
+            <TeamPhoto src='tommytham.jpg' alt='Enlipsium Tommy Tham' />
           </div>
           <TeamName>Mr Tommy Tham</TeamName>
           <TeamPosition>CTO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <img
-              src='chenqiushui.jpg'
-              alt='Enlipsium Chen Qiu Shui'
-              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
-            />
+            <TeamPhoto src='chenqiushui.jpg' alt='Enlipsium Chen Qiu Shui' />
           </div>
           <TeamName>Professor Qiushui Chen</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <img
-              src='xiaogangliu.jpg'
-              alt='Enlipsium Liu Xiao Gang'
-              style={{ width: '100%', borderRadius: '20%', padding: '20px' }}
-            />
+            <TeamPhoto src='xiaogangliu.jpg' alt='Enlipsium Liu Xiao Gang' />
           </div>
           <TeamName>Professor Xiaogang Liu</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>

@@ -61,7 +61,7 @@ const Polyipnos = () => {
   return (
     <Row align='top'>
       <ImageCol span={24}>
-        <LogoImg src='polyipnos-logo-whatever.png' alt='Polyipnos Logo' />
+        <LogoImg src='polyipnos-logo-gimped.png' alt='Polyipnos Logo' />
         <Tagline>Luminescence Nanocrystals</Tagline>
       </ImageCol>
       <TitleCol span={24}>
@@ -70,13 +70,13 @@ const Polyipnos = () => {
       </TitleCol>
       <MainContainer>
         <LeftContainer xs={24} sm={24} md={24} lg={10}>
-          <Text style={{ fontSize: '18px' }}>
+          <Text style={{ fontSize: '17px' }}>
             Based on lanthanide luminescence nanocrystal additive technology,
             Polyipnos creates secure identification markers that can be used to
             trace the origin of products and raw materials.
           </Text>
           <br />
-          <Text style={{ fontSize: '18px' }}>
+          <Text style={{ fontSize: '17px' }}>
             Polyipnos technology involves tuning nanocrystals to emit a unique
             light frequency (or 'color') that is invisible to the naked eye.
             This invisible marker can be customized to experience excitation by
