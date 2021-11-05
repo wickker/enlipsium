@@ -35,7 +35,6 @@ export const StyledFooter = styled.div`
   padding: 0px;
   border-top: 1px solid ${COLORS.BORDER};
   width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
 `;

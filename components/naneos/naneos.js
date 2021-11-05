@@ -88,7 +88,7 @@ const Naneos = () => {
           </ProductContainer>
         </DescriptionText>
       </DescriptionCol>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

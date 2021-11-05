@@ -60,7 +60,7 @@ const Organic = () => {
           for quotation/ more information on our products.
         </Details>
       </Container>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

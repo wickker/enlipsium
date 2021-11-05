@@ -129,7 +129,7 @@ const Enlit = () => {
           </OverlayText>
         </Overlay>
       </OverlayCol>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

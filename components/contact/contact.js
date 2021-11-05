@@ -165,7 +165,7 @@ const Contact = () => {
         </a>{' '}
         for more information about us and our technology.
       </InfoDescription>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

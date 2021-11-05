@@ -45,7 +45,7 @@ const Nanoperovskite = () => {
           alt='Nano Perovskite'
         />
       </div>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

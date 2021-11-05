@@ -7,7 +7,7 @@ import { ROUTES_KEYS } from '../../../utils/constants';
 
 const { SubMenu } = Menu;
 
-const Header = () => {
+const NavHeader = () => {
   const router = useRouter();
   const getInitialWindowWidth = () => {
     if (typeof window !== 'undefined') {
@@ -75,7 +75,7 @@ const Header = () => {
       onClick={handleClick}
       selectedKeys={[currentKey]}
       mode='horizontal'
-      style={{ fontSize : '16px', color: 'black' }}
+      style={{ fontSize: '16px', color: 'black' }}
     >
       <Menu.Item
         key={`${ROUTES_KEYS.HOME}`}
@@ -94,7 +94,7 @@ const Header = () => {
             style={{
               marginLeft: '-12px',
               marginBottom: '-5px',
-              letterSpacing: '1px'
+              letterSpacing: '1px',
             }}
           >
             NANEOS
@@ -119,7 +119,11 @@ const Header = () => {
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.POLYIPNOS}`}
-            style={{ marginLeft: '-12px', marginBottom: '-5px', letterSpacing: '1px' }}
+            style={{
+              marginLeft: '-12px',
+              marginBottom: '-5px',
+              letterSpacing: '1px',
+            }}
           >
             POLYIPNOS
           </Menu.Item>
@@ -136,4 +140,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavHeader;

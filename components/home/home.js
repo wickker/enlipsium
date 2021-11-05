@@ -174,7 +174,7 @@ const Home = () => {
         buttonText='Contact Us'
         style={{ marginBottom: '50px', marginTop: '10px' }}
       />
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };

@@ -181,7 +181,7 @@ const UCNPs = () => {
           scroll={{ x: 400 }}
         />
       </TableCol>
-      <EmptyCol span={24} />
+      {/* <EmptyCol span={24} /> */}
     </Row>
   );
 };
