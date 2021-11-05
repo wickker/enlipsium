@@ -11,6 +11,9 @@ export const COLORS = {
   LIGHT_RED: '#F77A7A',
   OKAY_GREEN: '#82C91F',
   HIGHLIGHT_MARINE: '#7AF7CD',
+  DARK_BLUE: '#084A83',
+  BLUE: '#70ACDF',
+  LIGHT_BLUE: '#C6E5F3',
 };
 
 export const ROUTES_KEYS = {
