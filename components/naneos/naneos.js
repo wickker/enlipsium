@@ -35,7 +35,7 @@ const Naneos = () => {
       <Col xs={24} sm={24} md={24} lg={12}>
         <img
           style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
-          src='https://image.shutterstock.com/image-photo/photo-xray-human-shoulder-600w-1716091282.jpg'
+          src='x-ray-body.jpg'
           alt='Enlipsium Skeleton'
         />
       </Col>

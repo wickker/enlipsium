@@ -32,12 +32,7 @@ const Enlit = () => {
       <TitleCol span={24}>Hydrophilic Nano Ceramic Coating</TitleCol>
       <CardRow justify='space-between'>
         <CardCol xs={24} sm={12} md={12} lg={6}>
-          <StyledCard
-            bordered={false}
-            cover={
-              <CardImg src='https://image.shutterstock.com/image-photo/elegant-wooden-home-terrace-balcony-600w-1538417267.jpg' />
-            }
-          >
+          <StyledCard bordered={false} cover={<CardImg src='house.jpg' />}>
             <CardTitle>
               <span>Self-Cleaning Coating For Houses</span>
             </CardTitle>
@@ -57,10 +52,7 @@ const Enlit = () => {
               <span>Self-Rinsing Coating For Commercial Facade</span>
             </CardTitle>
             <CardDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque rhoncus nisi libero. Nullam purus risus, eleifend et
-              metus sit amet, rhoncus tempus sapien. Nam lobortis urna non
-              libero iaculis, eget euismod tortor tincidunt.
+              Section under construction. Please check back later.
             </CardDescription>
           </StyledCard>
         </CardCol>
@@ -73,28 +65,17 @@ const Enlit = () => {
               <span>Anti-Dust Coating For Solar Panel</span>
             </CardTitle>
             <CardDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque rhoncus nisi libero. Nullam purus risus, eleifend et
-              metus sit amet, rhoncus tempus sapien. Nam lobortis urna non
-              libero iaculis, eget euismod tortor tincidunt.
+              Section under construction. Please check back later.
             </CardDescription>
           </StyledCard>
         </CardCol>
         <CardCol xs={24} sm={12} md={12} lg={6}>
-          <StyledCard
-            bordered={false}
-            cover={
-              <CardImg src='https://image.shutterstock.com/image-photo/march-182017-street-sign-that-600w-611403368.jpg' />
-            }
-          >
+          <StyledCard bordered={false} cover={<CardImg src='road-sign.jpg' />}>
             <CardTitle>
               <span>Anti-Dust Coating On Traffic Signs</span>
             </CardTitle>
             <CardDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque rhoncus nisi libero. Nullam purus risus, eleifend et
-              metus sit amet, rhoncus tempus sapien. Nam lobortis urna non
-              libero iaculis, eget euismod tortor tincidunt.
+              Section under construction. Please check back later.
             </CardDescription>
           </StyledCard>
         </CardCol>
@@ -120,9 +101,7 @@ const Enlit = () => {
           <OverlayText>
             Find out more{' '}
             <Link href={`${ROUTES_KEYS.CONTACT_US}`}>
-              <a
-                style={{ fontWeight: 900, color: `${COLORS.DARK_BLUE}` }}
-              >
+              <a style={{ fontWeight: 900, color: `${COLORS.DARK_BLUE}` }}>
                 HERE
               </a>
             </Link>

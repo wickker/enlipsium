@@ -43,7 +43,7 @@ const Home = () => {
       <Col xs={24} sm={24} md={24} lg={12}>
         <img
           style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
-          src='https://image.shutterstock.com/image-photo/hand-take-fluorescent-tube-600w-780769636.jpg'
+          src='homepage.jpg'
           alt='Enlipsium Homepage'
         />
       </Col>

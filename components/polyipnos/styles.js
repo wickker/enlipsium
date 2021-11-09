@@ -82,7 +82,7 @@ export const MainContainer = styled(Row)`
         rgba(255, 255, 255, 0.3),
         rgba(255, 255, 255, 0.3)
       ),
-      url('https://image.shutterstock.com/image-photo/flat-lay-top-view-pile-600w-1187616253.jpg');
+      url('crystals.jpg');
     background-repeat: no-repeat;
     background-position: -350px 0px;
     background-size: cover;
