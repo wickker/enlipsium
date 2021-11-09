@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'antd';
-import { Logo } from './styles';
+import { Logo } from './Styles';
 import { get } from 'lodash';
 import { useRouter } from 'next/router';
 import { ROUTES_KEYS } from '../../../utils/constants';

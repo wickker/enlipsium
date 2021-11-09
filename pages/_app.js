@@ -2,7 +2,7 @@ import 'antd/dist/antd.less';
 import React from 'react';
 import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
-import NavHeader from '../components/navigation/header/header';
+import NavHeader from '../components/navigation/header/Header';
 import Footer from '../components/navigation/footer/footer';
 import { Layout } from 'antd';
 
