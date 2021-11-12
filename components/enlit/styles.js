@@ -1,7 +1,6 @@
 import { Col, Row, Card } from 'antd';
 import { COLORS } from '../../utils/constants';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 export const ImageCol = styled(Col)`
   && {
@@ -24,15 +23,13 @@ export const ImageCol = styled(Col)`
   }
 `;
 
-export const LogoImg = styled(Image)`
-  && {
-    width: 35%;
-    object-fit: cover;
-    margin: 120px 80px 0px 80px;
-    @media only screen and (max-width: 576px) {
-      width: 60%;
-      margin: 120px 0px 0px -10px;
-    }
+export const LogoImg = styled.img`
+  width: 35%;
+  object-fit: cover;
+  margin: 120px 80px 0px 80px;
+  @media only screen and (max-width: 576px) {
+    width: 60%;
+    margin: 120px 0px 0px -10px;
   }
 `;
 
@@ -77,13 +74,11 @@ export const CardCol = styled(Col)`
     padding: 0px 10px 30px 10px;
 `;
 
-export const CardImg = styled(Image)`
-  && {
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px 4px 0px 0px;
-  }
+export const CardImg = styled.img`
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px 4px 0px 0px;
 `;
 
 export const EmptyCol = styled(Col)`
@@ -141,10 +136,8 @@ export const GifCol = styled(Col)`
   }
 `;
 
-export const GifImg = styled(Image)`
-  && {
-    width: 100%;
-  }
+export const GifImg = styled.img`
+  width: 100%;
 `;
 
 export const ProductImg = styled.div`
