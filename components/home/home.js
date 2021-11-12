@@ -43,7 +43,7 @@ const Home = () => {
       <Col xs={24} sm={24} md={24} lg={12}>
         <img
           style={{ width: '100%', height: '75vh', objectFit: 'cover' }}
-          src='homepage.jpg'
+          src='homepage.webp'
           alt='Enlipsium Homepage'
         />
       </Col>
@@ -60,7 +60,7 @@ const Home = () => {
             style={{ width: '100%' }}
             bordered={false}
             cover={
-              <img src='polyipnos-logo.png' style={{ borderRadius: '15px' }} />
+              <img src='polyipnos-logo.webp' style={{ borderRadius: '15px' }} />
             }
           >
             <Row justify='center'>
@@ -87,7 +87,7 @@ const Home = () => {
             style={{ width: '100%' }}
             bordered={false}
             cover={
-              <img src='naneos-logo.png' style={{ borderRadius: '15px' }} />
+              <img src='naneos-logo.webp' style={{ borderRadius: '15px' }} />
             }
           >
             <Row justify='center'>
@@ -113,7 +113,7 @@ const Home = () => {
             style={{ width: '100%' }}
             bordered={false}
             cover={
-              <img src='enlit-logo.png' style={{ borderRadius: '15px' }} />
+              <img src='enlit-logo.webp' style={{ borderRadius: '15px' }} />
             }
           >
             <Row justify='center'>
@@ -139,28 +139,28 @@ const Home = () => {
       <TeamRow justify='center'>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <TeamPhoto src='yzharperry.jpg' alt='Enlipsium Yzhar Perry' />
+            <TeamPhoto src='yzharperry.webp' alt='Enlipsium Yzhar Perry' />
           </div>
           <TeamName>Mr Yzhar Perry</TeamName>
           <TeamPosition>CEO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <TeamPhoto src='tommytham.jpg' alt='Enlipsium Tommy Tham' />
+            <TeamPhoto src='tommytham.webp' alt='Enlipsium Tommy Tham' />
           </div>
           <TeamName>Mr Tommy Tham</TeamName>
           <TeamPosition>CTO & Founder</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <TeamPhoto src='chenqiushui.jpg' alt='Enlipsium Chen Qiu Shui' />
+            <TeamPhoto src='chenqiushui.webp' alt='Enlipsium Chen Qiu Shui' />
           </div>
           <TeamName>Professor Qiushui Chen</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>
         </Col>
         <Col xs={24} sm={24} md={12} lg={6}>
           <div>
-            <TeamPhoto src='xiaogangliu.jpg' alt='Enlipsium Liu Xiao Gang' />
+            <TeamPhoto src='xiaogangliu.webp' alt='Enlipsium Liu Xiao Gang' />
           </div>
           <TeamName>Professor Xiaogang Liu</TeamName>
           <TeamPosition>Technical Advisor</TeamPosition>

@@ -61,7 +61,7 @@ const Polyipnos = () => {
   return (
     <Row align='top'>
       <ImageCol span={24}>
-        <LogoImg src='polyipnos-logo-gimped.png' alt='Polyipnos Logo' />
+        <LogoImg src='polyipnos-logo-gimped.webp' alt='Polyipnos Logo' />
         <Tagline>Luminescence Nanocrystals</Tagline>
       </ImageCol>
       <TitleCol span={24}>

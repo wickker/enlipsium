@@ -85,7 +85,7 @@ const NavHeader = () => {
           marginLeft: `${get(logoMargins, 'left')}px`,
         }}
       >
-        <Logo src='enlipsium-logo.jpg' alt='Enlipsium' />
+        <Logo src='enlipsium-logo.webp' alt='Enlipsium' />
       </Menu.Item>
       <SubMenu key={`${ROUTES_KEYS.TECHNOLOGIES}`} title='Technologies'>
         <Menu.ItemGroup>

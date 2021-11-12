@@ -19,7 +19,7 @@ const Organic = () => {
       </TitleCol>
       <Container xs={24} sm={24} md={12} lg={12}>
         <img
-          src='../../organic.jpg'
+          src='../../organic.webp'
           alt='Organic'
           style={{ width: '100%', borderRadius: '15%' }}
         />

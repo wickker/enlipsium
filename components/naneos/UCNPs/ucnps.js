@@ -140,7 +140,7 @@ const UCNPs = () => {
       <Container xs={24} sm={24} md={12} lg={12}>
         <img
           style={{ width: '100%' }}
-          src='../../ucnps.jpg'
+          src='../../ucnps.webp'
           alt='Upconverting Nanoparticles'
         />
       </Container>

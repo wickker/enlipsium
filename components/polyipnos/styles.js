@@ -10,7 +10,7 @@ export const ImageCol = styled(Col)`
         rgba(157, 233, 223, 0.4),
         rgba(255, 255, 255, 0.6)
       ),
-      url('bottle.jpeg');
+      url('bottle.webp');
     background-repeat: no-repeat;
     background-size: cover;
     height: 75vh;
@@ -82,7 +82,7 @@ export const MainContainer = styled(Row)`
         rgba(255, 255, 255, 0.3),
         rgba(255, 255, 255, 0.3)
       ),
-      url('crystals.jpg');
+      url('crystals.webp');
     background-repeat: no-repeat;
     background-position: -350px 0px;
     background-size: cover;

@@ -26,13 +26,28 @@ const Enlit = () => {
   return (
     <Row align='top'>
       <ImageCol span={24}>
-        <LogoImg src='enlit-logo-gimped.png' alt='Enlit Logo' />
+        <LogoImg
+          src='/enlit-logo-gimped.webp'
+          alt='Enlit Logo'
+          placeholder='blur'
+          unsized
+        />
         <Tagline>Cleaner Than Clean</Tagline>
       </ImageCol>
       <TitleCol span={24}>Hydrophilic Nano Ceramic Coating</TitleCol>
       <CardRow justify='space-between'>
         <CardCol xs={24} sm={12} md={12} lg={6}>
-          <StyledCard bordered={false} cover={<CardImg src='house.jpg' />}>
+          <StyledCard
+            bordered={false}
+            cover={
+              <CardImg
+                src='/house.webp'
+                alt='House'
+                placeholder='blur'
+                unsized
+              />
+            }
+          >
             <CardTitle>
               <span>Self-Cleaning Coating For Houses</span>
             </CardTitle>
@@ -46,7 +61,14 @@ const Enlit = () => {
         <CardCol xs={24} sm={12} md={12} lg={6}>
           <StyledCard
             bordered={false}
-            cover={<CardImg src='glass-facade.jpg' />}
+            cover={
+              <CardImg
+                src='/glass-facade.webp'
+                alt='Glass Facade'
+                placeholder='blur'
+                unsized
+              />
+            }
           >
             <CardTitle>
               <span>Self-Rinsing Coating For Commercial Facade</span>
@@ -59,7 +81,14 @@ const Enlit = () => {
         <CardCol xs={24} sm={12} md={12} lg={6}>
           <StyledCard
             bordered={false}
-            cover={<CardImg src='solar-panel.jpg' />}
+            cover={
+              <CardImg
+                src='/solar-panel.webp'
+                alt='Solar Panel'
+                placeholder='blur'
+                unsized
+              />
+            }
           >
             <CardTitle>
               <span>Anti-Dust Coating For Solar Panel</span>
@@ -70,7 +99,17 @@ const Enlit = () => {
           </StyledCard>
         </CardCol>
         <CardCol xs={24} sm={12} md={12} lg={6}>
-          <StyledCard bordered={false} cover={<CardImg src='road-sign.jpg' />}>
+          <StyledCard
+            bordered={false}
+            cover={
+              <CardImg
+                src='/road-sign.webp'
+                alt='Road Sign'
+                placeholder='blur'
+                unsized
+              />
+            }
+          >
             <CardTitle>
               <span>Anti-Dust Coating On Traffic Signs</span>
             </CardTitle>
@@ -82,8 +121,18 @@ const Enlit = () => {
       </CardRow>
       <VideoRow align='space-between'>
         <GifCol xs={24} sm={24} md={24} lg={7}>
-          <GifImg src='enlit1.gif' alt='Enlit Product Specs 1' />
-          <GifImg src='before-after.webp' alt='Enlit Product Demo 1' />
+          <GifImg
+            src='/enlit1.webp'
+            alt='Enlit Product Specs 1'
+            placeholder='blur'
+            unsized
+          />
+          <GifImg
+            src='/before-after.webp'
+            alt='Enlit Product Demo 1'
+            placeholder='blur'
+            unsized
+          />
         </GifCol>
         <GifCol xs={24} sm={24} md={24} lg={7}>
           <video controls={true} style={{ width: '100%' }}>
@@ -91,13 +140,23 @@ const Enlit = () => {
           </video>
         </GifCol>
         <GifCol xs={24} sm={24} md={24} lg={7}>
-          <GifImg src='enlit2.webp' alt='Enlit Product Specs 2' />
-          <GifImg src='before-after2.gif' alt='Enlit Product Demo 2' />
+          <GifImg
+            src='/enlit2.webp'
+            alt='Enlit Product Specs 2'
+            placeholder='blur'
+            unsized
+          />
+          <GifImg
+            src='/before-after2.webp'
+            alt='Enlit Product Demo 2'
+            placeholder='blur'
+            unsized
+          />
         </GifCol>
       </VideoRow>
       <OverlayCol span={24}>
         <ProductImg></ProductImg>
-        <Overlay className='hello'>
+        <Overlay className='findOutMore'>
           <OverlayText>
             Find out more{' '}
             <Link href={`${ROUTES_KEYS.CONTACT_US}`}>

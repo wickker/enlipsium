@@ -1,6 +1,7 @@
 import { Col, Row, Card } from 'antd';
 import { COLORS } from '../../utils/constants';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const ImageCol = styled(Col)`
   && {
@@ -9,7 +10,7 @@ export const ImageCol = styled(Col)`
         rgba(113, 173, 223, 0.2),
         rgba(255, 255, 255, 0.4)
       ),
-      url('building.jpg');
+      url('building.webp');
     background-repeat: no-repeat;
     background-size: cover;
     height: 75vh;
@@ -23,13 +24,15 @@ export const ImageCol = styled(Col)`
   }
 `;
 
-export const LogoImg = styled.img`
-  width: 35%;
-  object-fit: cover;
-  margin: 120px 80px 0px 80px;
-  @media only screen and (max-width: 576px) {
-    width: 60%;
-    margin: 120px 0px 0px -10px;
+export const LogoImg = styled(Image)`
+  && {
+    width: 35%;
+    object-fit: cover;
+    margin: 120px 80px 0px 80px;
+    @media only screen and (max-width: 576px) {
+      width: 60%;
+      margin: 120px 0px 0px -10px;
+    }
   }
 `;
 
@@ -74,11 +77,13 @@ export const CardCol = styled(Col)`
     padding: 0px 10px 30px 10px;
 `;
 
-export const CardImg = styled.img`
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px 4px 0px 0px;
+export const CardImg = styled(Image)`
+  && {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0px 0px;
+  }
 `;
 
 export const EmptyCol = styled(Col)`
@@ -121,6 +126,9 @@ export const VideoRow = styled(Row)`
   && {
     background-color: black;
     padding: 20px 100px;
+    @media only screen and (max-width: 576px) {
+      padding: 20px;
+    }
   }
 `;
 
@@ -133,12 +141,14 @@ export const GifCol = styled(Col)`
   }
 `;
 
-export const GifImg = styled.img`
-  width: 100%;
+export const GifImg = styled(Image)`
+  && {
+    width: 100%;
+  }
 `;
 
 export const ProductImg = styled.div`
-  background: url('enlit-product.jpeg');
+  background: url('enlit-product.webp');
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
@@ -160,7 +170,7 @@ export const Overlay = styled.div`
 export const OverlayCol = styled(Col)`
   && {
     &:hover {
-      .hello {
+      .findOutMore {
         width: 22%;
       }
     }
