@@ -55,7 +55,12 @@ const Home = () => {
         for different industries and applications
       </ProductLine>
       <CardRow justify='space-between'>
-        <CardCol xs={24} sm={24} md={24} lg={8}>
+        <CardCol
+          xs={24}
+          sm={24}
+          md={{ span: 24, order: 2 }}
+          lg={{ span: 8, order: 1 }}
+        >
           <Card
             style={{ width: '100%' }}
             bordered={false}
@@ -82,7 +87,12 @@ const Home = () => {
             </Row>
           </Card>
         </CardCol>
-        <CardCol xs={24} sm={24} md={24} lg={8}>
+        <CardCol
+          xs={24}
+          sm={24}
+          md={{ span: 24, order: 1 }}
+          lg={{ span: 8, order: 2 }}
+        >
           <Card
             style={{ width: '100%' }}
             bordered={false}
@@ -108,7 +118,12 @@ const Home = () => {
             </Row>
           </Card>
         </CardCol>
-        <CardCol xs={24} sm={24} md={24} lg={8}>
+        <CardCol
+          xs={24}
+          sm={24}
+          md={{ span: 24, order: 3 }}
+          lg={{ span: 8, order: 3 }}
+        >
           <Card
             style={{ width: '100%' }}
             bordered={false}
