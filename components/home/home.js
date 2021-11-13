@@ -56,8 +56,8 @@ const Home = () => {
       </ProductLine>
       <CardRow justify='space-between'>
         <CardCol
-          xs={24}
-          sm={24}
+          xs={{ span: 24, order: 2 }}
+          sm={{ span: 24, order: 2 }}
           md={{ span: 24, order: 2 }}
           lg={{ span: 8, order: 1 }}
         >
@@ -88,8 +88,8 @@ const Home = () => {
           </Card>
         </CardCol>
         <CardCol
-          xs={24}
-          sm={24}
+          xs={{ span: 24, order: 1 }}
+          sm={{ span: 24, order: 1 }}
           md={{ span: 24, order: 1 }}
           lg={{ span: 8, order: 2 }}
         >
@@ -119,8 +119,8 @@ const Home = () => {
           </Card>
         </CardCol>
         <CardCol
-          xs={24}
-          sm={24}
+          xs={{ span: 24, order: 3 }}
+          sm={{ span: 24, order: 3 }}
           md={{ span: 24, order: 3 }}
           lg={{ span: 8, order: 3 }}
         >
