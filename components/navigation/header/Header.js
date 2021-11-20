@@ -128,6 +128,12 @@ const NavHeader = () => {
             POLYIPNOS
           </Menu.Item>
           <Menu.Item
+            key={`${ROUTES_KEYS.GLOW_PARTICLES}`}
+            style={{ marginBottom: '-5px' }}
+          >
+            Glow Particles
+          </Menu.Item>
+          <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
             style={{ marginLeft: '-12px', letterSpacing: '1px' }}
           >
