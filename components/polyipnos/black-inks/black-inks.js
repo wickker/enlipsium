@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Row } from 'antd';
 import { get } from 'lodash';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -6,64 +5,29 @@ import {
   TitleCol,
   Title,
   Tagline,
-  Image,
-  LeftCol,
-  RightCol,
+  LayoutCol,
   ProductTitle,
   FontAwesomeIcon,
   ProductItem,
-  ProductSpan,
-  PreviewImageCol,
   ProductItem2,
-  FullSizeImageDiv,
-  FullSizeImage,
+  ProductSpan,
+  StyledRow,
 } from './styles';
 
-const uv = {
-  title: 'UV Glow Particles',
+const blackInk = {
+  title: 'UV / IR Black Inks',
   list: [
-    'Particles that light up under UV irradiation',
-    'Red, green and blue emissions',
-    'High heat stability',
-    'Can be blended into polymers, metals or inks',
+    'Black inks that light up under UV, NIR or both',
+    'Strong visible emissions',
+    'Can be used on paper fabric and plastic surfaces',
+    'Flexographic printing options available',
   ],
-  packSize: '1g, 5g, 25g',
-  wavelengths: '270nm, 365nm',
-  path: 'https://via.placeholder.com/700X500?text=UV',
-  name: 'uv',
+  packSize: '500ml, 1l, 5l',
+  wavelengths:
+    '270nm, 365nm, 808nm, 980nm or any combinations of the aforementioned',
 };
 
-const ir = {
-  title: 'IR Glow Particles',
-  list: [
-    'Particles that light up under NIR irradiation',
-    'Red, green and blue emissions',
-    'High heat stability',
-    'Can be blended into polymers, metals or inks',
-  ],
-  packSize: '1g, 5g, 25g',
-  wavelengths: '808nm, 980nm',
-  path: 'https://via.placeholder.com/700X500?text=IR',
-  name: 'ir',
-};
-
-const custom = {
-  title: 'Customized Blends',
-  list: [
-    'For special requirements where particles need to light up under more than 1 wavelength',
-    'Red, green or blue emissions',
-    'High heat stability',
-    'Can be blended into polymers, metals or inks',
-  ],
-  packSize: '1g, 5g, 25g',
-  wavelengths: 'Please contact us',
-  path: 'https://via.placeholder.com/700X500?text=Custom',
-  name: 'custom',
-};
-
-const GlowParticles = () => {
-  const [product, setProduct] = useState(uv);
-
+const BlackInks = () => {
   const generateList = (list) => {
     return list.map((el) => {
       return (
@@ -75,25 +39,49 @@ const GlowParticles = () => {
     });
   };
 
-  const handleClickProductImage = (e) => {
-    console.log(e.target.src);
-    const source = get(e, 'target.src').toLowerCase();
-    if (source.includes('uv')) {
-      setProduct(uv);
-    } else if (source.includes('ir')) {
-      setProduct(ir);
-    } else if (source.includes('custom')) {
-      setProduct(custom);
-    }
-  };
-
   return (
     <Row align='top' style={{ minHeight: '94vh', maxWidth: '1980px' }}>
       <TitleCol span={24}>
         <Title>Products</Title>
-        <Tagline>Technologies > Polyipnos > Glow Particles</Tagline>
+        <Tagline>Technologies > Polyipnos > Black Inks</Tagline>
       </TitleCol>
-      <LeftCol xs={24} sm={12} md={12} lg={12}>
+      <StyledRow align='space-between' justify='center'>
+        <LayoutCol xs={24} sm={24} md={24} lg={8} video={true}>
+          <iframe
+            width='100%'
+            height='100%'
+            src='https://www.youtube.com/embed/0U5SWCzvcWE'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          ></iframe>
+        </LayoutCol>
+        <LayoutCol xs={24} sm={24} md={24} lg={8}>
+          <ProductTitle>{get(blackInk, 'title')}</ProductTitle>
+          {generateList(get(blackInk, 'list'))}
+          <ProductItem2 style={{ marginTop: '40px' }}>
+            <ProductSpan>Available Pack Size:</ProductSpan>
+            {get(blackInk, 'packSize')}
+          </ProductItem2>
+          <ProductItem2>
+            <ProductSpan>Available Absorption Wavelengths:</ProductSpan>
+            {get(blackInk, 'wavelengths')}
+          </ProductItem2>
+        </LayoutCol>
+        <LayoutCol xs={24} sm={24} md={24} lg={8} video={true}>
+          <iframe
+            width='100%'
+            height='100%'
+            src='https://www.youtube.com/embed/DSnllBSvIH8'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          ></iframe>
+        </LayoutCol>
+      </StyledRow>
+      {/* <LeftCol xs={24} sm={12} md={12} lg={12}>
         <FullSizeImageDiv>
           <FullSizeImage
             src={get(product, 'path')}
@@ -147,9 +135,9 @@ const GlowParticles = () => {
           <ProductSpan>Available Absorption Wavelengths:</ProductSpan>
           {get(product, 'wavelengths')}
         </ProductItem2>
-      </RightCol>
+      </RightCol> */}
     </Row>
   );
 };
 
-export default GlowParticles;
+export default BlackInks;

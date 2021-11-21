@@ -92,9 +92,15 @@ const Enlit = () => {
           <GifImg src='before-after.webp' alt='Enlit Product Demo 1' />
         </GifCol>
         <GifCol xs={24} sm={24} md={24} lg={7}>
-          <video controls={true} style={{ width: '100%' }}>
-            <source src='http://kennethp42.sg-host.com/wp-content/uploads/2021/09/SG100-Final-preview.mp4' />
-          </video>
+          <iframe
+            width='100%'
+            height='100%'
+            src='https://www.youtube.com/embed/fKmjrC6tAzY'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen
+          ></iframe>
         </GifCol>
         <GifCol xs={24} sm={24} md={24} lg={7}>
           <GifImg src='enlit2.webp' alt='Enlit Product Specs 2' />

@@ -11,6 +11,7 @@ import {
   faFacebookSquare,
   faTwitterSquare,
   faInstagramSquare,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
 const year = new Date().getFullYear();
@@ -24,9 +25,21 @@ const Footer = () => {
         </CopyrightTextCol>
         <DummyCol xs={2} sm={2} md={8} lg={8}></DummyCol>
         <IconsCol xs={11} sm={11} md={8} lg={8}>
-          <FontAwesomeIcon icon={faFacebookSquare} />
-          <FontAwesomeIcon icon={faTwitterSquare} />
-          <FontAwesomeIcon icon={faInstagramSquare} />
+          <a href='#'>
+            <FontAwesomeIcon icon={faFacebookSquare} />
+          </a>
+          <a href='#'>
+            <FontAwesomeIcon icon={faTwitterSquare} />
+          </a>
+          <a href='#'>
+            <FontAwesomeIcon icon={faInstagramSquare} />
+          </a>
+          <a
+            href='https://www.linkedin.com/company/31339881/admin/'
+            target='_blank'
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
         </IconsCol>
       </Row>
     </StyledFooter>

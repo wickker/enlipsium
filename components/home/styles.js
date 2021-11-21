@@ -1,6 +1,13 @@
 import styled from 'styled-components';
-import { Col, Row } from 'antd';
+import { Col, Row, Card } from 'antd';
 import { COLORS } from '../../utils/constants';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+
+export const StyledRow = styled(Row)`
+  && {
+    min-height: 94vh;
+  }
+`;
 
 export const TitleLeftCol = styled(Col)`
   && {
@@ -11,6 +18,7 @@ export const TitleLeftCol = styled(Col)`
     padding: 0px 120px;
     background-color: ${COLORS.DARK_GRAY};
     height: 75vh;
+    margin-top: 45px;
     @media only screen and (max-width: 570px) {
       padding: 0px 50px;
     }
@@ -54,13 +62,24 @@ export const Title3 = styled.div`
   }
 `;
 
+export const Image = styled.img`
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  margin-top: 45px;
+  @media only screen and (max-width: 992px) {
+    margin-top: 0px;
+  }
+`;
+
 export const ProductLine = styled.div`
-  font-size: 30px;
-  color: ${COLORS.DARK_GRAY};
-  padding: 0px 120px;
+  font-size: 35px;
+  color: ${COLORS.SEMI_BLACK};
+  padding: 0px 10%;
+  vertical-align: middle;
   text-align: center;
   margin-top: 50px;
-  @media only screen and (max-width: 570px) {
+  @media only screen and (max-width: 576px) {
     padding: 0px 50px;
   }
   @media only screen and (max-width: 350px) {
@@ -68,91 +87,94 @@ export const ProductLine = styled.div`
   }
 `;
 
+export const FontAwesomeIcon = styled(Icon)`
+  && {
+    min-height: 1.2em;
+    min-width: 1.2em;
+    color: ${COLORS.ORANGE};
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+`;
+
+export const ProductContainer = styled.div`
+  width: 100%;
+  min-height: 20vh;
+`;
+
 export const CardRow = styled(Row)`
   && {
-    padding: 0px 100px;
-    @media only screen and (max-width: 570px) {
-      padding: 0px 50px;
+    padding: 0px 10%;
+    @media only screen and (max-width: 992px) {
+      padding-bottom: 50px;
+    }
+    @media only screen and (max-width: 576px) {
+      padding: 0px 50px 50px 50px;
     }
     @media only screen and (max-width: 350px) {
-      padding: 0px 30px;
+      padding: 0px 30px 50px 30px;
     }
   }
 `;
 
 export const CardCol = styled(Col)`
   && {
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin: 30px 0px 50px 0px;
+    @media only screen and (max-width: 992px) {
+      margin: 30px 0px 0px 0px;
+    }
   }
 `;
 
+export const StyledCard = styled(Card)`
+  && {
+    width: 100%;
+    height: 100%;
+    background-color: ${COLORS.DARK_GRAY};
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    .ant-card-body {
+      padding: 0px;
+    }
+  }
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 40px 30px;
+`;
+
 export const CardTitle = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 900;
   margin-bottom: 10px;
-  text-align: center;
-  color: ${COLORS.SEMI_BLACK};
+  color: ${COLORS.ORANGE};
 `;
 
 export const CardDescription = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: ${COLORS.DARK_GRAY};
-  text-align: center;
-`;
-
-export const TeamTitle = styled.div`
-  font-size: 50px;
-  width: 100%;
-  background-color: ${COLORS.DARK_GRAY};
-  text-align: center;
-  color: ${COLORS.ORANGE};
-  padding: 50px 30px 10px 30px;
-  @media only screen and (max-width: 570px) {
-    font-size: 40px;
-  }
-`;
-
-export const TeamPhoto = styled.img`
-  width: 100%;
-  border-radius: 20%;
-  padding: 20px 30px;
-`;
-
-export const TeamTagline = styled.div`
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  background-color: ${COLORS.DARK_GRAY};
-  text-align: center;
-  color: ${COLORS.LIGHTEST_GRAY};
-  padding: 0px 30px 20px 30px;
-  letter-spacing: 1px;
-`;
-
-export const TeamRow = styled(Row)`
-  && {
-    padding: 0px 100px 50px 100px;
-    background-color: ${COLORS.DARK_GRAY};
-    @media only screen and (max-width: 576px) {
-      padding: 0px 10px 50px 10px;
-    }
-  }
-`;
-
-export const TeamName = styled.div`
-  font-size: 17px;
   color: white;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  line-height: 170%;
 `;
 
-export const TeamPosition = styled.div`
-  font-size: 17px;
-  color: ${COLORS.LIGHTEST_GRAY};
+export const ButtonDiv = styled.div`
+  width: 100%;
+  text-align: right;
+  margin-top: 50px;
+`;
+
+export const LightContainer = styled.div`
+  background-color: ${COLORS.DARK_GRAY};
+  width: 100%;
+  min-height: 20vh;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 75px;
 `;
 
 export const ContactLine1 = styled.div`
@@ -160,20 +182,14 @@ export const ContactLine1 = styled.div`
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   text-align: center;
-  color: ${COLORS.DARK_GRAY};
-  padding: 50px 30px 0px 30px;
+  color: ${COLORS.ORANGE};
+  padding: 70px 30px 0px 30px;
   margin-bottom: 5px;
 `;
 
 export const ContactLine2 = styled(ContactLine1)`
   && {
-    color: ${COLORS.LIGHT_GRAY};
-    padding: 0px 30px;
-  }
-`;
-
-export const EmptyCol = styled(Col)`
-  && {
-    height: 50px;
+    color: white;
+    padding: 0px 30px 30px 30px;
   }
 `;

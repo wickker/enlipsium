@@ -26,5 +26,7 @@ export const ROUTES_KEYS = {
   UCNPS: '/naneos/UCNPs',
   NANO_PEROVSKITE: '/naneos/nano-perovskite',
   ORGANIC: '/naneos/organic',
-  GLOW_PARTICLES: '/polyipnos/glow-particles'
+  GLOW_PARTICLES: '/polyipnos/glow-particles',
+  BLACK_INKS: '/polyipnos/black-inks',
+  ABOUT: '/about',
 };

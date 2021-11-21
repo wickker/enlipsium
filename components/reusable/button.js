@@ -12,14 +12,16 @@ const handleColorSelection = (color) => {
 };
 
 const StyledButton = styled.button`
-  background: ${COLORS.DARK_GRAY};
+  // background-color: ${(props) => handleColorSelection(props.inputColor)};
+  background-color: ${COLORS.GRAY};
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: solid 3px ${(props) => handleColorSelection(props.inputColor)};
+  border: none;
   padding: 10px 30px;
-  font-size: 15px;
-  transition: background-color 1s ease;
+  font-size: 16px;
+  max-width: 173px;
+  transition: background-color 0.5s ease;
   &:hover {
     background-color: ${COLORS.SEMI_BLACK};
     cursor: pointer;

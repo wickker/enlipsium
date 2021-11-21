@@ -90,6 +90,7 @@ export const EmptyCol = styled(Col)`
 export const StyledCard = styled(Card)`
   && {
     width: 100%;
+    height: 100%;
     background-color: ${COLORS.DARK_BLUE};
     box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.3);
     border-radius: 4px;

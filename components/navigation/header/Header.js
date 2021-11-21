@@ -134,6 +134,12 @@ const NavHeader = () => {
             Glow Particles
           </Menu.Item>
           <Menu.Item
+            key={`${ROUTES_KEYS.BLACK_INKS}`}
+            style={{ marginBottom: '-5px' }}
+          >
+            Black Inks
+          </Menu.Item>
+          <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
             style={{ marginLeft: '-12px', letterSpacing: '1px' }}
           >
@@ -142,6 +148,7 @@ const NavHeader = () => {
         </Menu.ItemGroup>
       </SubMenu>
       <Menu.Item key={`${ROUTES_KEYS.CONTACT_US}`}>Contact Us</Menu.Item>
+      <Menu.Item key={`${ROUTES_KEYS.ABOUT}`}>About</Menu.Item>
     </Menu>
   );
 };

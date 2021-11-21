@@ -44,6 +44,8 @@ export const FontAwesomeIcon = styled(Icon)`
     min-height: 2em;
     min-width: 2em;
     margin-right: 10px;
+    margin-top: 8px;
+    color: ${COLORS.SEMI_BLACK};
     &:hover {
       cursor: pointer;
     }

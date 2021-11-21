@@ -1,4 +1,4 @@
-import { Col } from 'antd';
+import { Col, Row } from 'antd';
 import { COLORS } from '../../../utils/constants';
 import styled from 'styled-components';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -35,66 +35,16 @@ export const Tagline = styled.div`
   color: ${COLORS.DARK_GRAY};
 `;
 
-export const FullSizeImageDiv = styled.div`
-  overflow: hidden;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  @media only screen and (max-width: 576px) {
-    display: none;
-  }
-`;
-
-export const FullSizeImage = styled.img`
-  object-fit: cover;
-  width: 100%;
-  border-radius: 20px;
-  &:hover {
-    transform: scale(1.3);
-    transition: all 0.3s ease;
-  }
-`;
-
-export const Image = styled.img`
-  object-fit: cover;
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 30px;
-`;
-
-export const LeftCol = styled(Col)`
+export const LayoutCol = styled(Col)`
   && {
-    padding: 50px 30px 0px 15%;
+    padding: 50px 30px;
     @media only screen and (max-width: 992px) {
-      padding: 50px 30px 0px 5%;
+      padding: 30px;
+      min-height: ${(props) => (props.video ? '60vh' : 'none')};
     }
-    @media only screen and (max-width: 576px) {
-      padding: 50px 30px 0px 30px;
-    }
-  }
-`;
-
-export const PreviewImageCol = styled(Col)`
-  && {
-    &:hover {
-      cursor: pointer;
-    }
-    img {
-      box-shadow: ${(props) =>
-        props.id !== props.selected
-          ? 'none'
-          : 'rgba(0, 0, 0, 0.5) 0px 5px 15px'};
-    }
-  }
-`;
-
-export const RightCol = styled(Col)`
-  && {
-    padding: 50px 15% 0px 30px;
-    @media only screen and (max-width: 992px) {
-      padding: 50px 5% 0px 30px;
-    }
-    @media only screen and (max-width: 576px) {
-      padding: 50px 30px 0px 30px;
+    @media only screen and (max-width: 400px) {
+      padding: 30px;
+      min-height: ${(props) => (props.video ? '40vh' : 'none')};
     }
   }
 `;
@@ -134,4 +84,13 @@ export const ProductItem2 = styled.div`
 export const ProductSpan = styled.span`
   font-weight: 900;
   margin-right: 5px;
+`;
+
+export const StyledRow = styled(Row)`
+  && {
+    padding: 0px 5%;
+    @media only screen and (max-width: 992px) {
+      padding: 0px;
+    }
+  }
 `;
