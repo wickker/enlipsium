@@ -1,8 +1,7 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import { COLORS, ROUTES_KEYS } from '../../utils/constants';
-import { get } from 'lodash';
+import { Col } from 'antd';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 import {
   TeamTitle,
   TeamTagline,
@@ -16,6 +15,7 @@ import {
   FontAwesomeIcon,
   ImageCol,
   Info,
+  LinkSpan,
 } from './styles';
 
 const About = () => {
@@ -83,22 +83,37 @@ const About = () => {
           </Text>
           <br />
           <List>
-            <FontAwesomeIcon icon={faCheck} />
-            Naneos materials to develop X-ray imaging devices of the future
+            <div>
+              <FontAwesomeIcon icon={faCheck} />
+              <LinkSpan>
+                <Link href='/naneos'>Naneos</Link>
+              </LinkSpan>{' '}
+              materials to develop X-ray imaging devices of the future
+            </div>
           </List>
           <br />
           <List>
             <FontAwesomeIcon icon={faCheck} />
-            Polyipnos luminescent materials to ensure supply chain
-            accountability and that our customers' products are always well
-            protected against counterfeiting
+            <div>
+              <LinkSpan>
+                <Link href='/polyipnos'>Polyipnos</Link>
+              </LinkSpan>{' '}
+              luminescent materials to ensure supply chain accountability and
+              that our customers' products are always well protected against
+              counterfeiting
+            </div>
           </List>
           <br />
           <List>
             <FontAwesomeIcon icon={faCheck} />
-            Enlit range of products provides sustainable and innovative
-            solutions, improving efficiency in manpower reliant industries such
-            as Building and Construction.
+            <div>
+              <LinkSpan>
+                <Link href='/enlit'>Enlit</Link>
+              </LinkSpan>{' '}
+              range of products provides sustainable and innovative solutions,
+              improving efficiency in manpower reliant industries such as
+              Building and Construction.
+            </div>
           </List>
           <br />
           <Text>

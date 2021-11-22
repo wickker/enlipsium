@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Col, Row, Card } from 'antd';
+import { Col, Row } from 'antd';
 import { COLORS } from '../../utils/constants';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
@@ -35,30 +35,28 @@ const renderImage = (name) => {
 };
 
 export const ImageCol = styled.div`
-  && {
-    background-image: ${(props) => `url(${renderImage(props.path)})`};
-    width: 100%;
-    height: 50vh;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin-top: 30px;
-    border-radius: 24px;
-    &:hover {
-      .info {
-        height: 24%;
-        transition: 0.5s ease;
-      }
+  background-image: ${(props) => `url(${renderImage(props.path)})`};
+  width: 100%;
+  height: 50vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 30px;
+  border-radius: 24px;
+  &:hover {
+    .info {
+      height: 24%;
+      transition: 0.5s ease;
     }
-    @media only screen and (max-width: 576px) {
-      .info {
-        height: 24%;
-      }
+  }
+  @media only screen and (max-width: 576px) {
+    .info {
+      height: 24%;
     }
   }
 `;
@@ -176,4 +174,13 @@ export const List = styled.div`
   padding-left: 20px;
   display: flex;
   flex-direction: row;
+`;
+
+export const LinkSpan = styled.span`
+  font-weight: bold;
+  font-style: italic;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `;
