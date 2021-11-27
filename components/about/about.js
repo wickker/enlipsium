@@ -16,53 +16,12 @@ import {
   ImageCol,
   Info,
   LinkSpan,
+  Position,
 } from './styles';
 
 const About = () => {
   return (
     <StyledRow>
-      <TeamTitle>Who are these people anyway?</TeamTitle>
-      <TeamTagline>Teamwork Makes The Dream Work</TeamTagline>
-      <Col span={24}>
-        <TeamRow gutter={{ xs: 0, sm: 36, md: 36, lg: 36 }}>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <ImageCol span={24} path='yzhar'>
-              <Info className='info'>
-                <div style={{ marginBottom: '3px' }}>Mr Yzhar Perry</div>
-                <div>CEO & Founder</div>
-              </Info>
-            </ImageCol>
-          </Col>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <ImageCol span={24} path='tommy'>
-              <Info className='info'>
-                <div style={{ marginBottom: '3px' }}>Mr Tommy Tham</div>
-                <div>CTO & Founder</div>
-              </Info>
-            </ImageCol>
-          </Col>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <ImageCol span={24} path='qiu'>
-              <Info className='info'>
-                <div style={{ marginBottom: '3px' }}>
-                  Professor Qiushui Chen
-                </div>
-                <div>Technical Advisor</div>
-              </Info>
-            </ImageCol>
-          </Col>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <ImageCol span={24} path='xiao'>
-              <Info className='info'>
-                <div style={{ marginBottom: '3px' }}>
-                  Professor Xiaogang Liu
-                </div>
-                <div>Technical Advisor</div>
-              </Info>
-            </ImageCol>
-          </Col>
-        </TeamRow>
-      </Col>
       <MainContainer>
         <TitleCol xs={24} sm={4} md={4} lg={4}>
           <span>About</span>
@@ -123,6 +82,64 @@ const About = () => {
           </Text>
         </WriteUpCol>
       </MainContainer>
+      <TeamTitle>Who are these people anyway?</TeamTitle>
+      <TeamTagline>Teamwork Makes The Dream Work</TeamTagline>
+      <Col span={24}>
+        <TeamRow gutter={{ xs: 0, sm: 36, md: 36, lg: 36 }}>
+          <Col xs={24} sm={24} md={12} lg={6}>
+            <ImageCol span={24} path='yzhar'>
+              {/* <Info className='info'>
+                <div style={{ marginBottom: '3px' }}>Mr Yzhar Perry</div>
+                <div>CEO & Founder</div>
+              </Info> */}
+            </ImageCol>
+            <Position style={{ marginBottom: '3px', marginTop: '25px' }}>
+              Mr Yzhar Perry
+            </Position>
+            <Position>CEO & Founder</Position>
+          </Col>
+          <Col xs={24} sm={24} md={12} lg={6}>
+            <ImageCol span={24} path='tommy'>
+              {/* <Info className='info'>
+                <div style={{ marginBottom: '3px' }}>Mr Tommy Tham</div>
+                <div>CTO & Founder</div>
+              </Info> */}
+            </ImageCol>
+            <Position style={{ marginBottom: '3px', marginTop: '25px' }}>
+              Mr Tommy Tham
+            </Position>
+            <Position>CTO & Founder</Position>
+          </Col>
+          <Col xs={24} sm={24} md={12} lg={6}>
+            <ImageCol span={24} path='qiu'>
+              {/* <Info className='info'>
+                <div style={{ marginBottom: '3px' }}>
+                  Professor Qiushui Chen
+                </div>
+                <div>Technical Advisor</div>
+              </Info> */}
+            </ImageCol>
+            <Position style={{ marginBottom: '3px', marginTop: '25px' }}>
+              Professor Qiushui Chen
+            </Position>
+            <Position>Technical Advisor</Position>
+          </Col>
+          <Col xs={24} sm={24} md={12} lg={6}>
+            <ImageCol span={24} path='xiao'>
+              {/* <Info className='info'>
+                <div style={{ marginBottom: '3px' }}>
+                  Professor Xiaogang Liu
+                </div>
+                <div>Technical Advisor</div>
+              </Info> */}
+            </ImageCol>
+            <Position style={{ marginBottom: '3px', marginTop: '25px' }}>
+              Professor Xiaogang Liu
+            </Position>
+            <Position>Technical Advisor</Position>
+          </Col>
+        </TeamRow>
+      </Col>
     </StyledRow>
   );
 };

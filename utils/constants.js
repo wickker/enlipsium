@@ -1,8 +1,10 @@
 export const COLORS = {
   GRAY: '#5A5A5A',
   LIGHT_GRAY: '#848689',
+  LIGHTER_GRAY: '#e8e8ea',
   LIGHTEST_GRAY: '#F6F6F6',
   DARK_GRAY: '#333333',
+  MEDIUM_GRAY: '#3B3B3B',
   SEMI_BLACK: '#0B0C10',
   MARINE: '#3AAFA9',
   BORDER: '#f0f0f0',

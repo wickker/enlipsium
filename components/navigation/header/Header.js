@@ -76,6 +76,8 @@ const NavHeader = () => {
       selectedKeys={[currentKey]}
       mode='horizontal'
       style={{ fontSize: '16px', color: 'black' }}
+      triggerSubMenuAction='hover'
+      forceSubMenuRender={true}
     >
       <Menu.Item
         key={`${ROUTES_KEYS.HOME}`}
@@ -151,7 +153,7 @@ const NavHeader = () => {
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ANTI_DUST_COATINGS}`}
-            style={{ marginBottom: '-5px' }}
+            style={{ marginBottom: '10px' }}
           >
             Anti-Dust Coatings
           </Menu.Item>

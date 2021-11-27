@@ -47,7 +47,7 @@ export const FullSizeImageDiv = styled.div`
 export const FullSizeImage = styled.img`
   object-fit: cover;
   width: 100%;
-  border-radius: 20px;
+  // border-radius: 20px;
   &:hover {
     transform: scale(1.3);
     transition: all 0.3s ease;
@@ -57,7 +57,7 @@ export const FullSizeImage = styled.img`
 export const Image = styled.img`
   object-fit: cover;
   width: 100%;
-  border-radius: 20px;
+  // border-radius: 20px;
   margin-bottom: 30px;
 `;
 

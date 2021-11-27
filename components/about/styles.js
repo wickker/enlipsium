@@ -6,19 +6,18 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 export const StyledRow = styled(Row)`
   && {
     min-height: 94vh;
-    background-color: ${COLORS.DARK_GRAY};
   }
 `;
 
 export const TeamTitle = styled.div`
-  font-size: 60px;
+  font-size: 55px;
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
-  background-color: ${COLORS.DARK_GRAY};
+  background-color: ${COLORS.MEDIUM_GRAY};
   text-align: center;
   color: ${COLORS.ORANGE};
-  padding: 100px 30px 10px 30px;
+  padding: 50px 30px 10px 30px;
 `;
 
 const renderImage = (name) => {
@@ -38,7 +37,9 @@ export const ImageCol = styled.div`
   background-image: ${(props) => `url(${renderImage(props.path)})`};
   width: 100%;
   height: 50vh;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -48,16 +49,16 @@ export const ImageCol = styled.div`
   box-sizing: border-box;
   margin-top: 30px;
   // border-radius: 24px;
-  &:hover {
-    .info {
-      height: 24%;
-      transition: 0.5s ease;
-    }
-  }
-  @media only screen and (max-width: 576px) {
-    .info {
-      height: 24%;
-    }
+  // &:hover {
+  //   .info {
+  //     height: 24%;
+  //     transition: 0.5s ease;
+  //   }
+  // }
+  // @media only screen and (max-width: 576px) {
+  //   .info {
+  //     height: 24%;
+  //   }
   }
 `;
 
@@ -76,11 +77,18 @@ export const Info = styled.div`
   font-size: 17px;
 `;
 
+export const Position = styled.div`
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+`;
+
 export const TeamTagline = styled.div`
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
-  background-color: ${COLORS.DARK_GRAY};
+  background-color: ${COLORS.MEDIUM_GRAY};
   text-align: center;
   color: ${COLORS.LIGHTEST_GRAY};
   padding: 0px 30px 20px 30px;
@@ -91,7 +99,7 @@ export const TeamRow = styled(Row)`
   && {
     width: 101.5%;
     padding: 0px 10% 70px 10%;
-    background-color: ${COLORS.DARK_GRAY};
+    background-color: #3B3B3B;
   }
 `;
 
@@ -114,12 +122,13 @@ export const MainContainer = styled(Row)`
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-top: 48px;
   }
 `;
 
 export const TitleCol = styled(Col)`
   && {
-    background-color: ${COLORS.GRAY};
+    background-color: ${COLORS.LIGHTER_GRAY};
     display: flex;
     flex-direction: col;
     align-items: center;
@@ -146,7 +155,10 @@ export const TitleCol = styled(Col)`
 export const WriteUpCol = styled(Col)`
   && {
     background-color: ${COLORS.LIGHTEST_GRAY};
-    padding: 50px;
+    padding: 100px 70px;
+    @media only screen and (max-width: 576px) {
+      padding: 50px;
+    }
   }
 `;
 
