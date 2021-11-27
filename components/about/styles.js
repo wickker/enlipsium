@@ -47,7 +47,7 @@ export const ImageCol = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   margin-top: 30px;
-  border-radius: 24px;
+  // border-radius: 24px;
   &:hover {
     .info {
       height: 24%;
@@ -177,8 +177,6 @@ export const List = styled.div`
 `;
 
 export const LinkSpan = styled.span`
-  font-weight: bold;
-  font-style: italic;
   &:hover {
     cursor: pointer;
     text-decoration: underline;

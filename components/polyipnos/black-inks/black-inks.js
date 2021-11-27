@@ -81,61 +81,6 @@ const BlackInks = () => {
           ></iframe>
         </LayoutCol>
       </StyledRow>
-      {/* <LeftCol xs={24} sm={12} md={12} lg={12}>
-        <FullSizeImageDiv>
-          <FullSizeImage
-            src={get(product, 'path')}
-            alt='Glow Particle Product'
-          />
-        </FullSizeImageDiv>
-        <Row gutter={[16, 0]}>
-          <PreviewImageCol
-            xs={24}
-            sm={8}
-            md={8}
-            lg={8}
-            id='uv'
-            selected={get(product, 'name')}
-            onClick={handleClickProductImage}
-          >
-            <Image src={get(uv, 'path')} alt='UV Glow Particles' />
-          </PreviewImageCol>
-          <PreviewImageCol
-            xs={24}
-            sm={8}
-            md={8}
-            lg={8}
-            id='ir'
-            selected={get(product, 'name')}
-            onClick={handleClickProductImage}
-          >
-            <Image src={get(ir, 'path')} alt='IR Glow Particles' />
-          </PreviewImageCol>
-          <PreviewImageCol
-            xs={24}
-            sm={8}
-            md={8}
-            lg={8}
-            id='custom'
-            selected={get(product, 'name')}
-            onClick={handleClickProductImage}
-          >
-            <Image src={get(custom, 'path')} alt='Cutomized Blends' />
-          </PreviewImageCol>
-        </Row>
-      </LeftCol>
-      <RightCol xs={24} sm={12} md={12} lg={12}>
-        <ProductTitle>{get(product, 'title')}</ProductTitle>
-        {generateList(get(product, 'list'))}
-        <ProductItem2 style={{ marginTop: '40px' }}>
-          <ProductSpan>Available Pack Size:</ProductSpan>
-          {get(product, 'packSize')}
-        </ProductItem2>
-        <ProductItem2 style={{ marginBottom: '30px' }}>
-          <ProductSpan>Available Absorption Wavelengths:</ProductSpan>
-          {get(product, 'wavelengths')}
-        </ProductItem2>
-      </RightCol> */}
     </Row>
   );
 };

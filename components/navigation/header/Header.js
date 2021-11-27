@@ -141,9 +141,19 @@ const NavHeader = () => {
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ENLIT}`}
-            style={{ marginLeft: '-12px', letterSpacing: '1px' }}
+            style={{
+              marginLeft: '-12px',
+              marginBottom: '-5px',
+              letterSpacing: '1px',
+            }}
           >
             ENLIT
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.ANTI_DUST_COATINGS}`}
+            style={{ marginBottom: '-5px' }}
+          >
+            Anti-Dust Coatings
           </Menu.Item>
         </Menu.ItemGroup>
       </SubMenu>

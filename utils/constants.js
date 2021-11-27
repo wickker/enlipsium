@@ -29,4 +29,5 @@ export const ROUTES_KEYS = {
   GLOW_PARTICLES: '/polyipnos/glow-particles',
   BLACK_INKS: '/polyipnos/black-inks',
   ABOUT: '/about',
+  ANTI_DUST_COATINGS: '/enlit/anti-dust-coatings',
 };
