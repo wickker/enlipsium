@@ -32,4 +32,5 @@ export const ROUTES_KEYS = {
   BLACK_INKS: '/polyipnos/black-inks',
   ABOUT: '/about',
   ANTI_DUST_COATINGS: '/enlit/anti-dust-coatings',
+  CLEANERS: '/enlit/cleaners',
 };

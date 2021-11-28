@@ -153,9 +153,15 @@ const NavHeader = () => {
           </Menu.Item>
           <Menu.Item
             key={`${ROUTES_KEYS.ANTI_DUST_COATINGS}`}
-            style={{ marginBottom: '10px' }}
+            style={{ marginBottom: '-5px' }}
           >
             Anti-Dust Coatings
+          </Menu.Item>
+          <Menu.Item
+            key={`${ROUTES_KEYS.CLEANERS}`}
+            style={{ marginBottom: '10px' }}
+          >
+            Cleaners
           </Menu.Item>
         </Menu.ItemGroup>
       </SubMenu>
