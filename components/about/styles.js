@@ -11,7 +11,7 @@ export const StyledRow = styled(Row)`
 
 export const TeamTitle = styled.div`
   font-size: 55px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
   background-color: ${COLORS.MEDIUM_GRAY};
@@ -59,7 +59,7 @@ export const ImageCol = styled.div`
   //   .info {
   //     height: 24%;
   //   }
-  }
+  // }
 `;
 
 export const Info = styled.div`

@@ -38,7 +38,7 @@ export const Tagline = styled.div`
 export const FullSizeImageDiv = styled.div`
   overflow: hidden;
   margin-bottom: 20px;
-  border-radius: 20px;
+  // border-radius: 20px;
   @media only screen and (max-width: 576px) {
     display: none;
   }

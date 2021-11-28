@@ -1,70 +1,90 @@
 import { Row } from 'antd';
-import { get } from 'lodash';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import {
   TitleCol,
   Title,
   Tagline,
-  FontAwesomeIcon,
+  StyledRow,
+  ProductTitle,
+  ProductItem,
+  Image,
+  LeftCol,
+  RightCol,
 } from './styles';
 
 const AntiDustCoatings = () => {
-    const generateList = (list) => {
-      return list.map((el) => {
-        return (
+  return (
+    <Row align='top' style={{ minHeight: '94vh', maxWidth: '1980px' }}>
+      <TitleCol span={24}>
+        <Title>Products</Title>
+        <Tagline>Technologies > Enlit > Anti-Dust Coatings</Tagline>
+      </TitleCol>
+      <StyledRow>
+        <LeftCol
+          xs={{ span: 24, order: 1 }}
+          sm={{ span: 24, order: 1 }}
+          md={{ span: 12, order: 1 }}
+          lg={{ span: 12, order: 1 }}
+        >
+          <Image
+            src='https://via.placeholder.com/700x500'
+            alt='SG 100 Anti Dust Coating'
+          />
+        </LeftCol>
+        <RightCol
+          xs={{ span: 24, order: 2 }}
+          sm={{ span: 24, order: 2 }}
+          md={{ span: 12, order: 2 }}
+          lg={{ span: 12, order: 2 }}
+        >
+          <ProductTitle>SG 100 - Anti-Dust Coating</ProductTitle>
           <ProductItem>
-            <FontAwesomeIcon icon={faCheck} />
-            {el}
+            <ul>
+              <li>
+                Easy to use coating that keeps surfaces free from dirt and dust
+              </li>
+              <li>Durable coating, suitable for outdoor use</li>
+              <li>Water-based forumla, no harsh chemicals</li>
+              <li>
+                Suitable for surfaces including painted walls, tiles, signage,
+                glass, film, stickers, aluminum cladding, powder coated surfaces
+                and plastics
+              </li>
+            </ul>
           </ProductItem>
-        );
-      });
-    };
-  
-    return (
-      <Row align='top' style={{ minHeight: '94vh', maxWidth: '1980px' }}>
-        <TitleCol span={24}>
-          <Title>Products</Title>
-          <Tagline>Technologies > Polyipnos > Black Inks</Tagline>
-        </TitleCol>
-        {/* <StyledRow align='space-between' justify='center'>
-          <LayoutCol xs={24} sm={24} md={24} lg={8} video={true}>
-            <iframe
-              width='100%'
-              height='100%'
-              src='https://www.youtube.com/embed/0U5SWCzvcWE'
-              title='YouTube video player'
-              frameborder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
-            ></iframe>
-          </LayoutCol>
-          <LayoutCol xs={24} sm={24} md={24} lg={8}>
-            <ProductTitle>{get(blackInk, 'title')}</ProductTitle>
-            {generateList(get(blackInk, 'list'))}
-            <ProductItem2 style={{ marginTop: '40px' }}>
-              <ProductSpan>Available Pack Size:</ProductSpan>
-              {get(blackInk, 'packSize')}
-            </ProductItem2>
-            <ProductItem2>
-              <ProductSpan>Available Absorption Wavelengths:</ProductSpan>
-              {get(blackInk, 'wavelengths')}
-            </ProductItem2>
-          </LayoutCol>
-          <LayoutCol xs={24} sm={24} md={24} lg={8} video={true}>
-            <iframe
-              width='100%'
-              height='100%'
-              src='https://www.youtube.com/embed/DSnllBSvIH8'
-              title='YouTube video player'
-              frameborder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
-            ></iframe>
-          </LayoutCol>
-        </StyledRow> */}
-      </Row>
-    );
-  };
-  
-  export default AntiDustCoatings;
-  
+        </RightCol>
+        <LeftCol
+          xs={{ span: 24, order: 4 }}
+          sm={{ span: 24, order: 4 }}
+          md={{ span: 12, order: 3 }}
+          lg={{ span: 12, order: 3 }}
+        >
+          <ProductTitle>SG 100 PV - Anti-Dust Coating</ProductTitle>
+          <ProductItem>
+            <ul>
+              <li>Used for solar panels</li>
+              <li>
+                Improved long term efficiency by keeping the top surface clean
+              </li>
+              <li>Suitable for areas with high panel wash frequency</li>
+              <li>Does not corrode components</li>
+              <li>Water-based formula, no harsh chemicals</li>
+            </ul>
+          </ProductItem>
+        </LeftCol>
+        <RightCol
+          xs={{ span: 24, order: 3 }}
+          sm={{ span: 24, order: 3 }}
+          md={{ span: 12, order: 4 }}
+          lg={{ span: 12, order: 4 }}
+        >
+          <Image
+            src='https://via.placeholder.com/700x500'
+            alt='SG 100 PV Anti Dust Coating'
+          />
+        </RightCol>
+      </StyledRow>
+    </Row>
+  );
+};
+
+export default AntiDustCoatings;
