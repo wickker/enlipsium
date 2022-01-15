@@ -27,7 +27,7 @@ const data = {
       'Water-based formula, does not corrode',
       'No-rinse formula, simply spray then wipe off',
     ],
-    image: 'https://via.placeholder.com/500x700?text=BB09',
+    image: '/cleaners/bb09.webp',
     name: 'bb09',
   },
   bb10: {
@@ -39,7 +39,7 @@ const data = {
       'Water-based formula, acts as disinfectant',
       'No-rinse formula, simply spray and wipe off',
     ],
-    image: 'https://via.placeholder.com/500x700?text=BB10',
+    image: '/cleaners/bb10.webp',
     name: 'bb10',
   },
   bb12: {
@@ -51,7 +51,7 @@ const data = {
       'Water-based formula, non flammable',
       'No-rinse formula, simply spray and wipe off',
     ],
-    image: 'https://via.placeholder.com/500x700?text=BB12',
+    image: '/cleaners/bb12.webp',
     name: 'bb12',
   },
   bb14: {
@@ -62,7 +62,7 @@ const data = {
       'Can be used for most applications in the automative and marine industries',
       'No rinse needed, simply spray and wipe off',
     ],
-    image: 'https://via.placeholder.com/500x700?text=BB14',
+    image: '/cleaners/bb14.webp',
     name: 'bb14',
   },
   bb15: {
@@ -73,7 +73,7 @@ const data = {
       'Easy wash feature',
       'Water-based formula with no harsh solvents',
     ],
-    image: 'https://via.placeholder.com/500x700?text=BB15',
+    image: '/cleaners/bb15.webp',
     name: 'bb15',
   },
 };
@@ -113,11 +113,11 @@ const Cleaners = () => {
       </TitleCol>
       <StyledRow>
         <LeftCol xs={24} sm={14} md={14} lg={14}>
-          <LeftRow gutter={{ xs: 0, sm: 24, md: 24, lg: 24 }}>
-            <ScrollCol xs={24} sm={8} md={8} lg={8}>
+          <LeftRow gutter={{ xs: 0, sm: 0, md: 24, lg: 32 }} align='end'>
+            <ScrollCol xs={24} sm={24} md={24} lg={6}>
               {generateImageSelection()}
             </ScrollCol>
-            <BigImageCol xs={0} sm={16} md={16} lg={16}>
+            <BigImageCol xs={0} sm={0} md={0} lg={14}>
               <BigImage src={get(selected, 'image')} />
             </BigImageCol>
           </LeftRow>
