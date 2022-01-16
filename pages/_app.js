@@ -5,6 +5,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 import NavHeader from '../components/navigation/header/Header';
 import Footer from '../components/navigation/footer/footer';
 import { Layout } from 'antd';
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 const { Content, Header } = Layout;
 
