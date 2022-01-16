@@ -29,7 +29,7 @@ const uv = {
   ],
   packSize: '1g, 5g, 25g',
   wavelengths: '270nm, 365nm',
-  path: 'https://via.placeholder.com/700X500?text=UV',
+  path: '/glow-particles/uv.webp',
   name: 'uv',
 };
 
@@ -43,7 +43,7 @@ const ir = {
   ],
   packSize: '1g, 5g, 25g',
   wavelengths: '808nm, 980nm',
-  path: 'https://via.placeholder.com/700X500?text=IR',
+  path: '/glow-particles/ir.webp',
   name: 'ir',
 };
 
@@ -57,7 +57,7 @@ const custom = {
   ],
   packSize: '1g, 5g, 25g',
   wavelengths: 'Please contact us',
-  path: 'https://via.placeholder.com/700X500?text=Custom',
+  path: '/glow-particles/custom.webp',
   name: 'custom',
 };
 

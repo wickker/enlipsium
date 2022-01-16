@@ -26,7 +26,7 @@ const AntiDustCoatings = () => {
           lg={{ span: 12, order: 1 }}
         >
           <Image
-            src='https://via.placeholder.com/700x500'
+            src='/anti-dust-coatings/sg100.webp'
             alt='SG 100 Anti Dust Coating'
           />
         </LeftCol>
@@ -78,7 +78,7 @@ const AntiDustCoatings = () => {
           lg={{ span: 12, order: 4 }}
         >
           <Image
-            src='https://via.placeholder.com/700x500'
+            src='/anti-dust-coatings/sg100pv.webp'
             alt='SG 100 PV Anti Dust Coating'
           />
         </RightCol>

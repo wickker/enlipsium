@@ -117,7 +117,7 @@ const Cleaners = () => {
             <ScrollCol xs={24} sm={24} md={24} lg={6}>
               {generateImageSelection()}
             </ScrollCol>
-            <BigImageCol xs={0} sm={0} md={0} lg={14}>
+            <BigImageCol xs={0} sm={0} md={0} lg={13}>
               <BigImage src={get(selected, 'image')} />
             </BigImageCol>
           </LeftRow>

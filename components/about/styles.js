@@ -6,6 +6,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 export const StyledRow = styled(Row)`
   && {
     min-height: 94vh;
+    background-color: ${COLORS.MEDIUM_GRAY};
   }
 `;
 
@@ -128,7 +129,7 @@ export const MainContainer = styled(Row)`
 
 export const TitleCol = styled(Col)`
   && {
-    background-color: ${COLORS.LIGHTER_GRAY};
+    // background-color: ${COLORS.LIGHTER_GRAY};
     display: flex;
     flex-direction: col;
     align-items: center;
@@ -137,6 +138,7 @@ export const TitleCol = styled(Col)`
     letter-spacing: 2px;
     text-transform: uppercase;
     span {
+      margin-left: 30%;
       display: block;
       width: 100%;
       -webkit-transform: rotate(-90deg);
@@ -147,6 +149,7 @@ export const TitleCol = styled(Col)`
       span {
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
+        margin: 50px 0px 0px 0px;
       }
     }
   }
@@ -154,7 +157,7 @@ export const TitleCol = styled(Col)`
 
 export const WriteUpCol = styled(Col)`
   && {
-    background-color: ${COLORS.LIGHTEST_GRAY};
+    // background-color: ${COLORS.LIGHTEST_GRAY};
     padding: 100px 70px;
     @media only screen and (max-width: 576px) {
       padding: 50px;
@@ -165,7 +168,7 @@ export const WriteUpCol = styled(Col)`
 export const Text = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: black;
+  color: white;
 `;
 
 export const FontAwesomeIcon = styled(Icon)`
@@ -182,7 +185,7 @@ export const FontAwesomeIcon = styled(Icon)`
 export const List = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: black;
+  color: white;
   padding-left: 20px;
   display: flex;
   flex-direction: row;
